@@ -1,0 +1,40 @@
+[
+
+  {
+    "Edad": 14,
+    "Permitidos": [      
+    ]
+  },
+  {
+    "Edad": 15,
+    "Permitidos": [      
+      16
+    ]
+  },
+  {
+    "Edad": 16,
+    "Permitidos": [
+      15,      
+      17
+    ]
+  },
+  {
+    "Edad": 17,
+    "Permitidos": [
+      16   
+    ]
+  },
+  {
+    "Edad": 18,
+    "Permitidos": [      
+      19
+    ]
+  },
+  {
+    "Edad": 19,
+    "Permitidos": [
+      18,
+      0
+    ]
+  } 
+]

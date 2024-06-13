@@ -1,0 +1,18 @@
+﻿.center-tv-style{
+    text-align:center;
+}
+
+.row-tv-style {
+    font-size: xx-large;
+    font-weight: bold;
+}
+
+.row-vs-tv-style {
+    vertical-align: middle;
+    font-weight: bold;
+}
+
+.header-center {
+    text-align: center;
+    font-size: x-large;
+}

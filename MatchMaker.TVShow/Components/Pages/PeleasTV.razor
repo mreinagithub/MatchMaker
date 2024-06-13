@@ -1,0 +1,125 @@
+﻿@page "/"
+@attribute [StreamRendering(false)]
+
+@inject IJSRuntime js
+@inject DataBaseSupport _dbSup;
+
+@if(_peleas != null)
+{
+
+    <div class="custom-body-tv">
+
+        <div class="row">
+            <div class="col-6">
+                <button class="btn btn-danger" @onclick="RetrocederPelea">@("<<")</button>
+            </div>
+            <div class="col-6">
+                <button class="btn btn-success float-end" id="btnAvanzar" @onclick="AvanzarPelea">@(">>")</button>
+            </div>
+
+        </div>
+
+        <table class="table table-sm mt-1" id="tablaDePeleasTV">
+            <thead>
+                <tr>
+                    <th>Nro.</th>
+                    <th class="header-center">Rincon Rojo</th>
+                    <th></th>
+                    <th class="header-center">Rincon Azul</th>
+                </tr>
+            </thead>
+            <tbody>
+
+            @foreach(var pelea in _peleas)
+                {
+                    <tr style="background-color: @pelea.ColorFila">
+                        <td class="row-vs-tv-style">@pelea.Orden</td>
+                        <td class="center-tv-style row-tv-style">@pelea.BoxeadorRinconRojo</td>
+                        <td class="center-tv-style row-vs-tv-style">VS</td>
+                        <td class="center-tv-style row-tv-style">@pelea.BoxeadorRinconAzul</td>
+                    </tr>
+                }
+        
+
+        
+            </tbody>
+        </table>
+
+    </div>
+
+}
+
+@code
+{
+
+    IList<PeleaDTO> _peleas = new List<PeleaDTO>();
+
+    int _peleaActual = 0;
+    string _colorPeleaPendiente = "#F5F5F5";
+    string _colorPeleaPasada = "#7c7c7c";
+    string _colorPeleaActual = "#EAE833";
+
+    protected override void OnInitialized()
+    {
+        _peleas = _dbSup.GetPeleas();
+        AvanzarPelea();
+        
+    }
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if(firstRender)
+        {
+            await js.Focus("btnAvanzar");
+        }
+    }
+
+    void AvanzarPelea()
+    {
+        if (_peleaActual == _peleas.Count())
+            return;
+
+        _peleaActual++;
+        foreach(var pelea in _peleas)
+        {
+            if (pelea.Orden < _peleaActual)
+            {
+                pelea.ColorFila = _colorPeleaPasada;
+            }
+            else if (pelea.Orden == _peleaActual)
+            {
+                pelea.ColorFila = _colorPeleaActual;
+            }
+            else
+            {
+                pelea.ColorFila = _colorPeleaPendiente;
+            }
+
+        }
+    }
+    void RetrocederPelea()
+    {        
+
+        if (_peleaActual == 1)
+            return;
+
+        _peleaActual--;
+        foreach (var pelea in _peleas)
+        {
+            if (pelea.Orden < _peleaActual)
+            {
+                pelea.ColorFila = _colorPeleaPasada;
+            }
+            else if (pelea.Orden == _peleaActual)
+            {
+                pelea.ColorFila = _colorPeleaActual;
+            }
+            else
+            {
+                pelea.ColorFila = _colorPeleaPendiente;
+            }
+
+        }
+    }
+
+}

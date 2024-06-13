@@ -1,0 +1,32 @@
+¿Como usar MatchMaker?
+
+1. En la solapa "Ingreso" se cargan los boxeadores del evento: Nombre, Peso, Edad, Sexo (M/F), y opcionalmente Profesor y Cantidad de Peleas (experiencia).
+   Mientras un boxeador no esté asignado a una pelea, este se podrá modificar o eliminar.
+   Para Eliminar un boxeador se debe pintar la fila y preisonal la tecla "Supr".
+   Un boxeador asignado a una pelea NO se podrá modificar y se verá pintado en celeste.
+
+2. El sistema irá alocando a los boxeadores según su peso y sexo en la solapa que corresponda. Desde Cat 49 a Cat +91.
+
+3. Desde las solapas de Categorías puede armar las peleas, debe pintar los dos boxeadores a enfrentarse y hacer botón derecho "Armar Pelea...".
+   El sistema advertirá si hay una incompatibilidad en las edades, pero permitirá continuar en caso de ser necesario.
+   Tener en cuenta que el orden en que pinta los boxeadores es importante, ya que el primero que pinte irá al rincón rojo y el segundo al rincón azul.
+
+   ADICIONAL: el sistema permitirá armar peleas desde la solapa "Ingreso", siempre que pinte dos boxeadores NO asignados a una pelea. Esto permite cruzar categorías en caso de ser necesario.
+
+4. En la solapa "Peleas" puede desarmar las peleas, pintando la fila, haciendo botón derecho "Desarmar Pelea..." (también puede presionar la tecla "Supr").
+   En esta solapa también se permite reordenar las peleas pintando una fila, botón recho "Subir pelea..." o "Bajar pelea..." según necesite.
+
+
+Cambiar de evento.
+
+Cada vez que cambie el evento es recomendable iniciar uno nuevo mediante la opción "Archvio>Nuevo Evento...".
+Como cada evento NO se conoce con el anterior, el sistema le ofrecerá crear un backup del evento que está cerrando.
+Si desea crear el backup debe seleccionar la fecha del evento y apretar el botón "Guardar evento actual y generar nuevo...".
+Si no desea crear backup presione "Descartar evento actual y generar nuevo...".
+
+ADVERTENCIA: si descarta el evento actual, este NO se podrá recuperar.
+
+En cualquier momento puede ver eventos que haya guardado mediante la opción "Archivo>Ver otros eventos...".
+En la pantalla que le muestra, debe seleccionar el evento que desea ver y presionar "Ver evento seleccionado..."
+Los eventos anteriores son de solo lectura, por lo tanto NO se podrán modificar.
+Si está viendo un evento guardado y desea volver al evento actual, debe usar la opción "Archivo>Volver al evento actual...".
