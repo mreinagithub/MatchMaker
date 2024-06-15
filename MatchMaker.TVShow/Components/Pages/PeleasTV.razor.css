@@ -1,4 +1,8 @@
-﻿.center-tv-style{
+﻿.custom-body-tv {
+    
+}
+
+.center-tv-style{
     text-align:center;
 }
 
@@ -14,5 +18,13 @@
 
 .header-center {
     text-align: center;
-    font-size: x-large;
+    font-size: 18px;
+}
+
+.fixedElement {
+    background-color: #191919;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
 }

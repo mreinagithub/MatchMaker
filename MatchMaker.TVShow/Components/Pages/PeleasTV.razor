@@ -9,30 +9,31 @@
 
     <div class="custom-body-tv">
 
-        <div class="row">
-            <div class="col-6">
-                <button class="btn btn-danger" @onclick="RetrocederPelea">@("<<")</button>
+        <div class="row fixedElement">
+            <div class="col-8">
+                <img src="img/logo_is.png" width="60" height="50" />
+                <span style="color:white; text-align:center;font-size:35px; font-weight:bold; vertical-align:bottom;">PROMOTIONS</span>
             </div>
-            <div class="col-6">
-                <button class="btn btn-success float-end" id="btnAvanzar" @onclick="AvanzarPelea">@(">>")</button>
-            </div>
-
+            <button class="btn btn-danger col-2" @onclick="RetrocederPelea">@("<<")</button>
+            <button class="btn btn-success col-2 float-end" id="btnAvanzar" @onclick="AvanzarPelea">@(">>")</button>
         </div>
 
-        <table class="table table-sm mt-1" id="tablaDePeleasTV">
-            <thead>
-                <tr>
+        <div style="margin-top:65px;">
+
+            <table class="table table-sm mt-1" id="tablaDePeleasTV">
+            @* <thead style="color:white;">
+                <tr style="position:sticky;">
                     <th>Nro.</th>
                     <th class="header-center">Rincon Rojo</th>
                     <th></th>
                     <th class="header-center">Rincon Azul</th>
                 </tr>
-            </thead>
+            </thead> *@
             <tbody>
 
             @foreach(var pelea in _peleas)
                 {
-                    <tr style="background-color: @pelea.ColorFila">
+                    <tr style="background-color: @pelea.ColorFila; color: @pelea.ColorLetra;">
                         <td class="row-vs-tv-style">@pelea.Orden</td>
                         <td class="center-tv-style row-tv-style">@pelea.BoxeadorRinconRojo</td>
                         <td class="center-tv-style row-vs-tv-style">VS</td>
@@ -42,8 +43,9 @@
         
 
         
-            </tbody>
-        </table>
+                </tbody>
+            </table>
+        </div>
 
     </div>
 
@@ -55,15 +57,18 @@
     IList<PeleaDTO> _peleas = new List<PeleaDTO>();
 
     int _peleaActual = 0;
-    string _colorPeleaPendiente = "#F5F5F5";
+    string _colorPeleaPendiente = "#191919";
+    string _colorLetraPendiente = "#FFFFFF";
     string _colorPeleaPasada = "#7c7c7c";
-    string _colorPeleaActual = "#EAE833";
+    string _colorLetraPasada = "#9b9b9b";
+    string _colorPeleaActual = "#ff7514";
+    string _colorLetraActual = "#FFFFFF";
 
     protected override void OnInitialized()
     {
         _peleas = _dbSup.GetPeleas();
         AvanzarPelea();
-        
+
     }
 
     protected override async Task OnAfterRenderAsync(bool firstRender)
@@ -85,14 +90,17 @@
             if (pelea.Orden < _peleaActual)
             {
                 pelea.ColorFila = _colorPeleaPasada;
+                pelea.ColorLetra = _colorLetraPasada;
             }
             else if (pelea.Orden == _peleaActual)
             {
                 pelea.ColorFila = _colorPeleaActual;
+                pelea.ColorLetra = _colorLetraActual;
             }
             else
             {
                 pelea.ColorFila = _colorPeleaPendiente;
+                pelea.ColorLetra = _colorLetraPendiente;
             }
 
         }
@@ -109,14 +117,17 @@
             if (pelea.Orden < _peleaActual)
             {
                 pelea.ColorFila = _colorPeleaPasada;
+                pelea.ColorLetra = _colorLetraPasada;
             }
             else if (pelea.Orden == _peleaActual)
             {
                 pelea.ColorFila = _colorPeleaActual;
+                pelea.ColorLetra = _colorLetraActual;
             }
             else
             {
                 pelea.ColorFila = _colorPeleaPendiente;
+                pelea.ColorLetra = _colorLetraPendiente;
             }
 
         }
