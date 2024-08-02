@@ -20,10 +20,12 @@ namespace MatchMaker.Comun.Modelos
         public int Boxeador1ID { get; set; }
         [Ignore]
         public Boxeador Boxeador1 { get; set; }
+        public string ProfesorBoxeador1 { get; set; }
         [Indexed]
         public int Boxeador2ID { get; set; }
         [Ignore]
         public Boxeador Boxeador2 { get; set; }
+        public string ProfesorBoxeador2 { get; set; }
         public int Orden { get; set; }
 
 

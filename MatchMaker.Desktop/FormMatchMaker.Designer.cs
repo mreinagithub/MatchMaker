@@ -39,11 +39,11 @@
             grillaIngreso = new DataGridView();
             iDDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             nombreDataGridViewTextBoxColumn2 = new DataGridViewTextBoxColumn();
-            pesoDataGridViewTextBoxColumn2 = new DataGridViewTextBoxColumn();
-            edadDataGridViewTextBoxColumn2 = new DataGridViewTextBoxColumn();
             sexoDataGridViewTextBoxColumn3 = new DataGridViewComboBoxColumn();
-            profesorDataGridViewTextBoxColumn3 = new DataGridViewTextBoxColumn();
+            edadDataGridViewTextBoxColumn2 = new DataGridViewTextBoxColumn();
+            pesoDataGridViewTextBoxColumn2 = new DataGridViewTextBoxColumn();
             dataGridViewTextBoxColumn1 = new DataGridViewTextBoxColumn();
+            profesorDataGridViewTextBoxColumn3 = new DataGridViewTextBoxColumn();
             asignadoDataGridViewCheckBoxColumn18 = new DataGridViewCheckBoxColumn();
             contextArmarPelea = new ContextMenuStrip(components);
             toolArmarPelea = new ToolStripMenuItem();
@@ -53,211 +53,203 @@
             grillaMascCat49 = new DataGridView();
             iDDataGridViewTextBoxColumn2 = new DataGridViewTextBoxColumn();
             nombreDataGridViewTextBoxColumn4 = new DataGridViewTextBoxColumn();
-            pesoDataGridViewTextBoxColumn4 = new DataGridViewTextBoxColumn();
-            edadDataGridViewTextBoxColumn4 = new DataGridViewTextBoxColumn();
             sexoDataGridViewTextBoxColumn5 = new DataGridViewTextBoxColumn();
-            profesorDataGridViewTextBoxColumn5 = new DataGridViewTextBoxColumn();
+            edadDataGridViewTextBoxColumn4 = new DataGridViewTextBoxColumn();
+            pesoDataGridViewTextBoxColumn4 = new DataGridViewTextBoxColumn();
             dataGridViewTextBoxColumn2 = new DataGridViewTextBoxColumn();
+            profesorDataGridViewTextBoxColumn5 = new DataGridViewTextBoxColumn();
             asignadoDataGridViewCheckBoxColumn1 = new DataGridViewCheckBoxColumn();
             grillaFemCat49 = new DataGridView();
             iDDataGridViewTextBoxColumn1 = new DataGridViewTextBoxColumn();
             nombreDataGridViewTextBoxColumn3 = new DataGridViewTextBoxColumn();
-            pesoDataGridViewTextBoxColumn3 = new DataGridViewTextBoxColumn();
-            edadDataGridViewTextBoxColumn3 = new DataGridViewTextBoxColumn();
             sexoDataGridViewTextBoxColumn4 = new DataGridViewTextBoxColumn();
-            profesorDataGridViewTextBoxColumn4 = new DataGridViewTextBoxColumn();
+            edadDataGridViewTextBoxColumn3 = new DataGridViewTextBoxColumn();
+            pesoDataGridViewTextBoxColumn3 = new DataGridViewTextBoxColumn();
             cantidadPeleasDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            profesorDataGridViewTextBoxColumn4 = new DataGridViewTextBoxColumn();
             asignadoDataGridViewCheckBoxColumn = new DataGridViewCheckBoxColumn();
             tabCat52 = new TabPage();
             splitContainer2 = new SplitContainer();
             grillaMascCat52 = new DataGridView();
             iDDataGridViewTextBoxColumn3 = new DataGridViewTextBoxColumn();
             nombreDataGridViewTextBoxColumn5 = new DataGridViewTextBoxColumn();
-            pesoDataGridViewTextBoxColumn5 = new DataGridViewTextBoxColumn();
-            edadDataGridViewTextBoxColumn5 = new DataGridViewTextBoxColumn();
             sexoDataGridViewTextBoxColumn6 = new DataGridViewTextBoxColumn();
-            profesorDataGridViewTextBoxColumn6 = new DataGridViewTextBoxColumn();
+            edadDataGridViewTextBoxColumn5 = new DataGridViewTextBoxColumn();
+            pesoDataGridViewTextBoxColumn5 = new DataGridViewTextBoxColumn();
             cantidadPeleasDataGridViewTextBoxColumn1 = new DataGridViewTextBoxColumn();
+            profesorDataGridViewTextBoxColumn6 = new DataGridViewTextBoxColumn();
             asignadoDataGridViewCheckBoxColumn2 = new DataGridViewCheckBoxColumn();
             grillaFemCat52 = new DataGridView();
             iDDataGridViewTextBoxColumn4 = new DataGridViewTextBoxColumn();
             nombreDataGridViewTextBoxColumn6 = new DataGridViewTextBoxColumn();
-            pesoDataGridViewTextBoxColumn6 = new DataGridViewTextBoxColumn();
-            edadDataGridViewTextBoxColumn6 = new DataGridViewTextBoxColumn();
             sexoDataGridViewTextBoxColumn7 = new DataGridViewTextBoxColumn();
-            profesorDataGridViewTextBoxColumn7 = new DataGridViewTextBoxColumn();
+            edadDataGridViewTextBoxColumn6 = new DataGridViewTextBoxColumn();
+            pesoDataGridViewTextBoxColumn6 = new DataGridViewTextBoxColumn();
             cantidadPeleasDataGridViewTextBoxColumn2 = new DataGridViewTextBoxColumn();
+            profesorDataGridViewTextBoxColumn7 = new DataGridViewTextBoxColumn();
             asignadoDataGridViewCheckBoxColumn3 = new DataGridViewCheckBoxColumn();
             tabCat56 = new TabPage();
             splitContainer3 = new SplitContainer();
             grillaMascCat56 = new DataGridView();
             iDDataGridViewTextBoxColumn5 = new DataGridViewTextBoxColumn();
             nombreDataGridViewTextBoxColumn7 = new DataGridViewTextBoxColumn();
-            pesoDataGridViewTextBoxColumn7 = new DataGridViewTextBoxColumn();
-            edadDataGridViewTextBoxColumn7 = new DataGridViewTextBoxColumn();
             sexoDataGridViewTextBoxColumn8 = new DataGridViewTextBoxColumn();
-            profesorDataGridViewTextBoxColumn8 = new DataGridViewTextBoxColumn();
+            edadDataGridViewTextBoxColumn7 = new DataGridViewTextBoxColumn();
+            pesoDataGridViewTextBoxColumn7 = new DataGridViewTextBoxColumn();
             cantidadPeleasDataGridViewTextBoxColumn3 = new DataGridViewTextBoxColumn();
+            profesorDataGridViewTextBoxColumn8 = new DataGridViewTextBoxColumn();
             asignadoDataGridViewCheckBoxColumn4 = new DataGridViewCheckBoxColumn();
             grillaFemCat56 = new DataGridView();
             iDDataGridViewTextBoxColumn6 = new DataGridViewTextBoxColumn();
             nombreDataGridViewTextBoxColumn8 = new DataGridViewTextBoxColumn();
-            pesoDataGridViewTextBoxColumn8 = new DataGridViewTextBoxColumn();
-            edadDataGridViewTextBoxColumn8 = new DataGridViewTextBoxColumn();
             sexoDataGridViewTextBoxColumn9 = new DataGridViewTextBoxColumn();
-            profesorDataGridViewTextBoxColumn9 = new DataGridViewTextBoxColumn();
+            edadDataGridViewTextBoxColumn8 = new DataGridViewTextBoxColumn();
+            pesoDataGridViewTextBoxColumn8 = new DataGridViewTextBoxColumn();
             cantidadPeleasDataGridViewTextBoxColumn4 = new DataGridViewTextBoxColumn();
+            profesorDataGridViewTextBoxColumn9 = new DataGridViewTextBoxColumn();
             asignadoDataGridViewCheckBoxColumn5 = new DataGridViewCheckBoxColumn();
             tabCat60 = new TabPage();
             splitContainer4 = new SplitContainer();
             grillaMascCat60 = new DataGridView();
             iDDataGridViewTextBoxColumn7 = new DataGridViewTextBoxColumn();
             nombreDataGridViewTextBoxColumn9 = new DataGridViewTextBoxColumn();
-            pesoDataGridViewTextBoxColumn9 = new DataGridViewTextBoxColumn();
-            edadDataGridViewTextBoxColumn9 = new DataGridViewTextBoxColumn();
             sexoDataGridViewTextBoxColumn10 = new DataGridViewTextBoxColumn();
-            profesorDataGridViewTextBoxColumn10 = new DataGridViewTextBoxColumn();
+            edadDataGridViewTextBoxColumn9 = new DataGridViewTextBoxColumn();
+            pesoDataGridViewTextBoxColumn9 = new DataGridViewTextBoxColumn();
             cantidadPeleasDataGridViewTextBoxColumn5 = new DataGridViewTextBoxColumn();
+            profesorDataGridViewTextBoxColumn10 = new DataGridViewTextBoxColumn();
             asignadoDataGridViewCheckBoxColumn6 = new DataGridViewCheckBoxColumn();
             grillaFemCat60 = new DataGridView();
             iDDataGridViewTextBoxColumn8 = new DataGridViewTextBoxColumn();
             nombreDataGridViewTextBoxColumn10 = new DataGridViewTextBoxColumn();
-            pesoDataGridViewTextBoxColumn10 = new DataGridViewTextBoxColumn();
-            edadDataGridViewTextBoxColumn10 = new DataGridViewTextBoxColumn();
             sexoDataGridViewTextBoxColumn11 = new DataGridViewTextBoxColumn();
-            profesorDataGridViewTextBoxColumn11 = new DataGridViewTextBoxColumn();
+            edadDataGridViewTextBoxColumn10 = new DataGridViewTextBoxColumn();
+            pesoDataGridViewTextBoxColumn10 = new DataGridViewTextBoxColumn();
             cantidadPeleasDataGridViewTextBoxColumn6 = new DataGridViewTextBoxColumn();
+            profesorDataGridViewTextBoxColumn11 = new DataGridViewTextBoxColumn();
             asignadoDataGridViewCheckBoxColumn7 = new DataGridViewCheckBoxColumn();
             tabCat64 = new TabPage();
             splitContainer5 = new SplitContainer();
             grillaMascCat64 = new DataGridView();
             iDDataGridViewTextBoxColumn9 = new DataGridViewTextBoxColumn();
             nombreDataGridViewTextBoxColumn11 = new DataGridViewTextBoxColumn();
-            pesoDataGridViewTextBoxColumn11 = new DataGridViewTextBoxColumn();
-            edadDataGridViewTextBoxColumn11 = new DataGridViewTextBoxColumn();
             sexoDataGridViewTextBoxColumn12 = new DataGridViewTextBoxColumn();
-            profesorDataGridViewTextBoxColumn12 = new DataGridViewTextBoxColumn();
+            edadDataGridViewTextBoxColumn11 = new DataGridViewTextBoxColumn();
+            pesoDataGridViewTextBoxColumn11 = new DataGridViewTextBoxColumn();
             cantidadPeleasDataGridViewTextBoxColumn7 = new DataGridViewTextBoxColumn();
+            profesorDataGridViewTextBoxColumn12 = new DataGridViewTextBoxColumn();
             asignadoDataGridViewCheckBoxColumn8 = new DataGridViewCheckBoxColumn();
             grillaFemCat64 = new DataGridView();
             iDDataGridViewTextBoxColumn10 = new DataGridViewTextBoxColumn();
             nombreDataGridViewTextBoxColumn12 = new DataGridViewTextBoxColumn();
-            pesoDataGridViewTextBoxColumn12 = new DataGridViewTextBoxColumn();
-            edadDataGridViewTextBoxColumn12 = new DataGridViewTextBoxColumn();
             sexoDataGridViewTextBoxColumn13 = new DataGridViewTextBoxColumn();
-            profesorDataGridViewTextBoxColumn13 = new DataGridViewTextBoxColumn();
+            edadDataGridViewTextBoxColumn12 = new DataGridViewTextBoxColumn();
+            pesoDataGridViewTextBoxColumn12 = new DataGridViewTextBoxColumn();
             cantidadPeleasDataGridViewTextBoxColumn8 = new DataGridViewTextBoxColumn();
+            profesorDataGridViewTextBoxColumn13 = new DataGridViewTextBoxColumn();
             asignadoDataGridViewCheckBoxColumn9 = new DataGridViewCheckBoxColumn();
             tabCat69 = new TabPage();
             splitContainer6 = new SplitContainer();
             grillaMascCat69 = new DataGridView();
             iDDataGridViewTextBoxColumn11 = new DataGridViewTextBoxColumn();
             nombreDataGridViewTextBoxColumn13 = new DataGridViewTextBoxColumn();
-            pesoDataGridViewTextBoxColumn13 = new DataGridViewTextBoxColumn();
-            edadDataGridViewTextBoxColumn13 = new DataGridViewTextBoxColumn();
             sexoDataGridViewTextBoxColumn14 = new DataGridViewTextBoxColumn();
-            profesorDataGridViewTextBoxColumn14 = new DataGridViewTextBoxColumn();
+            edadDataGridViewTextBoxColumn13 = new DataGridViewTextBoxColumn();
+            pesoDataGridViewTextBoxColumn13 = new DataGridViewTextBoxColumn();
             cantidadPeleasDataGridViewTextBoxColumn9 = new DataGridViewTextBoxColumn();
+            profesorDataGridViewTextBoxColumn14 = new DataGridViewTextBoxColumn();
             asignadoDataGridViewCheckBoxColumn10 = new DataGridViewCheckBoxColumn();
             grillaFemCat69 = new DataGridView();
             iDDataGridViewTextBoxColumn12 = new DataGridViewTextBoxColumn();
             nombreDataGridViewTextBoxColumn14 = new DataGridViewTextBoxColumn();
-            pesoDataGridViewTextBoxColumn14 = new DataGridViewTextBoxColumn();
-            edadDataGridViewTextBoxColumn14 = new DataGridViewTextBoxColumn();
             sexoDataGridViewTextBoxColumn15 = new DataGridViewTextBoxColumn();
-            profesorDataGridViewTextBoxColumn15 = new DataGridViewTextBoxColumn();
+            edadDataGridViewTextBoxColumn14 = new DataGridViewTextBoxColumn();
+            pesoDataGridViewTextBoxColumn14 = new DataGridViewTextBoxColumn();
             cantidadPeleasDataGridViewTextBoxColumn10 = new DataGridViewTextBoxColumn();
+            profesorDataGridViewTextBoxColumn15 = new DataGridViewTextBoxColumn();
             asignadoDataGridViewCheckBoxColumn11 = new DataGridViewCheckBoxColumn();
             tabCat75 = new TabPage();
             splitContainer7 = new SplitContainer();
             grillaMascCat75 = new DataGridView();
             iDDataGridViewTextBoxColumn13 = new DataGridViewTextBoxColumn();
             nombreDataGridViewTextBoxColumn15 = new DataGridViewTextBoxColumn();
-            pesoDataGridViewTextBoxColumn15 = new DataGridViewTextBoxColumn();
-            edadDataGridViewTextBoxColumn15 = new DataGridViewTextBoxColumn();
             sexoDataGridViewTextBoxColumn16 = new DataGridViewTextBoxColumn();
-            profesorDataGridViewTextBoxColumn16 = new DataGridViewTextBoxColumn();
+            edadDataGridViewTextBoxColumn15 = new DataGridViewTextBoxColumn();
+            pesoDataGridViewTextBoxColumn15 = new DataGridViewTextBoxColumn();
             cantidadPeleasDataGridViewTextBoxColumn11 = new DataGridViewTextBoxColumn();
+            profesorDataGridViewTextBoxColumn16 = new DataGridViewTextBoxColumn();
             asignadoDataGridViewCheckBoxColumn12 = new DataGridViewCheckBoxColumn();
             grillaFemCat75 = new DataGridView();
             iDDataGridViewTextBoxColumn14 = new DataGridViewTextBoxColumn();
             nombreDataGridViewTextBoxColumn16 = new DataGridViewTextBoxColumn();
-            pesoDataGridViewTextBoxColumn16 = new DataGridViewTextBoxColumn();
-            edadDataGridViewTextBoxColumn16 = new DataGridViewTextBoxColumn();
             sexoDataGridViewTextBoxColumn17 = new DataGridViewTextBoxColumn();
-            profesorDataGridViewTextBoxColumn17 = new DataGridViewTextBoxColumn();
+            edadDataGridViewTextBoxColumn16 = new DataGridViewTextBoxColumn();
+            pesoDataGridViewTextBoxColumn16 = new DataGridViewTextBoxColumn();
             cantidadPeleasDataGridViewTextBoxColumn12 = new DataGridViewTextBoxColumn();
+            profesorDataGridViewTextBoxColumn17 = new DataGridViewTextBoxColumn();
             asignadoDataGridViewCheckBoxColumn13 = new DataGridViewCheckBoxColumn();
             tabCat81 = new TabPage();
             splitContainer8 = new SplitContainer();
             grillaMascCat81 = new DataGridView();
             iDDataGridViewTextBoxColumn15 = new DataGridViewTextBoxColumn();
             nombreDataGridViewTextBoxColumn17 = new DataGridViewTextBoxColumn();
-            pesoDataGridViewTextBoxColumn17 = new DataGridViewTextBoxColumn();
-            edadDataGridViewTextBoxColumn17 = new DataGridViewTextBoxColumn();
             sexoDataGridViewTextBoxColumn18 = new DataGridViewTextBoxColumn();
-            profesorDataGridViewTextBoxColumn18 = new DataGridViewTextBoxColumn();
+            edadDataGridViewTextBoxColumn17 = new DataGridViewTextBoxColumn();
+            pesoDataGridViewTextBoxColumn17 = new DataGridViewTextBoxColumn();
             cantidadPeleasDataGridViewTextBoxColumn13 = new DataGridViewTextBoxColumn();
+            profesorDataGridViewTextBoxColumn18 = new DataGridViewTextBoxColumn();
             asignadoDataGridViewCheckBoxColumn14 = new DataGridViewCheckBoxColumn();
             grillaFemCat81 = new DataGridView();
             iDDataGridViewTextBoxColumn16 = new DataGridViewTextBoxColumn();
             nombreDataGridViewTextBoxColumn18 = new DataGridViewTextBoxColumn();
-            pesoDataGridViewTextBoxColumn18 = new DataGridViewTextBoxColumn();
-            edadDataGridViewTextBoxColumn18 = new DataGridViewTextBoxColumn();
             sexoDataGridViewTextBoxColumn19 = new DataGridViewTextBoxColumn();
-            profesorDataGridViewTextBoxColumn19 = new DataGridViewTextBoxColumn();
+            edadDataGridViewTextBoxColumn18 = new DataGridViewTextBoxColumn();
+            pesoDataGridViewTextBoxColumn18 = new DataGridViewTextBoxColumn();
             cantidadPeleasDataGridViewTextBoxColumn14 = new DataGridViewTextBoxColumn();
+            profesorDataGridViewTextBoxColumn19 = new DataGridViewTextBoxColumn();
             asignadoDataGridViewCheckBoxColumn15 = new DataGridViewCheckBoxColumn();
             tabCat91 = new TabPage();
             splitContainer9 = new SplitContainer();
             grillaMascCat91 = new DataGridView();
             iDDataGridViewTextBoxColumn17 = new DataGridViewTextBoxColumn();
             nombreDataGridViewTextBoxColumn19 = new DataGridViewTextBoxColumn();
-            pesoDataGridViewTextBoxColumn19 = new DataGridViewTextBoxColumn();
-            edadDataGridViewTextBoxColumn19 = new DataGridViewTextBoxColumn();
             sexoDataGridViewTextBoxColumn20 = new DataGridViewTextBoxColumn();
-            profesorDataGridViewTextBoxColumn20 = new DataGridViewTextBoxColumn();
+            edadDataGridViewTextBoxColumn19 = new DataGridViewTextBoxColumn();
+            pesoDataGridViewTextBoxColumn19 = new DataGridViewTextBoxColumn();
             cantidadPeleasDataGridViewTextBoxColumn15 = new DataGridViewTextBoxColumn();
+            profesorDataGridViewTextBoxColumn20 = new DataGridViewTextBoxColumn();
             asignadoDataGridViewCheckBoxColumn16 = new DataGridViewCheckBoxColumn();
             grillaFemCat91 = new DataGridView();
             iDDataGridViewTextBoxColumn18 = new DataGridViewTextBoxColumn();
             nombreDataGridViewTextBoxColumn20 = new DataGridViewTextBoxColumn();
-            pesoDataGridViewTextBoxColumn20 = new DataGridViewTextBoxColumn();
-            edadDataGridViewTextBoxColumn20 = new DataGridViewTextBoxColumn();
             sexoDataGridViewTextBoxColumn21 = new DataGridViewTextBoxColumn();
-            profesorDataGridViewTextBoxColumn21 = new DataGridViewTextBoxColumn();
+            edadDataGridViewTextBoxColumn20 = new DataGridViewTextBoxColumn();
+            pesoDataGridViewTextBoxColumn20 = new DataGridViewTextBoxColumn();
             cantidadPeleasDataGridViewTextBoxColumn16 = new DataGridViewTextBoxColumn();
+            profesorDataGridViewTextBoxColumn21 = new DataGridViewTextBoxColumn();
             asignadoDataGridViewCheckBoxColumn17 = new DataGridViewCheckBoxColumn();
             tabMas91 = new TabPage();
             splitContainer10 = new SplitContainer();
             grillaMascCatMas91 = new DataGridView();
             dataGridViewTextBoxColumn3 = new DataGridViewTextBoxColumn();
             dataGridViewTextBoxColumn4 = new DataGridViewTextBoxColumn();
-            dataGridViewTextBoxColumn5 = new DataGridViewTextBoxColumn();
-            dataGridViewTextBoxColumn6 = new DataGridViewTextBoxColumn();
             dataGridViewTextBoxColumn7 = new DataGridViewTextBoxColumn();
-            dataGridViewTextBoxColumn8 = new DataGridViewTextBoxColumn();
+            dataGridViewTextBoxColumn6 = new DataGridViewTextBoxColumn();
+            dataGridViewTextBoxColumn5 = new DataGridViewTextBoxColumn();
             dataGridViewTextBoxColumn9 = new DataGridViewTextBoxColumn();
+            dataGridViewTextBoxColumn8 = new DataGridViewTextBoxColumn();
             dataGridViewCheckBoxColumn1 = new DataGridViewCheckBoxColumn();
             grillaFemCatMas91 = new DataGridView();
             dataGridViewTextBoxColumn10 = new DataGridViewTextBoxColumn();
             dataGridViewTextBoxColumn11 = new DataGridViewTextBoxColumn();
-            dataGridViewTextBoxColumn12 = new DataGridViewTextBoxColumn();
-            dataGridViewTextBoxColumn13 = new DataGridViewTextBoxColumn();
             dataGridViewTextBoxColumn14 = new DataGridViewTextBoxColumn();
-            dataGridViewTextBoxColumn15 = new DataGridViewTextBoxColumn();
+            dataGridViewTextBoxColumn13 = new DataGridViewTextBoxColumn();
+            dataGridViewTextBoxColumn12 = new DataGridViewTextBoxColumn();
             dataGridViewTextBoxColumn16 = new DataGridViewTextBoxColumn();
+            dataGridViewTextBoxColumn15 = new DataGridViewTextBoxColumn();
             dataGridViewCheckBoxColumn2 = new DataGridViewCheckBoxColumn();
             tabPeleas = new TabPage();
             grillaPeleas = new DataGridView();
-            iDDataGridViewTextBoxColumn19 = new DataGridViewTextBoxColumn();
-            ordenDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
-            sexoDataGridViewTextBoxColumn22 = new DataGridViewTextBoxColumn();
-            categoriaDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
-            boxeador1IDDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
-            boxeador1DataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
-            boxeador2IDDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
-            boxeador2DataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             contextDesarmarPelea = new ContextMenuStrip(components);
             toolDesarmarPelea = new ToolStripMenuItem();
             toolStripSeparator2 = new ToolStripSeparator();
@@ -273,6 +265,8 @@
             salirToolStripMenuItem = new ToolStripMenuItem();
             herramientasToolStripMenuItem = new ToolStripMenuItem();
             exportarPeleasAExcelToolStripMenuItem = new ToolStripMenuItem();
+            ayudaToolStripMenuItem = new ToolStripMenuItem();
+            guiaDeUsoToolStripMenuItem = new ToolStripMenuItem();
             nombre = new DataGridViewTextBoxColumn();
             peso = new DataGridViewTextBoxColumn();
             edad = new DataGridViewTextBoxColumn();
@@ -289,8 +283,16 @@
             sexoDataGridViewTextBoxColumn2 = new DataGridViewTextBoxColumn();
             profesorDataGridViewTextBoxColumn2 = new DataGridViewTextBoxColumn();
             saveFileDialog1 = new SaveFileDialog();
-            ayudaToolStripMenuItem = new ToolStripMenuItem();
-            guiaDeUsoToolStripMenuItem = new ToolStripMenuItem();
+            ordenDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            sexoDataGridViewTextBoxColumn22 = new DataGridViewTextBoxColumn();
+            categoriaDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            boxeador1DataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            profesorBoxeador1DataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            boxeador2DataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            profesorBoxeador2DataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            iDDataGridViewTextBoxColumn19 = new DataGridViewTextBoxColumn();
+            boxeador1IDDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            boxeador2IDDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             tabPrincipal.SuspendLayout();
             tabIngreso.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)grillaIngreso).BeginInit();
@@ -410,7 +412,7 @@
             // 
             grillaIngreso.AutoGenerateColumns = false;
             grillaIngreso.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            grillaIngreso.Columns.AddRange(new DataGridViewColumn[] { iDDataGridViewTextBoxColumn, nombreDataGridViewTextBoxColumn2, pesoDataGridViewTextBoxColumn2, edadDataGridViewTextBoxColumn2, sexoDataGridViewTextBoxColumn3, profesorDataGridViewTextBoxColumn3, dataGridViewTextBoxColumn1, asignadoDataGridViewCheckBoxColumn18 });
+            grillaIngreso.Columns.AddRange(new DataGridViewColumn[] { iDDataGridViewTextBoxColumn, nombreDataGridViewTextBoxColumn2, sexoDataGridViewTextBoxColumn3, edadDataGridViewTextBoxColumn2, pesoDataGridViewTextBoxColumn2, dataGridViewTextBoxColumn1, profesorDataGridViewTextBoxColumn3, asignadoDataGridViewCheckBoxColumn18 });
             grillaIngreso.ContextMenuStrip = contextArmarPelea;
             grillaIngreso.DataSource = boxeadorBindingSource1;
             grillaIngreso.Dock = DockStyle.Fill;
@@ -434,18 +436,6 @@
             nombreDataGridViewTextBoxColumn2.Name = "nombreDataGridViewTextBoxColumn2";
             nombreDataGridViewTextBoxColumn2.Width = 180;
             // 
-            // pesoDataGridViewTextBoxColumn2
-            // 
-            pesoDataGridViewTextBoxColumn2.DataPropertyName = "Peso";
-            pesoDataGridViewTextBoxColumn2.HeaderText = "Peso";
-            pesoDataGridViewTextBoxColumn2.Name = "pesoDataGridViewTextBoxColumn2";
-            // 
-            // edadDataGridViewTextBoxColumn2
-            // 
-            edadDataGridViewTextBoxColumn2.DataPropertyName = "Edad";
-            edadDataGridViewTextBoxColumn2.HeaderText = "Edad";
-            edadDataGridViewTextBoxColumn2.Name = "edadDataGridViewTextBoxColumn2";
-            // 
             // sexoDataGridViewTextBoxColumn3
             // 
             sexoDataGridViewTextBoxColumn3.DataPropertyName = "Sexo";
@@ -455,19 +445,31 @@
             sexoDataGridViewTextBoxColumn3.Resizable = DataGridViewTriState.True;
             sexoDataGridViewTextBoxColumn3.SortMode = DataGridViewColumnSortMode.Automatic;
             // 
-            // profesorDataGridViewTextBoxColumn3
+            // edadDataGridViewTextBoxColumn2
             // 
-            profesorDataGridViewTextBoxColumn3.DataPropertyName = "Profesor";
-            profesorDataGridViewTextBoxColumn3.HeaderText = "Profesor";
-            profesorDataGridViewTextBoxColumn3.MaxInputLength = 100;
-            profesorDataGridViewTextBoxColumn3.Name = "profesorDataGridViewTextBoxColumn3";
-            profesorDataGridViewTextBoxColumn3.Width = 180;
+            edadDataGridViewTextBoxColumn2.DataPropertyName = "Edad";
+            edadDataGridViewTextBoxColumn2.HeaderText = "Edad";
+            edadDataGridViewTextBoxColumn2.Name = "edadDataGridViewTextBoxColumn2";
+            // 
+            // pesoDataGridViewTextBoxColumn2
+            // 
+            pesoDataGridViewTextBoxColumn2.DataPropertyName = "Peso";
+            pesoDataGridViewTextBoxColumn2.HeaderText = "Peso";
+            pesoDataGridViewTextBoxColumn2.Name = "pesoDataGridViewTextBoxColumn2";
             // 
             // dataGridViewTextBoxColumn1
             // 
             dataGridViewTextBoxColumn1.DataPropertyName = "CantidadPeleas";
             dataGridViewTextBoxColumn1.HeaderText = "Cantidad Peleas";
             dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            // 
+            // profesorDataGridViewTextBoxColumn3
+            // 
+            profesorDataGridViewTextBoxColumn3.DataPropertyName = "Profesor";
+            profesorDataGridViewTextBoxColumn3.HeaderText = "Profesor/Escuela";
+            profesorDataGridViewTextBoxColumn3.MaxInputLength = 100;
+            profesorDataGridViewTextBoxColumn3.Name = "profesorDataGridViewTextBoxColumn3";
+            profesorDataGridViewTextBoxColumn3.Width = 180;
             // 
             // asignadoDataGridViewCheckBoxColumn18
             // 
@@ -529,7 +531,7 @@
             grillaMascCat49.AllowUserToDeleteRows = false;
             grillaMascCat49.AutoGenerateColumns = false;
             grillaMascCat49.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            grillaMascCat49.Columns.AddRange(new DataGridViewColumn[] { iDDataGridViewTextBoxColumn2, nombreDataGridViewTextBoxColumn4, pesoDataGridViewTextBoxColumn4, edadDataGridViewTextBoxColumn4, sexoDataGridViewTextBoxColumn5, profesorDataGridViewTextBoxColumn5, dataGridViewTextBoxColumn2, asignadoDataGridViewCheckBoxColumn1 });
+            grillaMascCat49.Columns.AddRange(new DataGridViewColumn[] { iDDataGridViewTextBoxColumn2, nombreDataGridViewTextBoxColumn4, sexoDataGridViewTextBoxColumn5, edadDataGridViewTextBoxColumn4, pesoDataGridViewTextBoxColumn4, dataGridViewTextBoxColumn2, profesorDataGridViewTextBoxColumn5, asignadoDataGridViewCheckBoxColumn1 });
             grillaMascCat49.ContextMenuStrip = contextArmarPelea;
             grillaMascCat49.DataSource = boxeadorBindingSource1;
             grillaMascCat49.Dock = DockStyle.Fill;
@@ -555,12 +557,12 @@
             nombreDataGridViewTextBoxColumn4.ReadOnly = true;
             nombreDataGridViewTextBoxColumn4.Width = 180;
             // 
-            // pesoDataGridViewTextBoxColumn4
+            // sexoDataGridViewTextBoxColumn5
             // 
-            pesoDataGridViewTextBoxColumn4.DataPropertyName = "Peso";
-            pesoDataGridViewTextBoxColumn4.HeaderText = "Peso";
-            pesoDataGridViewTextBoxColumn4.Name = "pesoDataGridViewTextBoxColumn4";
-            pesoDataGridViewTextBoxColumn4.ReadOnly = true;
+            sexoDataGridViewTextBoxColumn5.DataPropertyName = "Sexo";
+            sexoDataGridViewTextBoxColumn5.HeaderText = "Sexo";
+            sexoDataGridViewTextBoxColumn5.Name = "sexoDataGridViewTextBoxColumn5";
+            sexoDataGridViewTextBoxColumn5.ReadOnly = true;
             // 
             // edadDataGridViewTextBoxColumn4
             // 
@@ -569,20 +571,12 @@
             edadDataGridViewTextBoxColumn4.Name = "edadDataGridViewTextBoxColumn4";
             edadDataGridViewTextBoxColumn4.ReadOnly = true;
             // 
-            // sexoDataGridViewTextBoxColumn5
+            // pesoDataGridViewTextBoxColumn4
             // 
-            sexoDataGridViewTextBoxColumn5.DataPropertyName = "Sexo";
-            sexoDataGridViewTextBoxColumn5.HeaderText = "Sexo";
-            sexoDataGridViewTextBoxColumn5.Name = "sexoDataGridViewTextBoxColumn5";
-            sexoDataGridViewTextBoxColumn5.ReadOnly = true;
-            // 
-            // profesorDataGridViewTextBoxColumn5
-            // 
-            profesorDataGridViewTextBoxColumn5.DataPropertyName = "Profesor";
-            profesorDataGridViewTextBoxColumn5.HeaderText = "Profesor";
-            profesorDataGridViewTextBoxColumn5.Name = "profesorDataGridViewTextBoxColumn5";
-            profesorDataGridViewTextBoxColumn5.ReadOnly = true;
-            profesorDataGridViewTextBoxColumn5.Width = 180;
+            pesoDataGridViewTextBoxColumn4.DataPropertyName = "Peso";
+            pesoDataGridViewTextBoxColumn4.HeaderText = "Peso";
+            pesoDataGridViewTextBoxColumn4.Name = "pesoDataGridViewTextBoxColumn4";
+            pesoDataGridViewTextBoxColumn4.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn2
             // 
@@ -590,6 +584,14 @@
             dataGridViewTextBoxColumn2.HeaderText = "Cantidad Peleas";
             dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
             dataGridViewTextBoxColumn2.ReadOnly = true;
+            // 
+            // profesorDataGridViewTextBoxColumn5
+            // 
+            profesorDataGridViewTextBoxColumn5.DataPropertyName = "Profesor";
+            profesorDataGridViewTextBoxColumn5.HeaderText = "Profesor/Escuela";
+            profesorDataGridViewTextBoxColumn5.Name = "profesorDataGridViewTextBoxColumn5";
+            profesorDataGridViewTextBoxColumn5.ReadOnly = true;
+            profesorDataGridViewTextBoxColumn5.Width = 180;
             // 
             // asignadoDataGridViewCheckBoxColumn1
             // 
@@ -605,7 +607,7 @@
             grillaFemCat49.AllowUserToDeleteRows = false;
             grillaFemCat49.AutoGenerateColumns = false;
             grillaFemCat49.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            grillaFemCat49.Columns.AddRange(new DataGridViewColumn[] { iDDataGridViewTextBoxColumn1, nombreDataGridViewTextBoxColumn3, pesoDataGridViewTextBoxColumn3, edadDataGridViewTextBoxColumn3, sexoDataGridViewTextBoxColumn4, profesorDataGridViewTextBoxColumn4, cantidadPeleasDataGridViewTextBoxColumn, asignadoDataGridViewCheckBoxColumn });
+            grillaFemCat49.Columns.AddRange(new DataGridViewColumn[] { iDDataGridViewTextBoxColumn1, nombreDataGridViewTextBoxColumn3, sexoDataGridViewTextBoxColumn4, edadDataGridViewTextBoxColumn3, pesoDataGridViewTextBoxColumn3, cantidadPeleasDataGridViewTextBoxColumn, profesorDataGridViewTextBoxColumn4, asignadoDataGridViewCheckBoxColumn });
             grillaFemCat49.ContextMenuStrip = contextArmarPelea;
             grillaFemCat49.DataSource = boxeadorBindingSource1;
             grillaFemCat49.Dock = DockStyle.Fill;
@@ -631,12 +633,12 @@
             nombreDataGridViewTextBoxColumn3.ReadOnly = true;
             nombreDataGridViewTextBoxColumn3.Width = 180;
             // 
-            // pesoDataGridViewTextBoxColumn3
+            // sexoDataGridViewTextBoxColumn4
             // 
-            pesoDataGridViewTextBoxColumn3.DataPropertyName = "Peso";
-            pesoDataGridViewTextBoxColumn3.HeaderText = "Peso";
-            pesoDataGridViewTextBoxColumn3.Name = "pesoDataGridViewTextBoxColumn3";
-            pesoDataGridViewTextBoxColumn3.ReadOnly = true;
+            sexoDataGridViewTextBoxColumn4.DataPropertyName = "Sexo";
+            sexoDataGridViewTextBoxColumn4.HeaderText = "Sexo";
+            sexoDataGridViewTextBoxColumn4.Name = "sexoDataGridViewTextBoxColumn4";
+            sexoDataGridViewTextBoxColumn4.ReadOnly = true;
             // 
             // edadDataGridViewTextBoxColumn3
             // 
@@ -645,20 +647,12 @@
             edadDataGridViewTextBoxColumn3.Name = "edadDataGridViewTextBoxColumn3";
             edadDataGridViewTextBoxColumn3.ReadOnly = true;
             // 
-            // sexoDataGridViewTextBoxColumn4
+            // pesoDataGridViewTextBoxColumn3
             // 
-            sexoDataGridViewTextBoxColumn4.DataPropertyName = "Sexo";
-            sexoDataGridViewTextBoxColumn4.HeaderText = "Sexo";
-            sexoDataGridViewTextBoxColumn4.Name = "sexoDataGridViewTextBoxColumn4";
-            sexoDataGridViewTextBoxColumn4.ReadOnly = true;
-            // 
-            // profesorDataGridViewTextBoxColumn4
-            // 
-            profesorDataGridViewTextBoxColumn4.DataPropertyName = "Profesor";
-            profesorDataGridViewTextBoxColumn4.HeaderText = "Profesor";
-            profesorDataGridViewTextBoxColumn4.Name = "profesorDataGridViewTextBoxColumn4";
-            profesorDataGridViewTextBoxColumn4.ReadOnly = true;
-            profesorDataGridViewTextBoxColumn4.Width = 180;
+            pesoDataGridViewTextBoxColumn3.DataPropertyName = "Peso";
+            pesoDataGridViewTextBoxColumn3.HeaderText = "Peso";
+            pesoDataGridViewTextBoxColumn3.Name = "pesoDataGridViewTextBoxColumn3";
+            pesoDataGridViewTextBoxColumn3.ReadOnly = true;
             // 
             // cantidadPeleasDataGridViewTextBoxColumn
             // 
@@ -666,6 +660,14 @@
             cantidadPeleasDataGridViewTextBoxColumn.HeaderText = "Cantidad Peleas";
             cantidadPeleasDataGridViewTextBoxColumn.Name = "cantidadPeleasDataGridViewTextBoxColumn";
             cantidadPeleasDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // profesorDataGridViewTextBoxColumn4
+            // 
+            profesorDataGridViewTextBoxColumn4.DataPropertyName = "Profesor";
+            profesorDataGridViewTextBoxColumn4.HeaderText = "Profesor/Escuela";
+            profesorDataGridViewTextBoxColumn4.Name = "profesorDataGridViewTextBoxColumn4";
+            profesorDataGridViewTextBoxColumn4.ReadOnly = true;
+            profesorDataGridViewTextBoxColumn4.Width = 180;
             // 
             // asignadoDataGridViewCheckBoxColumn
             // 
@@ -709,7 +711,7 @@
             grillaMascCat52.AllowUserToDeleteRows = false;
             grillaMascCat52.AutoGenerateColumns = false;
             grillaMascCat52.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            grillaMascCat52.Columns.AddRange(new DataGridViewColumn[] { iDDataGridViewTextBoxColumn3, nombreDataGridViewTextBoxColumn5, pesoDataGridViewTextBoxColumn5, edadDataGridViewTextBoxColumn5, sexoDataGridViewTextBoxColumn6, profesorDataGridViewTextBoxColumn6, cantidadPeleasDataGridViewTextBoxColumn1, asignadoDataGridViewCheckBoxColumn2 });
+            grillaMascCat52.Columns.AddRange(new DataGridViewColumn[] { iDDataGridViewTextBoxColumn3, nombreDataGridViewTextBoxColumn5, sexoDataGridViewTextBoxColumn6, edadDataGridViewTextBoxColumn5, pesoDataGridViewTextBoxColumn5, cantidadPeleasDataGridViewTextBoxColumn1, profesorDataGridViewTextBoxColumn6, asignadoDataGridViewCheckBoxColumn2 });
             grillaMascCat52.ContextMenuStrip = contextArmarPelea;
             grillaMascCat52.DataSource = boxeadorBindingSource1;
             grillaMascCat52.Dock = DockStyle.Fill;
@@ -735,12 +737,12 @@
             nombreDataGridViewTextBoxColumn5.ReadOnly = true;
             nombreDataGridViewTextBoxColumn5.Width = 180;
             // 
-            // pesoDataGridViewTextBoxColumn5
+            // sexoDataGridViewTextBoxColumn6
             // 
-            pesoDataGridViewTextBoxColumn5.DataPropertyName = "Peso";
-            pesoDataGridViewTextBoxColumn5.HeaderText = "Peso";
-            pesoDataGridViewTextBoxColumn5.Name = "pesoDataGridViewTextBoxColumn5";
-            pesoDataGridViewTextBoxColumn5.ReadOnly = true;
+            sexoDataGridViewTextBoxColumn6.DataPropertyName = "Sexo";
+            sexoDataGridViewTextBoxColumn6.HeaderText = "Sexo";
+            sexoDataGridViewTextBoxColumn6.Name = "sexoDataGridViewTextBoxColumn6";
+            sexoDataGridViewTextBoxColumn6.ReadOnly = true;
             // 
             // edadDataGridViewTextBoxColumn5
             // 
@@ -749,20 +751,12 @@
             edadDataGridViewTextBoxColumn5.Name = "edadDataGridViewTextBoxColumn5";
             edadDataGridViewTextBoxColumn5.ReadOnly = true;
             // 
-            // sexoDataGridViewTextBoxColumn6
+            // pesoDataGridViewTextBoxColumn5
             // 
-            sexoDataGridViewTextBoxColumn6.DataPropertyName = "Sexo";
-            sexoDataGridViewTextBoxColumn6.HeaderText = "Sexo";
-            sexoDataGridViewTextBoxColumn6.Name = "sexoDataGridViewTextBoxColumn6";
-            sexoDataGridViewTextBoxColumn6.ReadOnly = true;
-            // 
-            // profesorDataGridViewTextBoxColumn6
-            // 
-            profesorDataGridViewTextBoxColumn6.DataPropertyName = "Profesor";
-            profesorDataGridViewTextBoxColumn6.HeaderText = "Profesor";
-            profesorDataGridViewTextBoxColumn6.Name = "profesorDataGridViewTextBoxColumn6";
-            profesorDataGridViewTextBoxColumn6.ReadOnly = true;
-            profesorDataGridViewTextBoxColumn6.Width = 180;
+            pesoDataGridViewTextBoxColumn5.DataPropertyName = "Peso";
+            pesoDataGridViewTextBoxColumn5.HeaderText = "Peso";
+            pesoDataGridViewTextBoxColumn5.Name = "pesoDataGridViewTextBoxColumn5";
+            pesoDataGridViewTextBoxColumn5.ReadOnly = true;
             // 
             // cantidadPeleasDataGridViewTextBoxColumn1
             // 
@@ -770,6 +764,14 @@
             cantidadPeleasDataGridViewTextBoxColumn1.HeaderText = "Cantidad Peleas";
             cantidadPeleasDataGridViewTextBoxColumn1.Name = "cantidadPeleasDataGridViewTextBoxColumn1";
             cantidadPeleasDataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // profesorDataGridViewTextBoxColumn6
+            // 
+            profesorDataGridViewTextBoxColumn6.DataPropertyName = "Profesor";
+            profesorDataGridViewTextBoxColumn6.HeaderText = "Profesor/Escuela";
+            profesorDataGridViewTextBoxColumn6.Name = "profesorDataGridViewTextBoxColumn6";
+            profesorDataGridViewTextBoxColumn6.ReadOnly = true;
+            profesorDataGridViewTextBoxColumn6.Width = 180;
             // 
             // asignadoDataGridViewCheckBoxColumn2
             // 
@@ -785,7 +787,7 @@
             grillaFemCat52.AllowUserToDeleteRows = false;
             grillaFemCat52.AutoGenerateColumns = false;
             grillaFemCat52.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            grillaFemCat52.Columns.AddRange(new DataGridViewColumn[] { iDDataGridViewTextBoxColumn4, nombreDataGridViewTextBoxColumn6, pesoDataGridViewTextBoxColumn6, edadDataGridViewTextBoxColumn6, sexoDataGridViewTextBoxColumn7, profesorDataGridViewTextBoxColumn7, cantidadPeleasDataGridViewTextBoxColumn2, asignadoDataGridViewCheckBoxColumn3 });
+            grillaFemCat52.Columns.AddRange(new DataGridViewColumn[] { iDDataGridViewTextBoxColumn4, nombreDataGridViewTextBoxColumn6, sexoDataGridViewTextBoxColumn7, edadDataGridViewTextBoxColumn6, pesoDataGridViewTextBoxColumn6, cantidadPeleasDataGridViewTextBoxColumn2, profesorDataGridViewTextBoxColumn7, asignadoDataGridViewCheckBoxColumn3 });
             grillaFemCat52.ContextMenuStrip = contextArmarPelea;
             grillaFemCat52.DataSource = boxeadorBindingSource1;
             grillaFemCat52.Dock = DockStyle.Fill;
@@ -811,12 +813,12 @@
             nombreDataGridViewTextBoxColumn6.ReadOnly = true;
             nombreDataGridViewTextBoxColumn6.Width = 180;
             // 
-            // pesoDataGridViewTextBoxColumn6
+            // sexoDataGridViewTextBoxColumn7
             // 
-            pesoDataGridViewTextBoxColumn6.DataPropertyName = "Peso";
-            pesoDataGridViewTextBoxColumn6.HeaderText = "Peso";
-            pesoDataGridViewTextBoxColumn6.Name = "pesoDataGridViewTextBoxColumn6";
-            pesoDataGridViewTextBoxColumn6.ReadOnly = true;
+            sexoDataGridViewTextBoxColumn7.DataPropertyName = "Sexo";
+            sexoDataGridViewTextBoxColumn7.HeaderText = "Sexo";
+            sexoDataGridViewTextBoxColumn7.Name = "sexoDataGridViewTextBoxColumn7";
+            sexoDataGridViewTextBoxColumn7.ReadOnly = true;
             // 
             // edadDataGridViewTextBoxColumn6
             // 
@@ -825,20 +827,12 @@
             edadDataGridViewTextBoxColumn6.Name = "edadDataGridViewTextBoxColumn6";
             edadDataGridViewTextBoxColumn6.ReadOnly = true;
             // 
-            // sexoDataGridViewTextBoxColumn7
+            // pesoDataGridViewTextBoxColumn6
             // 
-            sexoDataGridViewTextBoxColumn7.DataPropertyName = "Sexo";
-            sexoDataGridViewTextBoxColumn7.HeaderText = "Sexo";
-            sexoDataGridViewTextBoxColumn7.Name = "sexoDataGridViewTextBoxColumn7";
-            sexoDataGridViewTextBoxColumn7.ReadOnly = true;
-            // 
-            // profesorDataGridViewTextBoxColumn7
-            // 
-            profesorDataGridViewTextBoxColumn7.DataPropertyName = "Profesor";
-            profesorDataGridViewTextBoxColumn7.HeaderText = "Profesor";
-            profesorDataGridViewTextBoxColumn7.Name = "profesorDataGridViewTextBoxColumn7";
-            profesorDataGridViewTextBoxColumn7.ReadOnly = true;
-            profesorDataGridViewTextBoxColumn7.Width = 180;
+            pesoDataGridViewTextBoxColumn6.DataPropertyName = "Peso";
+            pesoDataGridViewTextBoxColumn6.HeaderText = "Peso";
+            pesoDataGridViewTextBoxColumn6.Name = "pesoDataGridViewTextBoxColumn6";
+            pesoDataGridViewTextBoxColumn6.ReadOnly = true;
             // 
             // cantidadPeleasDataGridViewTextBoxColumn2
             // 
@@ -846,6 +840,14 @@
             cantidadPeleasDataGridViewTextBoxColumn2.HeaderText = "Cantidad Peleas";
             cantidadPeleasDataGridViewTextBoxColumn2.Name = "cantidadPeleasDataGridViewTextBoxColumn2";
             cantidadPeleasDataGridViewTextBoxColumn2.ReadOnly = true;
+            // 
+            // profesorDataGridViewTextBoxColumn7
+            // 
+            profesorDataGridViewTextBoxColumn7.DataPropertyName = "Profesor";
+            profesorDataGridViewTextBoxColumn7.HeaderText = "Profesor/Escuela";
+            profesorDataGridViewTextBoxColumn7.Name = "profesorDataGridViewTextBoxColumn7";
+            profesorDataGridViewTextBoxColumn7.ReadOnly = true;
+            profesorDataGridViewTextBoxColumn7.Width = 180;
             // 
             // asignadoDataGridViewCheckBoxColumn3
             // 
@@ -889,7 +891,7 @@
             grillaMascCat56.AllowUserToDeleteRows = false;
             grillaMascCat56.AutoGenerateColumns = false;
             grillaMascCat56.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            grillaMascCat56.Columns.AddRange(new DataGridViewColumn[] { iDDataGridViewTextBoxColumn5, nombreDataGridViewTextBoxColumn7, pesoDataGridViewTextBoxColumn7, edadDataGridViewTextBoxColumn7, sexoDataGridViewTextBoxColumn8, profesorDataGridViewTextBoxColumn8, cantidadPeleasDataGridViewTextBoxColumn3, asignadoDataGridViewCheckBoxColumn4 });
+            grillaMascCat56.Columns.AddRange(new DataGridViewColumn[] { iDDataGridViewTextBoxColumn5, nombreDataGridViewTextBoxColumn7, sexoDataGridViewTextBoxColumn8, edadDataGridViewTextBoxColumn7, pesoDataGridViewTextBoxColumn7, cantidadPeleasDataGridViewTextBoxColumn3, profesorDataGridViewTextBoxColumn8, asignadoDataGridViewCheckBoxColumn4 });
             grillaMascCat56.ContextMenuStrip = contextArmarPelea;
             grillaMascCat56.DataSource = boxeadorBindingSource1;
             grillaMascCat56.Dock = DockStyle.Fill;
@@ -915,12 +917,12 @@
             nombreDataGridViewTextBoxColumn7.ReadOnly = true;
             nombreDataGridViewTextBoxColumn7.Width = 180;
             // 
-            // pesoDataGridViewTextBoxColumn7
+            // sexoDataGridViewTextBoxColumn8
             // 
-            pesoDataGridViewTextBoxColumn7.DataPropertyName = "Peso";
-            pesoDataGridViewTextBoxColumn7.HeaderText = "Peso";
-            pesoDataGridViewTextBoxColumn7.Name = "pesoDataGridViewTextBoxColumn7";
-            pesoDataGridViewTextBoxColumn7.ReadOnly = true;
+            sexoDataGridViewTextBoxColumn8.DataPropertyName = "Sexo";
+            sexoDataGridViewTextBoxColumn8.HeaderText = "Sexo";
+            sexoDataGridViewTextBoxColumn8.Name = "sexoDataGridViewTextBoxColumn8";
+            sexoDataGridViewTextBoxColumn8.ReadOnly = true;
             // 
             // edadDataGridViewTextBoxColumn7
             // 
@@ -929,20 +931,12 @@
             edadDataGridViewTextBoxColumn7.Name = "edadDataGridViewTextBoxColumn7";
             edadDataGridViewTextBoxColumn7.ReadOnly = true;
             // 
-            // sexoDataGridViewTextBoxColumn8
+            // pesoDataGridViewTextBoxColumn7
             // 
-            sexoDataGridViewTextBoxColumn8.DataPropertyName = "Sexo";
-            sexoDataGridViewTextBoxColumn8.HeaderText = "Sexo";
-            sexoDataGridViewTextBoxColumn8.Name = "sexoDataGridViewTextBoxColumn8";
-            sexoDataGridViewTextBoxColumn8.ReadOnly = true;
-            // 
-            // profesorDataGridViewTextBoxColumn8
-            // 
-            profesorDataGridViewTextBoxColumn8.DataPropertyName = "Profesor";
-            profesorDataGridViewTextBoxColumn8.HeaderText = "Profesor";
-            profesorDataGridViewTextBoxColumn8.Name = "profesorDataGridViewTextBoxColumn8";
-            profesorDataGridViewTextBoxColumn8.ReadOnly = true;
-            profesorDataGridViewTextBoxColumn8.Width = 180;
+            pesoDataGridViewTextBoxColumn7.DataPropertyName = "Peso";
+            pesoDataGridViewTextBoxColumn7.HeaderText = "Peso";
+            pesoDataGridViewTextBoxColumn7.Name = "pesoDataGridViewTextBoxColumn7";
+            pesoDataGridViewTextBoxColumn7.ReadOnly = true;
             // 
             // cantidadPeleasDataGridViewTextBoxColumn3
             // 
@@ -950,6 +944,14 @@
             cantidadPeleasDataGridViewTextBoxColumn3.HeaderText = "Cantidad Peleas";
             cantidadPeleasDataGridViewTextBoxColumn3.Name = "cantidadPeleasDataGridViewTextBoxColumn3";
             cantidadPeleasDataGridViewTextBoxColumn3.ReadOnly = true;
+            // 
+            // profesorDataGridViewTextBoxColumn8
+            // 
+            profesorDataGridViewTextBoxColumn8.DataPropertyName = "Profesor";
+            profesorDataGridViewTextBoxColumn8.HeaderText = "Profesor/Escuela";
+            profesorDataGridViewTextBoxColumn8.Name = "profesorDataGridViewTextBoxColumn8";
+            profesorDataGridViewTextBoxColumn8.ReadOnly = true;
+            profesorDataGridViewTextBoxColumn8.Width = 180;
             // 
             // asignadoDataGridViewCheckBoxColumn4
             // 
@@ -965,7 +967,7 @@
             grillaFemCat56.AllowUserToDeleteRows = false;
             grillaFemCat56.AutoGenerateColumns = false;
             grillaFemCat56.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            grillaFemCat56.Columns.AddRange(new DataGridViewColumn[] { iDDataGridViewTextBoxColumn6, nombreDataGridViewTextBoxColumn8, pesoDataGridViewTextBoxColumn8, edadDataGridViewTextBoxColumn8, sexoDataGridViewTextBoxColumn9, profesorDataGridViewTextBoxColumn9, cantidadPeleasDataGridViewTextBoxColumn4, asignadoDataGridViewCheckBoxColumn5 });
+            grillaFemCat56.Columns.AddRange(new DataGridViewColumn[] { iDDataGridViewTextBoxColumn6, nombreDataGridViewTextBoxColumn8, sexoDataGridViewTextBoxColumn9, edadDataGridViewTextBoxColumn8, pesoDataGridViewTextBoxColumn8, cantidadPeleasDataGridViewTextBoxColumn4, profesorDataGridViewTextBoxColumn9, asignadoDataGridViewCheckBoxColumn5 });
             grillaFemCat56.ContextMenuStrip = contextArmarPelea;
             grillaFemCat56.DataSource = boxeadorBindingSource1;
             grillaFemCat56.Dock = DockStyle.Fill;
@@ -991,12 +993,12 @@
             nombreDataGridViewTextBoxColumn8.ReadOnly = true;
             nombreDataGridViewTextBoxColumn8.Width = 180;
             // 
-            // pesoDataGridViewTextBoxColumn8
+            // sexoDataGridViewTextBoxColumn9
             // 
-            pesoDataGridViewTextBoxColumn8.DataPropertyName = "Peso";
-            pesoDataGridViewTextBoxColumn8.HeaderText = "Peso";
-            pesoDataGridViewTextBoxColumn8.Name = "pesoDataGridViewTextBoxColumn8";
-            pesoDataGridViewTextBoxColumn8.ReadOnly = true;
+            sexoDataGridViewTextBoxColumn9.DataPropertyName = "Sexo";
+            sexoDataGridViewTextBoxColumn9.HeaderText = "Sexo";
+            sexoDataGridViewTextBoxColumn9.Name = "sexoDataGridViewTextBoxColumn9";
+            sexoDataGridViewTextBoxColumn9.ReadOnly = true;
             // 
             // edadDataGridViewTextBoxColumn8
             // 
@@ -1005,20 +1007,12 @@
             edadDataGridViewTextBoxColumn8.Name = "edadDataGridViewTextBoxColumn8";
             edadDataGridViewTextBoxColumn8.ReadOnly = true;
             // 
-            // sexoDataGridViewTextBoxColumn9
+            // pesoDataGridViewTextBoxColumn8
             // 
-            sexoDataGridViewTextBoxColumn9.DataPropertyName = "Sexo";
-            sexoDataGridViewTextBoxColumn9.HeaderText = "Sexo";
-            sexoDataGridViewTextBoxColumn9.Name = "sexoDataGridViewTextBoxColumn9";
-            sexoDataGridViewTextBoxColumn9.ReadOnly = true;
-            // 
-            // profesorDataGridViewTextBoxColumn9
-            // 
-            profesorDataGridViewTextBoxColumn9.DataPropertyName = "Profesor";
-            profesorDataGridViewTextBoxColumn9.HeaderText = "Profesor";
-            profesorDataGridViewTextBoxColumn9.Name = "profesorDataGridViewTextBoxColumn9";
-            profesorDataGridViewTextBoxColumn9.ReadOnly = true;
-            profesorDataGridViewTextBoxColumn9.Width = 180;
+            pesoDataGridViewTextBoxColumn8.DataPropertyName = "Peso";
+            pesoDataGridViewTextBoxColumn8.HeaderText = "Peso";
+            pesoDataGridViewTextBoxColumn8.Name = "pesoDataGridViewTextBoxColumn8";
+            pesoDataGridViewTextBoxColumn8.ReadOnly = true;
             // 
             // cantidadPeleasDataGridViewTextBoxColumn4
             // 
@@ -1026,6 +1020,14 @@
             cantidadPeleasDataGridViewTextBoxColumn4.HeaderText = "Cantidad Peleas";
             cantidadPeleasDataGridViewTextBoxColumn4.Name = "cantidadPeleasDataGridViewTextBoxColumn4";
             cantidadPeleasDataGridViewTextBoxColumn4.ReadOnly = true;
+            // 
+            // profesorDataGridViewTextBoxColumn9
+            // 
+            profesorDataGridViewTextBoxColumn9.DataPropertyName = "Profesor";
+            profesorDataGridViewTextBoxColumn9.HeaderText = "Profesor/Escuela";
+            profesorDataGridViewTextBoxColumn9.Name = "profesorDataGridViewTextBoxColumn9";
+            profesorDataGridViewTextBoxColumn9.ReadOnly = true;
+            profesorDataGridViewTextBoxColumn9.Width = 180;
             // 
             // asignadoDataGridViewCheckBoxColumn5
             // 
@@ -1069,7 +1071,7 @@
             grillaMascCat60.AllowUserToDeleteRows = false;
             grillaMascCat60.AutoGenerateColumns = false;
             grillaMascCat60.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            grillaMascCat60.Columns.AddRange(new DataGridViewColumn[] { iDDataGridViewTextBoxColumn7, nombreDataGridViewTextBoxColumn9, pesoDataGridViewTextBoxColumn9, edadDataGridViewTextBoxColumn9, sexoDataGridViewTextBoxColumn10, profesorDataGridViewTextBoxColumn10, cantidadPeleasDataGridViewTextBoxColumn5, asignadoDataGridViewCheckBoxColumn6 });
+            grillaMascCat60.Columns.AddRange(new DataGridViewColumn[] { iDDataGridViewTextBoxColumn7, nombreDataGridViewTextBoxColumn9, sexoDataGridViewTextBoxColumn10, edadDataGridViewTextBoxColumn9, pesoDataGridViewTextBoxColumn9, cantidadPeleasDataGridViewTextBoxColumn5, profesorDataGridViewTextBoxColumn10, asignadoDataGridViewCheckBoxColumn6 });
             grillaMascCat60.ContextMenuStrip = contextArmarPelea;
             grillaMascCat60.DataSource = boxeadorBindingSource1;
             grillaMascCat60.Dock = DockStyle.Fill;
@@ -1095,12 +1097,12 @@
             nombreDataGridViewTextBoxColumn9.ReadOnly = true;
             nombreDataGridViewTextBoxColumn9.Width = 180;
             // 
-            // pesoDataGridViewTextBoxColumn9
+            // sexoDataGridViewTextBoxColumn10
             // 
-            pesoDataGridViewTextBoxColumn9.DataPropertyName = "Peso";
-            pesoDataGridViewTextBoxColumn9.HeaderText = "Peso";
-            pesoDataGridViewTextBoxColumn9.Name = "pesoDataGridViewTextBoxColumn9";
-            pesoDataGridViewTextBoxColumn9.ReadOnly = true;
+            sexoDataGridViewTextBoxColumn10.DataPropertyName = "Sexo";
+            sexoDataGridViewTextBoxColumn10.HeaderText = "Sexo";
+            sexoDataGridViewTextBoxColumn10.Name = "sexoDataGridViewTextBoxColumn10";
+            sexoDataGridViewTextBoxColumn10.ReadOnly = true;
             // 
             // edadDataGridViewTextBoxColumn9
             // 
@@ -1109,20 +1111,12 @@
             edadDataGridViewTextBoxColumn9.Name = "edadDataGridViewTextBoxColumn9";
             edadDataGridViewTextBoxColumn9.ReadOnly = true;
             // 
-            // sexoDataGridViewTextBoxColumn10
+            // pesoDataGridViewTextBoxColumn9
             // 
-            sexoDataGridViewTextBoxColumn10.DataPropertyName = "Sexo";
-            sexoDataGridViewTextBoxColumn10.HeaderText = "Sexo";
-            sexoDataGridViewTextBoxColumn10.Name = "sexoDataGridViewTextBoxColumn10";
-            sexoDataGridViewTextBoxColumn10.ReadOnly = true;
-            // 
-            // profesorDataGridViewTextBoxColumn10
-            // 
-            profesorDataGridViewTextBoxColumn10.DataPropertyName = "Profesor";
-            profesorDataGridViewTextBoxColumn10.HeaderText = "Profesor";
-            profesorDataGridViewTextBoxColumn10.Name = "profesorDataGridViewTextBoxColumn10";
-            profesorDataGridViewTextBoxColumn10.ReadOnly = true;
-            profesorDataGridViewTextBoxColumn10.Width = 180;
+            pesoDataGridViewTextBoxColumn9.DataPropertyName = "Peso";
+            pesoDataGridViewTextBoxColumn9.HeaderText = "Peso";
+            pesoDataGridViewTextBoxColumn9.Name = "pesoDataGridViewTextBoxColumn9";
+            pesoDataGridViewTextBoxColumn9.ReadOnly = true;
             // 
             // cantidadPeleasDataGridViewTextBoxColumn5
             // 
@@ -1130,6 +1124,14 @@
             cantidadPeleasDataGridViewTextBoxColumn5.HeaderText = "Cantidad Peleas";
             cantidadPeleasDataGridViewTextBoxColumn5.Name = "cantidadPeleasDataGridViewTextBoxColumn5";
             cantidadPeleasDataGridViewTextBoxColumn5.ReadOnly = true;
+            // 
+            // profesorDataGridViewTextBoxColumn10
+            // 
+            profesorDataGridViewTextBoxColumn10.DataPropertyName = "Profesor";
+            profesorDataGridViewTextBoxColumn10.HeaderText = "Profesor/Escuela";
+            profesorDataGridViewTextBoxColumn10.Name = "profesorDataGridViewTextBoxColumn10";
+            profesorDataGridViewTextBoxColumn10.ReadOnly = true;
+            profesorDataGridViewTextBoxColumn10.Width = 180;
             // 
             // asignadoDataGridViewCheckBoxColumn6
             // 
@@ -1145,7 +1147,7 @@
             grillaFemCat60.AllowUserToDeleteRows = false;
             grillaFemCat60.AutoGenerateColumns = false;
             grillaFemCat60.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            grillaFemCat60.Columns.AddRange(new DataGridViewColumn[] { iDDataGridViewTextBoxColumn8, nombreDataGridViewTextBoxColumn10, pesoDataGridViewTextBoxColumn10, edadDataGridViewTextBoxColumn10, sexoDataGridViewTextBoxColumn11, profesorDataGridViewTextBoxColumn11, cantidadPeleasDataGridViewTextBoxColumn6, asignadoDataGridViewCheckBoxColumn7 });
+            grillaFemCat60.Columns.AddRange(new DataGridViewColumn[] { iDDataGridViewTextBoxColumn8, nombreDataGridViewTextBoxColumn10, sexoDataGridViewTextBoxColumn11, edadDataGridViewTextBoxColumn10, pesoDataGridViewTextBoxColumn10, cantidadPeleasDataGridViewTextBoxColumn6, profesorDataGridViewTextBoxColumn11, asignadoDataGridViewCheckBoxColumn7 });
             grillaFemCat60.ContextMenuStrip = contextArmarPelea;
             grillaFemCat60.DataSource = boxeadorBindingSource1;
             grillaFemCat60.Dock = DockStyle.Fill;
@@ -1171,12 +1173,12 @@
             nombreDataGridViewTextBoxColumn10.ReadOnly = true;
             nombreDataGridViewTextBoxColumn10.Width = 180;
             // 
-            // pesoDataGridViewTextBoxColumn10
+            // sexoDataGridViewTextBoxColumn11
             // 
-            pesoDataGridViewTextBoxColumn10.DataPropertyName = "Peso";
-            pesoDataGridViewTextBoxColumn10.HeaderText = "Peso";
-            pesoDataGridViewTextBoxColumn10.Name = "pesoDataGridViewTextBoxColumn10";
-            pesoDataGridViewTextBoxColumn10.ReadOnly = true;
+            sexoDataGridViewTextBoxColumn11.DataPropertyName = "Sexo";
+            sexoDataGridViewTextBoxColumn11.HeaderText = "Sexo";
+            sexoDataGridViewTextBoxColumn11.Name = "sexoDataGridViewTextBoxColumn11";
+            sexoDataGridViewTextBoxColumn11.ReadOnly = true;
             // 
             // edadDataGridViewTextBoxColumn10
             // 
@@ -1185,20 +1187,12 @@
             edadDataGridViewTextBoxColumn10.Name = "edadDataGridViewTextBoxColumn10";
             edadDataGridViewTextBoxColumn10.ReadOnly = true;
             // 
-            // sexoDataGridViewTextBoxColumn11
+            // pesoDataGridViewTextBoxColumn10
             // 
-            sexoDataGridViewTextBoxColumn11.DataPropertyName = "Sexo";
-            sexoDataGridViewTextBoxColumn11.HeaderText = "Sexo";
-            sexoDataGridViewTextBoxColumn11.Name = "sexoDataGridViewTextBoxColumn11";
-            sexoDataGridViewTextBoxColumn11.ReadOnly = true;
-            // 
-            // profesorDataGridViewTextBoxColumn11
-            // 
-            profesorDataGridViewTextBoxColumn11.DataPropertyName = "Profesor";
-            profesorDataGridViewTextBoxColumn11.HeaderText = "Profesor";
-            profesorDataGridViewTextBoxColumn11.Name = "profesorDataGridViewTextBoxColumn11";
-            profesorDataGridViewTextBoxColumn11.ReadOnly = true;
-            profesorDataGridViewTextBoxColumn11.Width = 180;
+            pesoDataGridViewTextBoxColumn10.DataPropertyName = "Peso";
+            pesoDataGridViewTextBoxColumn10.HeaderText = "Peso";
+            pesoDataGridViewTextBoxColumn10.Name = "pesoDataGridViewTextBoxColumn10";
+            pesoDataGridViewTextBoxColumn10.ReadOnly = true;
             // 
             // cantidadPeleasDataGridViewTextBoxColumn6
             // 
@@ -1206,6 +1200,14 @@
             cantidadPeleasDataGridViewTextBoxColumn6.HeaderText = "Cantidad Peleas";
             cantidadPeleasDataGridViewTextBoxColumn6.Name = "cantidadPeleasDataGridViewTextBoxColumn6";
             cantidadPeleasDataGridViewTextBoxColumn6.ReadOnly = true;
+            // 
+            // profesorDataGridViewTextBoxColumn11
+            // 
+            profesorDataGridViewTextBoxColumn11.DataPropertyName = "Profesor";
+            profesorDataGridViewTextBoxColumn11.HeaderText = "Profesor/Escuela";
+            profesorDataGridViewTextBoxColumn11.Name = "profesorDataGridViewTextBoxColumn11";
+            profesorDataGridViewTextBoxColumn11.ReadOnly = true;
+            profesorDataGridViewTextBoxColumn11.Width = 180;
             // 
             // asignadoDataGridViewCheckBoxColumn7
             // 
@@ -1249,7 +1251,7 @@
             grillaMascCat64.AllowUserToDeleteRows = false;
             grillaMascCat64.AutoGenerateColumns = false;
             grillaMascCat64.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            grillaMascCat64.Columns.AddRange(new DataGridViewColumn[] { iDDataGridViewTextBoxColumn9, nombreDataGridViewTextBoxColumn11, pesoDataGridViewTextBoxColumn11, edadDataGridViewTextBoxColumn11, sexoDataGridViewTextBoxColumn12, profesorDataGridViewTextBoxColumn12, cantidadPeleasDataGridViewTextBoxColumn7, asignadoDataGridViewCheckBoxColumn8 });
+            grillaMascCat64.Columns.AddRange(new DataGridViewColumn[] { iDDataGridViewTextBoxColumn9, nombreDataGridViewTextBoxColumn11, sexoDataGridViewTextBoxColumn12, edadDataGridViewTextBoxColumn11, pesoDataGridViewTextBoxColumn11, cantidadPeleasDataGridViewTextBoxColumn7, profesorDataGridViewTextBoxColumn12, asignadoDataGridViewCheckBoxColumn8 });
             grillaMascCat64.ContextMenuStrip = contextArmarPelea;
             grillaMascCat64.DataSource = boxeadorBindingSource1;
             grillaMascCat64.Dock = DockStyle.Fill;
@@ -1275,12 +1277,12 @@
             nombreDataGridViewTextBoxColumn11.ReadOnly = true;
             nombreDataGridViewTextBoxColumn11.Width = 180;
             // 
-            // pesoDataGridViewTextBoxColumn11
+            // sexoDataGridViewTextBoxColumn12
             // 
-            pesoDataGridViewTextBoxColumn11.DataPropertyName = "Peso";
-            pesoDataGridViewTextBoxColumn11.HeaderText = "Peso";
-            pesoDataGridViewTextBoxColumn11.Name = "pesoDataGridViewTextBoxColumn11";
-            pesoDataGridViewTextBoxColumn11.ReadOnly = true;
+            sexoDataGridViewTextBoxColumn12.DataPropertyName = "Sexo";
+            sexoDataGridViewTextBoxColumn12.HeaderText = "Sexo";
+            sexoDataGridViewTextBoxColumn12.Name = "sexoDataGridViewTextBoxColumn12";
+            sexoDataGridViewTextBoxColumn12.ReadOnly = true;
             // 
             // edadDataGridViewTextBoxColumn11
             // 
@@ -1289,20 +1291,12 @@
             edadDataGridViewTextBoxColumn11.Name = "edadDataGridViewTextBoxColumn11";
             edadDataGridViewTextBoxColumn11.ReadOnly = true;
             // 
-            // sexoDataGridViewTextBoxColumn12
+            // pesoDataGridViewTextBoxColumn11
             // 
-            sexoDataGridViewTextBoxColumn12.DataPropertyName = "Sexo";
-            sexoDataGridViewTextBoxColumn12.HeaderText = "Sexo";
-            sexoDataGridViewTextBoxColumn12.Name = "sexoDataGridViewTextBoxColumn12";
-            sexoDataGridViewTextBoxColumn12.ReadOnly = true;
-            // 
-            // profesorDataGridViewTextBoxColumn12
-            // 
-            profesorDataGridViewTextBoxColumn12.DataPropertyName = "Profesor";
-            profesorDataGridViewTextBoxColumn12.HeaderText = "Profesor";
-            profesorDataGridViewTextBoxColumn12.Name = "profesorDataGridViewTextBoxColumn12";
-            profesorDataGridViewTextBoxColumn12.ReadOnly = true;
-            profesorDataGridViewTextBoxColumn12.Width = 180;
+            pesoDataGridViewTextBoxColumn11.DataPropertyName = "Peso";
+            pesoDataGridViewTextBoxColumn11.HeaderText = "Peso";
+            pesoDataGridViewTextBoxColumn11.Name = "pesoDataGridViewTextBoxColumn11";
+            pesoDataGridViewTextBoxColumn11.ReadOnly = true;
             // 
             // cantidadPeleasDataGridViewTextBoxColumn7
             // 
@@ -1310,6 +1304,14 @@
             cantidadPeleasDataGridViewTextBoxColumn7.HeaderText = "Cantidad Peleas";
             cantidadPeleasDataGridViewTextBoxColumn7.Name = "cantidadPeleasDataGridViewTextBoxColumn7";
             cantidadPeleasDataGridViewTextBoxColumn7.ReadOnly = true;
+            // 
+            // profesorDataGridViewTextBoxColumn12
+            // 
+            profesorDataGridViewTextBoxColumn12.DataPropertyName = "Profesor";
+            profesorDataGridViewTextBoxColumn12.HeaderText = "Profesor/Escuela";
+            profesorDataGridViewTextBoxColumn12.Name = "profesorDataGridViewTextBoxColumn12";
+            profesorDataGridViewTextBoxColumn12.ReadOnly = true;
+            profesorDataGridViewTextBoxColumn12.Width = 180;
             // 
             // asignadoDataGridViewCheckBoxColumn8
             // 
@@ -1325,7 +1327,7 @@
             grillaFemCat64.AllowUserToDeleteRows = false;
             grillaFemCat64.AutoGenerateColumns = false;
             grillaFemCat64.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            grillaFemCat64.Columns.AddRange(new DataGridViewColumn[] { iDDataGridViewTextBoxColumn10, nombreDataGridViewTextBoxColumn12, pesoDataGridViewTextBoxColumn12, edadDataGridViewTextBoxColumn12, sexoDataGridViewTextBoxColumn13, profesorDataGridViewTextBoxColumn13, cantidadPeleasDataGridViewTextBoxColumn8, asignadoDataGridViewCheckBoxColumn9 });
+            grillaFemCat64.Columns.AddRange(new DataGridViewColumn[] { iDDataGridViewTextBoxColumn10, nombreDataGridViewTextBoxColumn12, sexoDataGridViewTextBoxColumn13, edadDataGridViewTextBoxColumn12, pesoDataGridViewTextBoxColumn12, cantidadPeleasDataGridViewTextBoxColumn8, profesorDataGridViewTextBoxColumn13, asignadoDataGridViewCheckBoxColumn9 });
             grillaFemCat64.ContextMenuStrip = contextArmarPelea;
             grillaFemCat64.DataSource = boxeadorBindingSource1;
             grillaFemCat64.Dock = DockStyle.Fill;
@@ -1351,12 +1353,12 @@
             nombreDataGridViewTextBoxColumn12.ReadOnly = true;
             nombreDataGridViewTextBoxColumn12.Width = 180;
             // 
-            // pesoDataGridViewTextBoxColumn12
+            // sexoDataGridViewTextBoxColumn13
             // 
-            pesoDataGridViewTextBoxColumn12.DataPropertyName = "Peso";
-            pesoDataGridViewTextBoxColumn12.HeaderText = "Peso";
-            pesoDataGridViewTextBoxColumn12.Name = "pesoDataGridViewTextBoxColumn12";
-            pesoDataGridViewTextBoxColumn12.ReadOnly = true;
+            sexoDataGridViewTextBoxColumn13.DataPropertyName = "Sexo";
+            sexoDataGridViewTextBoxColumn13.HeaderText = "Sexo";
+            sexoDataGridViewTextBoxColumn13.Name = "sexoDataGridViewTextBoxColumn13";
+            sexoDataGridViewTextBoxColumn13.ReadOnly = true;
             // 
             // edadDataGridViewTextBoxColumn12
             // 
@@ -1365,20 +1367,12 @@
             edadDataGridViewTextBoxColumn12.Name = "edadDataGridViewTextBoxColumn12";
             edadDataGridViewTextBoxColumn12.ReadOnly = true;
             // 
-            // sexoDataGridViewTextBoxColumn13
+            // pesoDataGridViewTextBoxColumn12
             // 
-            sexoDataGridViewTextBoxColumn13.DataPropertyName = "Sexo";
-            sexoDataGridViewTextBoxColumn13.HeaderText = "Sexo";
-            sexoDataGridViewTextBoxColumn13.Name = "sexoDataGridViewTextBoxColumn13";
-            sexoDataGridViewTextBoxColumn13.ReadOnly = true;
-            // 
-            // profesorDataGridViewTextBoxColumn13
-            // 
-            profesorDataGridViewTextBoxColumn13.DataPropertyName = "Profesor";
-            profesorDataGridViewTextBoxColumn13.HeaderText = "Profesor";
-            profesorDataGridViewTextBoxColumn13.Name = "profesorDataGridViewTextBoxColumn13";
-            profesorDataGridViewTextBoxColumn13.ReadOnly = true;
-            profesorDataGridViewTextBoxColumn13.Width = 180;
+            pesoDataGridViewTextBoxColumn12.DataPropertyName = "Peso";
+            pesoDataGridViewTextBoxColumn12.HeaderText = "Peso";
+            pesoDataGridViewTextBoxColumn12.Name = "pesoDataGridViewTextBoxColumn12";
+            pesoDataGridViewTextBoxColumn12.ReadOnly = true;
             // 
             // cantidadPeleasDataGridViewTextBoxColumn8
             // 
@@ -1386,6 +1380,14 @@
             cantidadPeleasDataGridViewTextBoxColumn8.HeaderText = "Cantidad Peleas";
             cantidadPeleasDataGridViewTextBoxColumn8.Name = "cantidadPeleasDataGridViewTextBoxColumn8";
             cantidadPeleasDataGridViewTextBoxColumn8.ReadOnly = true;
+            // 
+            // profesorDataGridViewTextBoxColumn13
+            // 
+            profesorDataGridViewTextBoxColumn13.DataPropertyName = "Profesor";
+            profesorDataGridViewTextBoxColumn13.HeaderText = "Profesor/Escuela";
+            profesorDataGridViewTextBoxColumn13.Name = "profesorDataGridViewTextBoxColumn13";
+            profesorDataGridViewTextBoxColumn13.ReadOnly = true;
+            profesorDataGridViewTextBoxColumn13.Width = 180;
             // 
             // asignadoDataGridViewCheckBoxColumn9
             // 
@@ -1429,7 +1431,7 @@
             grillaMascCat69.AllowUserToDeleteRows = false;
             grillaMascCat69.AutoGenerateColumns = false;
             grillaMascCat69.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            grillaMascCat69.Columns.AddRange(new DataGridViewColumn[] { iDDataGridViewTextBoxColumn11, nombreDataGridViewTextBoxColumn13, pesoDataGridViewTextBoxColumn13, edadDataGridViewTextBoxColumn13, sexoDataGridViewTextBoxColumn14, profesorDataGridViewTextBoxColumn14, cantidadPeleasDataGridViewTextBoxColumn9, asignadoDataGridViewCheckBoxColumn10 });
+            grillaMascCat69.Columns.AddRange(new DataGridViewColumn[] { iDDataGridViewTextBoxColumn11, nombreDataGridViewTextBoxColumn13, sexoDataGridViewTextBoxColumn14, edadDataGridViewTextBoxColumn13, pesoDataGridViewTextBoxColumn13, cantidadPeleasDataGridViewTextBoxColumn9, profesorDataGridViewTextBoxColumn14, asignadoDataGridViewCheckBoxColumn10 });
             grillaMascCat69.ContextMenuStrip = contextArmarPelea;
             grillaMascCat69.DataSource = boxeadorBindingSource1;
             grillaMascCat69.Dock = DockStyle.Fill;
@@ -1455,12 +1457,12 @@
             nombreDataGridViewTextBoxColumn13.ReadOnly = true;
             nombreDataGridViewTextBoxColumn13.Width = 180;
             // 
-            // pesoDataGridViewTextBoxColumn13
+            // sexoDataGridViewTextBoxColumn14
             // 
-            pesoDataGridViewTextBoxColumn13.DataPropertyName = "Peso";
-            pesoDataGridViewTextBoxColumn13.HeaderText = "Peso";
-            pesoDataGridViewTextBoxColumn13.Name = "pesoDataGridViewTextBoxColumn13";
-            pesoDataGridViewTextBoxColumn13.ReadOnly = true;
+            sexoDataGridViewTextBoxColumn14.DataPropertyName = "Sexo";
+            sexoDataGridViewTextBoxColumn14.HeaderText = "Sexo";
+            sexoDataGridViewTextBoxColumn14.Name = "sexoDataGridViewTextBoxColumn14";
+            sexoDataGridViewTextBoxColumn14.ReadOnly = true;
             // 
             // edadDataGridViewTextBoxColumn13
             // 
@@ -1469,20 +1471,12 @@
             edadDataGridViewTextBoxColumn13.Name = "edadDataGridViewTextBoxColumn13";
             edadDataGridViewTextBoxColumn13.ReadOnly = true;
             // 
-            // sexoDataGridViewTextBoxColumn14
+            // pesoDataGridViewTextBoxColumn13
             // 
-            sexoDataGridViewTextBoxColumn14.DataPropertyName = "Sexo";
-            sexoDataGridViewTextBoxColumn14.HeaderText = "Sexo";
-            sexoDataGridViewTextBoxColumn14.Name = "sexoDataGridViewTextBoxColumn14";
-            sexoDataGridViewTextBoxColumn14.ReadOnly = true;
-            // 
-            // profesorDataGridViewTextBoxColumn14
-            // 
-            profesorDataGridViewTextBoxColumn14.DataPropertyName = "Profesor";
-            profesorDataGridViewTextBoxColumn14.HeaderText = "Profesor";
-            profesorDataGridViewTextBoxColumn14.Name = "profesorDataGridViewTextBoxColumn14";
-            profesorDataGridViewTextBoxColumn14.ReadOnly = true;
-            profesorDataGridViewTextBoxColumn14.Width = 180;
+            pesoDataGridViewTextBoxColumn13.DataPropertyName = "Peso";
+            pesoDataGridViewTextBoxColumn13.HeaderText = "Peso";
+            pesoDataGridViewTextBoxColumn13.Name = "pesoDataGridViewTextBoxColumn13";
+            pesoDataGridViewTextBoxColumn13.ReadOnly = true;
             // 
             // cantidadPeleasDataGridViewTextBoxColumn9
             // 
@@ -1490,6 +1484,14 @@
             cantidadPeleasDataGridViewTextBoxColumn9.HeaderText = "Cantidad Peleas";
             cantidadPeleasDataGridViewTextBoxColumn9.Name = "cantidadPeleasDataGridViewTextBoxColumn9";
             cantidadPeleasDataGridViewTextBoxColumn9.ReadOnly = true;
+            // 
+            // profesorDataGridViewTextBoxColumn14
+            // 
+            profesorDataGridViewTextBoxColumn14.DataPropertyName = "Profesor";
+            profesorDataGridViewTextBoxColumn14.HeaderText = "Profesor/Escuela";
+            profesorDataGridViewTextBoxColumn14.Name = "profesorDataGridViewTextBoxColumn14";
+            profesorDataGridViewTextBoxColumn14.ReadOnly = true;
+            profesorDataGridViewTextBoxColumn14.Width = 180;
             // 
             // asignadoDataGridViewCheckBoxColumn10
             // 
@@ -1505,7 +1507,7 @@
             grillaFemCat69.AllowUserToDeleteRows = false;
             grillaFemCat69.AutoGenerateColumns = false;
             grillaFemCat69.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            grillaFemCat69.Columns.AddRange(new DataGridViewColumn[] { iDDataGridViewTextBoxColumn12, nombreDataGridViewTextBoxColumn14, pesoDataGridViewTextBoxColumn14, edadDataGridViewTextBoxColumn14, sexoDataGridViewTextBoxColumn15, profesorDataGridViewTextBoxColumn15, cantidadPeleasDataGridViewTextBoxColumn10, asignadoDataGridViewCheckBoxColumn11 });
+            grillaFemCat69.Columns.AddRange(new DataGridViewColumn[] { iDDataGridViewTextBoxColumn12, nombreDataGridViewTextBoxColumn14, sexoDataGridViewTextBoxColumn15, edadDataGridViewTextBoxColumn14, pesoDataGridViewTextBoxColumn14, cantidadPeleasDataGridViewTextBoxColumn10, profesorDataGridViewTextBoxColumn15, asignadoDataGridViewCheckBoxColumn11 });
             grillaFemCat69.ContextMenuStrip = contextArmarPelea;
             grillaFemCat69.DataSource = boxeadorBindingSource1;
             grillaFemCat69.Dock = DockStyle.Fill;
@@ -1531,12 +1533,12 @@
             nombreDataGridViewTextBoxColumn14.ReadOnly = true;
             nombreDataGridViewTextBoxColumn14.Width = 180;
             // 
-            // pesoDataGridViewTextBoxColumn14
+            // sexoDataGridViewTextBoxColumn15
             // 
-            pesoDataGridViewTextBoxColumn14.DataPropertyName = "Peso";
-            pesoDataGridViewTextBoxColumn14.HeaderText = "Peso";
-            pesoDataGridViewTextBoxColumn14.Name = "pesoDataGridViewTextBoxColumn14";
-            pesoDataGridViewTextBoxColumn14.ReadOnly = true;
+            sexoDataGridViewTextBoxColumn15.DataPropertyName = "Sexo";
+            sexoDataGridViewTextBoxColumn15.HeaderText = "Sexo";
+            sexoDataGridViewTextBoxColumn15.Name = "sexoDataGridViewTextBoxColumn15";
+            sexoDataGridViewTextBoxColumn15.ReadOnly = true;
             // 
             // edadDataGridViewTextBoxColumn14
             // 
@@ -1545,20 +1547,12 @@
             edadDataGridViewTextBoxColumn14.Name = "edadDataGridViewTextBoxColumn14";
             edadDataGridViewTextBoxColumn14.ReadOnly = true;
             // 
-            // sexoDataGridViewTextBoxColumn15
+            // pesoDataGridViewTextBoxColumn14
             // 
-            sexoDataGridViewTextBoxColumn15.DataPropertyName = "Sexo";
-            sexoDataGridViewTextBoxColumn15.HeaderText = "Sexo";
-            sexoDataGridViewTextBoxColumn15.Name = "sexoDataGridViewTextBoxColumn15";
-            sexoDataGridViewTextBoxColumn15.ReadOnly = true;
-            // 
-            // profesorDataGridViewTextBoxColumn15
-            // 
-            profesorDataGridViewTextBoxColumn15.DataPropertyName = "Profesor";
-            profesorDataGridViewTextBoxColumn15.HeaderText = "Profesor";
-            profesorDataGridViewTextBoxColumn15.Name = "profesorDataGridViewTextBoxColumn15";
-            profesorDataGridViewTextBoxColumn15.ReadOnly = true;
-            profesorDataGridViewTextBoxColumn15.Width = 180;
+            pesoDataGridViewTextBoxColumn14.DataPropertyName = "Peso";
+            pesoDataGridViewTextBoxColumn14.HeaderText = "Peso";
+            pesoDataGridViewTextBoxColumn14.Name = "pesoDataGridViewTextBoxColumn14";
+            pesoDataGridViewTextBoxColumn14.ReadOnly = true;
             // 
             // cantidadPeleasDataGridViewTextBoxColumn10
             // 
@@ -1566,6 +1560,14 @@
             cantidadPeleasDataGridViewTextBoxColumn10.HeaderText = "Cantidad Peleas";
             cantidadPeleasDataGridViewTextBoxColumn10.Name = "cantidadPeleasDataGridViewTextBoxColumn10";
             cantidadPeleasDataGridViewTextBoxColumn10.ReadOnly = true;
+            // 
+            // profesorDataGridViewTextBoxColumn15
+            // 
+            profesorDataGridViewTextBoxColumn15.DataPropertyName = "Profesor";
+            profesorDataGridViewTextBoxColumn15.HeaderText = "Profesor/Escuela";
+            profesorDataGridViewTextBoxColumn15.Name = "profesorDataGridViewTextBoxColumn15";
+            profesorDataGridViewTextBoxColumn15.ReadOnly = true;
+            profesorDataGridViewTextBoxColumn15.Width = 180;
             // 
             // asignadoDataGridViewCheckBoxColumn11
             // 
@@ -1609,7 +1611,7 @@
             grillaMascCat75.AllowUserToDeleteRows = false;
             grillaMascCat75.AutoGenerateColumns = false;
             grillaMascCat75.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            grillaMascCat75.Columns.AddRange(new DataGridViewColumn[] { iDDataGridViewTextBoxColumn13, nombreDataGridViewTextBoxColumn15, pesoDataGridViewTextBoxColumn15, edadDataGridViewTextBoxColumn15, sexoDataGridViewTextBoxColumn16, profesorDataGridViewTextBoxColumn16, cantidadPeleasDataGridViewTextBoxColumn11, asignadoDataGridViewCheckBoxColumn12 });
+            grillaMascCat75.Columns.AddRange(new DataGridViewColumn[] { iDDataGridViewTextBoxColumn13, nombreDataGridViewTextBoxColumn15, sexoDataGridViewTextBoxColumn16, edadDataGridViewTextBoxColumn15, pesoDataGridViewTextBoxColumn15, cantidadPeleasDataGridViewTextBoxColumn11, profesorDataGridViewTextBoxColumn16, asignadoDataGridViewCheckBoxColumn12 });
             grillaMascCat75.ContextMenuStrip = contextArmarPelea;
             grillaMascCat75.DataSource = boxeadorBindingSource1;
             grillaMascCat75.Dock = DockStyle.Fill;
@@ -1635,12 +1637,12 @@
             nombreDataGridViewTextBoxColumn15.ReadOnly = true;
             nombreDataGridViewTextBoxColumn15.Width = 180;
             // 
-            // pesoDataGridViewTextBoxColumn15
+            // sexoDataGridViewTextBoxColumn16
             // 
-            pesoDataGridViewTextBoxColumn15.DataPropertyName = "Peso";
-            pesoDataGridViewTextBoxColumn15.HeaderText = "Peso";
-            pesoDataGridViewTextBoxColumn15.Name = "pesoDataGridViewTextBoxColumn15";
-            pesoDataGridViewTextBoxColumn15.ReadOnly = true;
+            sexoDataGridViewTextBoxColumn16.DataPropertyName = "Sexo";
+            sexoDataGridViewTextBoxColumn16.HeaderText = "Sexo";
+            sexoDataGridViewTextBoxColumn16.Name = "sexoDataGridViewTextBoxColumn16";
+            sexoDataGridViewTextBoxColumn16.ReadOnly = true;
             // 
             // edadDataGridViewTextBoxColumn15
             // 
@@ -1649,20 +1651,12 @@
             edadDataGridViewTextBoxColumn15.Name = "edadDataGridViewTextBoxColumn15";
             edadDataGridViewTextBoxColumn15.ReadOnly = true;
             // 
-            // sexoDataGridViewTextBoxColumn16
+            // pesoDataGridViewTextBoxColumn15
             // 
-            sexoDataGridViewTextBoxColumn16.DataPropertyName = "Sexo";
-            sexoDataGridViewTextBoxColumn16.HeaderText = "Sexo";
-            sexoDataGridViewTextBoxColumn16.Name = "sexoDataGridViewTextBoxColumn16";
-            sexoDataGridViewTextBoxColumn16.ReadOnly = true;
-            // 
-            // profesorDataGridViewTextBoxColumn16
-            // 
-            profesorDataGridViewTextBoxColumn16.DataPropertyName = "Profesor";
-            profesorDataGridViewTextBoxColumn16.HeaderText = "Profesor";
-            profesorDataGridViewTextBoxColumn16.Name = "profesorDataGridViewTextBoxColumn16";
-            profesorDataGridViewTextBoxColumn16.ReadOnly = true;
-            profesorDataGridViewTextBoxColumn16.Width = 180;
+            pesoDataGridViewTextBoxColumn15.DataPropertyName = "Peso";
+            pesoDataGridViewTextBoxColumn15.HeaderText = "Peso";
+            pesoDataGridViewTextBoxColumn15.Name = "pesoDataGridViewTextBoxColumn15";
+            pesoDataGridViewTextBoxColumn15.ReadOnly = true;
             // 
             // cantidadPeleasDataGridViewTextBoxColumn11
             // 
@@ -1670,6 +1664,14 @@
             cantidadPeleasDataGridViewTextBoxColumn11.HeaderText = "Cantidad Peleas";
             cantidadPeleasDataGridViewTextBoxColumn11.Name = "cantidadPeleasDataGridViewTextBoxColumn11";
             cantidadPeleasDataGridViewTextBoxColumn11.ReadOnly = true;
+            // 
+            // profesorDataGridViewTextBoxColumn16
+            // 
+            profesorDataGridViewTextBoxColumn16.DataPropertyName = "Profesor";
+            profesorDataGridViewTextBoxColumn16.HeaderText = "Profesor/Escuela";
+            profesorDataGridViewTextBoxColumn16.Name = "profesorDataGridViewTextBoxColumn16";
+            profesorDataGridViewTextBoxColumn16.ReadOnly = true;
+            profesorDataGridViewTextBoxColumn16.Width = 180;
             // 
             // asignadoDataGridViewCheckBoxColumn12
             // 
@@ -1685,7 +1687,7 @@
             grillaFemCat75.AllowUserToDeleteRows = false;
             grillaFemCat75.AutoGenerateColumns = false;
             grillaFemCat75.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            grillaFemCat75.Columns.AddRange(new DataGridViewColumn[] { iDDataGridViewTextBoxColumn14, nombreDataGridViewTextBoxColumn16, pesoDataGridViewTextBoxColumn16, edadDataGridViewTextBoxColumn16, sexoDataGridViewTextBoxColumn17, profesorDataGridViewTextBoxColumn17, cantidadPeleasDataGridViewTextBoxColumn12, asignadoDataGridViewCheckBoxColumn13 });
+            grillaFemCat75.Columns.AddRange(new DataGridViewColumn[] { iDDataGridViewTextBoxColumn14, nombreDataGridViewTextBoxColumn16, sexoDataGridViewTextBoxColumn17, edadDataGridViewTextBoxColumn16, pesoDataGridViewTextBoxColumn16, cantidadPeleasDataGridViewTextBoxColumn12, profesorDataGridViewTextBoxColumn17, asignadoDataGridViewCheckBoxColumn13 });
             grillaFemCat75.ContextMenuStrip = contextArmarPelea;
             grillaFemCat75.DataSource = boxeadorBindingSource1;
             grillaFemCat75.Dock = DockStyle.Fill;
@@ -1711,12 +1713,12 @@
             nombreDataGridViewTextBoxColumn16.ReadOnly = true;
             nombreDataGridViewTextBoxColumn16.Width = 180;
             // 
-            // pesoDataGridViewTextBoxColumn16
+            // sexoDataGridViewTextBoxColumn17
             // 
-            pesoDataGridViewTextBoxColumn16.DataPropertyName = "Peso";
-            pesoDataGridViewTextBoxColumn16.HeaderText = "Peso";
-            pesoDataGridViewTextBoxColumn16.Name = "pesoDataGridViewTextBoxColumn16";
-            pesoDataGridViewTextBoxColumn16.ReadOnly = true;
+            sexoDataGridViewTextBoxColumn17.DataPropertyName = "Sexo";
+            sexoDataGridViewTextBoxColumn17.HeaderText = "Sexo";
+            sexoDataGridViewTextBoxColumn17.Name = "sexoDataGridViewTextBoxColumn17";
+            sexoDataGridViewTextBoxColumn17.ReadOnly = true;
             // 
             // edadDataGridViewTextBoxColumn16
             // 
@@ -1725,20 +1727,12 @@
             edadDataGridViewTextBoxColumn16.Name = "edadDataGridViewTextBoxColumn16";
             edadDataGridViewTextBoxColumn16.ReadOnly = true;
             // 
-            // sexoDataGridViewTextBoxColumn17
+            // pesoDataGridViewTextBoxColumn16
             // 
-            sexoDataGridViewTextBoxColumn17.DataPropertyName = "Sexo";
-            sexoDataGridViewTextBoxColumn17.HeaderText = "Sexo";
-            sexoDataGridViewTextBoxColumn17.Name = "sexoDataGridViewTextBoxColumn17";
-            sexoDataGridViewTextBoxColumn17.ReadOnly = true;
-            // 
-            // profesorDataGridViewTextBoxColumn17
-            // 
-            profesorDataGridViewTextBoxColumn17.DataPropertyName = "Profesor";
-            profesorDataGridViewTextBoxColumn17.HeaderText = "Profesor";
-            profesorDataGridViewTextBoxColumn17.Name = "profesorDataGridViewTextBoxColumn17";
-            profesorDataGridViewTextBoxColumn17.ReadOnly = true;
-            profesorDataGridViewTextBoxColumn17.Width = 180;
+            pesoDataGridViewTextBoxColumn16.DataPropertyName = "Peso";
+            pesoDataGridViewTextBoxColumn16.HeaderText = "Peso";
+            pesoDataGridViewTextBoxColumn16.Name = "pesoDataGridViewTextBoxColumn16";
+            pesoDataGridViewTextBoxColumn16.ReadOnly = true;
             // 
             // cantidadPeleasDataGridViewTextBoxColumn12
             // 
@@ -1746,6 +1740,14 @@
             cantidadPeleasDataGridViewTextBoxColumn12.HeaderText = "Cantidad Peleas";
             cantidadPeleasDataGridViewTextBoxColumn12.Name = "cantidadPeleasDataGridViewTextBoxColumn12";
             cantidadPeleasDataGridViewTextBoxColumn12.ReadOnly = true;
+            // 
+            // profesorDataGridViewTextBoxColumn17
+            // 
+            profesorDataGridViewTextBoxColumn17.DataPropertyName = "Profesor";
+            profesorDataGridViewTextBoxColumn17.HeaderText = "Profesor/Escuela";
+            profesorDataGridViewTextBoxColumn17.Name = "profesorDataGridViewTextBoxColumn17";
+            profesorDataGridViewTextBoxColumn17.ReadOnly = true;
+            profesorDataGridViewTextBoxColumn17.Width = 180;
             // 
             // asignadoDataGridViewCheckBoxColumn13
             // 
@@ -1789,7 +1791,7 @@
             grillaMascCat81.AllowUserToDeleteRows = false;
             grillaMascCat81.AutoGenerateColumns = false;
             grillaMascCat81.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            grillaMascCat81.Columns.AddRange(new DataGridViewColumn[] { iDDataGridViewTextBoxColumn15, nombreDataGridViewTextBoxColumn17, pesoDataGridViewTextBoxColumn17, edadDataGridViewTextBoxColumn17, sexoDataGridViewTextBoxColumn18, profesorDataGridViewTextBoxColumn18, cantidadPeleasDataGridViewTextBoxColumn13, asignadoDataGridViewCheckBoxColumn14 });
+            grillaMascCat81.Columns.AddRange(new DataGridViewColumn[] { iDDataGridViewTextBoxColumn15, nombreDataGridViewTextBoxColumn17, sexoDataGridViewTextBoxColumn18, edadDataGridViewTextBoxColumn17, pesoDataGridViewTextBoxColumn17, cantidadPeleasDataGridViewTextBoxColumn13, profesorDataGridViewTextBoxColumn18, asignadoDataGridViewCheckBoxColumn14 });
             grillaMascCat81.ContextMenuStrip = contextArmarPelea;
             grillaMascCat81.DataSource = boxeadorBindingSource1;
             grillaMascCat81.Dock = DockStyle.Fill;
@@ -1815,12 +1817,12 @@
             nombreDataGridViewTextBoxColumn17.ReadOnly = true;
             nombreDataGridViewTextBoxColumn17.Width = 180;
             // 
-            // pesoDataGridViewTextBoxColumn17
+            // sexoDataGridViewTextBoxColumn18
             // 
-            pesoDataGridViewTextBoxColumn17.DataPropertyName = "Peso";
-            pesoDataGridViewTextBoxColumn17.HeaderText = "Peso";
-            pesoDataGridViewTextBoxColumn17.Name = "pesoDataGridViewTextBoxColumn17";
-            pesoDataGridViewTextBoxColumn17.ReadOnly = true;
+            sexoDataGridViewTextBoxColumn18.DataPropertyName = "Sexo";
+            sexoDataGridViewTextBoxColumn18.HeaderText = "Sexo";
+            sexoDataGridViewTextBoxColumn18.Name = "sexoDataGridViewTextBoxColumn18";
+            sexoDataGridViewTextBoxColumn18.ReadOnly = true;
             // 
             // edadDataGridViewTextBoxColumn17
             // 
@@ -1829,20 +1831,12 @@
             edadDataGridViewTextBoxColumn17.Name = "edadDataGridViewTextBoxColumn17";
             edadDataGridViewTextBoxColumn17.ReadOnly = true;
             // 
-            // sexoDataGridViewTextBoxColumn18
+            // pesoDataGridViewTextBoxColumn17
             // 
-            sexoDataGridViewTextBoxColumn18.DataPropertyName = "Sexo";
-            sexoDataGridViewTextBoxColumn18.HeaderText = "Sexo";
-            sexoDataGridViewTextBoxColumn18.Name = "sexoDataGridViewTextBoxColumn18";
-            sexoDataGridViewTextBoxColumn18.ReadOnly = true;
-            // 
-            // profesorDataGridViewTextBoxColumn18
-            // 
-            profesorDataGridViewTextBoxColumn18.DataPropertyName = "Profesor";
-            profesorDataGridViewTextBoxColumn18.HeaderText = "Profesor";
-            profesorDataGridViewTextBoxColumn18.Name = "profesorDataGridViewTextBoxColumn18";
-            profesorDataGridViewTextBoxColumn18.ReadOnly = true;
-            profesorDataGridViewTextBoxColumn18.Width = 180;
+            pesoDataGridViewTextBoxColumn17.DataPropertyName = "Peso";
+            pesoDataGridViewTextBoxColumn17.HeaderText = "Peso";
+            pesoDataGridViewTextBoxColumn17.Name = "pesoDataGridViewTextBoxColumn17";
+            pesoDataGridViewTextBoxColumn17.ReadOnly = true;
             // 
             // cantidadPeleasDataGridViewTextBoxColumn13
             // 
@@ -1850,6 +1844,14 @@
             cantidadPeleasDataGridViewTextBoxColumn13.HeaderText = "Cantidad Peleas";
             cantidadPeleasDataGridViewTextBoxColumn13.Name = "cantidadPeleasDataGridViewTextBoxColumn13";
             cantidadPeleasDataGridViewTextBoxColumn13.ReadOnly = true;
+            // 
+            // profesorDataGridViewTextBoxColumn18
+            // 
+            profesorDataGridViewTextBoxColumn18.DataPropertyName = "Profesor";
+            profesorDataGridViewTextBoxColumn18.HeaderText = "Profesor/Escuela";
+            profesorDataGridViewTextBoxColumn18.Name = "profesorDataGridViewTextBoxColumn18";
+            profesorDataGridViewTextBoxColumn18.ReadOnly = true;
+            profesorDataGridViewTextBoxColumn18.Width = 180;
             // 
             // asignadoDataGridViewCheckBoxColumn14
             // 
@@ -1865,7 +1867,7 @@
             grillaFemCat81.AllowUserToDeleteRows = false;
             grillaFemCat81.AutoGenerateColumns = false;
             grillaFemCat81.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            grillaFemCat81.Columns.AddRange(new DataGridViewColumn[] { iDDataGridViewTextBoxColumn16, nombreDataGridViewTextBoxColumn18, pesoDataGridViewTextBoxColumn18, edadDataGridViewTextBoxColumn18, sexoDataGridViewTextBoxColumn19, profesorDataGridViewTextBoxColumn19, cantidadPeleasDataGridViewTextBoxColumn14, asignadoDataGridViewCheckBoxColumn15 });
+            grillaFemCat81.Columns.AddRange(new DataGridViewColumn[] { iDDataGridViewTextBoxColumn16, nombreDataGridViewTextBoxColumn18, sexoDataGridViewTextBoxColumn19, edadDataGridViewTextBoxColumn18, pesoDataGridViewTextBoxColumn18, cantidadPeleasDataGridViewTextBoxColumn14, profesorDataGridViewTextBoxColumn19, asignadoDataGridViewCheckBoxColumn15 });
             grillaFemCat81.ContextMenuStrip = contextArmarPelea;
             grillaFemCat81.DataSource = boxeadorBindingSource1;
             grillaFemCat81.Dock = DockStyle.Fill;
@@ -1891,12 +1893,12 @@
             nombreDataGridViewTextBoxColumn18.ReadOnly = true;
             nombreDataGridViewTextBoxColumn18.Width = 180;
             // 
-            // pesoDataGridViewTextBoxColumn18
+            // sexoDataGridViewTextBoxColumn19
             // 
-            pesoDataGridViewTextBoxColumn18.DataPropertyName = "Peso";
-            pesoDataGridViewTextBoxColumn18.HeaderText = "Peso";
-            pesoDataGridViewTextBoxColumn18.Name = "pesoDataGridViewTextBoxColumn18";
-            pesoDataGridViewTextBoxColumn18.ReadOnly = true;
+            sexoDataGridViewTextBoxColumn19.DataPropertyName = "Sexo";
+            sexoDataGridViewTextBoxColumn19.HeaderText = "Sexo";
+            sexoDataGridViewTextBoxColumn19.Name = "sexoDataGridViewTextBoxColumn19";
+            sexoDataGridViewTextBoxColumn19.ReadOnly = true;
             // 
             // edadDataGridViewTextBoxColumn18
             // 
@@ -1905,20 +1907,12 @@
             edadDataGridViewTextBoxColumn18.Name = "edadDataGridViewTextBoxColumn18";
             edadDataGridViewTextBoxColumn18.ReadOnly = true;
             // 
-            // sexoDataGridViewTextBoxColumn19
+            // pesoDataGridViewTextBoxColumn18
             // 
-            sexoDataGridViewTextBoxColumn19.DataPropertyName = "Sexo";
-            sexoDataGridViewTextBoxColumn19.HeaderText = "Sexo";
-            sexoDataGridViewTextBoxColumn19.Name = "sexoDataGridViewTextBoxColumn19";
-            sexoDataGridViewTextBoxColumn19.ReadOnly = true;
-            // 
-            // profesorDataGridViewTextBoxColumn19
-            // 
-            profesorDataGridViewTextBoxColumn19.DataPropertyName = "Profesor";
-            profesorDataGridViewTextBoxColumn19.HeaderText = "Profesor";
-            profesorDataGridViewTextBoxColumn19.Name = "profesorDataGridViewTextBoxColumn19";
-            profesorDataGridViewTextBoxColumn19.ReadOnly = true;
-            profesorDataGridViewTextBoxColumn19.Width = 180;
+            pesoDataGridViewTextBoxColumn18.DataPropertyName = "Peso";
+            pesoDataGridViewTextBoxColumn18.HeaderText = "Peso";
+            pesoDataGridViewTextBoxColumn18.Name = "pesoDataGridViewTextBoxColumn18";
+            pesoDataGridViewTextBoxColumn18.ReadOnly = true;
             // 
             // cantidadPeleasDataGridViewTextBoxColumn14
             // 
@@ -1926,6 +1920,14 @@
             cantidadPeleasDataGridViewTextBoxColumn14.HeaderText = "Cantidad Peleas";
             cantidadPeleasDataGridViewTextBoxColumn14.Name = "cantidadPeleasDataGridViewTextBoxColumn14";
             cantidadPeleasDataGridViewTextBoxColumn14.ReadOnly = true;
+            // 
+            // profesorDataGridViewTextBoxColumn19
+            // 
+            profesorDataGridViewTextBoxColumn19.DataPropertyName = "Profesor";
+            profesorDataGridViewTextBoxColumn19.HeaderText = "Profesor/Escuela";
+            profesorDataGridViewTextBoxColumn19.Name = "profesorDataGridViewTextBoxColumn19";
+            profesorDataGridViewTextBoxColumn19.ReadOnly = true;
+            profesorDataGridViewTextBoxColumn19.Width = 180;
             // 
             // asignadoDataGridViewCheckBoxColumn15
             // 
@@ -1969,7 +1971,7 @@
             grillaMascCat91.AllowUserToDeleteRows = false;
             grillaMascCat91.AutoGenerateColumns = false;
             grillaMascCat91.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            grillaMascCat91.Columns.AddRange(new DataGridViewColumn[] { iDDataGridViewTextBoxColumn17, nombreDataGridViewTextBoxColumn19, pesoDataGridViewTextBoxColumn19, edadDataGridViewTextBoxColumn19, sexoDataGridViewTextBoxColumn20, profesorDataGridViewTextBoxColumn20, cantidadPeleasDataGridViewTextBoxColumn15, asignadoDataGridViewCheckBoxColumn16 });
+            grillaMascCat91.Columns.AddRange(new DataGridViewColumn[] { iDDataGridViewTextBoxColumn17, nombreDataGridViewTextBoxColumn19, sexoDataGridViewTextBoxColumn20, edadDataGridViewTextBoxColumn19, pesoDataGridViewTextBoxColumn19, cantidadPeleasDataGridViewTextBoxColumn15, profesorDataGridViewTextBoxColumn20, asignadoDataGridViewCheckBoxColumn16 });
             grillaMascCat91.ContextMenuStrip = contextArmarPelea;
             grillaMascCat91.DataSource = boxeadorBindingSource1;
             grillaMascCat91.Dock = DockStyle.Fill;
@@ -1995,12 +1997,12 @@
             nombreDataGridViewTextBoxColumn19.ReadOnly = true;
             nombreDataGridViewTextBoxColumn19.Width = 180;
             // 
-            // pesoDataGridViewTextBoxColumn19
+            // sexoDataGridViewTextBoxColumn20
             // 
-            pesoDataGridViewTextBoxColumn19.DataPropertyName = "Peso";
-            pesoDataGridViewTextBoxColumn19.HeaderText = "Peso";
-            pesoDataGridViewTextBoxColumn19.Name = "pesoDataGridViewTextBoxColumn19";
-            pesoDataGridViewTextBoxColumn19.ReadOnly = true;
+            sexoDataGridViewTextBoxColumn20.DataPropertyName = "Sexo";
+            sexoDataGridViewTextBoxColumn20.HeaderText = "Sexo";
+            sexoDataGridViewTextBoxColumn20.Name = "sexoDataGridViewTextBoxColumn20";
+            sexoDataGridViewTextBoxColumn20.ReadOnly = true;
             // 
             // edadDataGridViewTextBoxColumn19
             // 
@@ -2009,20 +2011,12 @@
             edadDataGridViewTextBoxColumn19.Name = "edadDataGridViewTextBoxColumn19";
             edadDataGridViewTextBoxColumn19.ReadOnly = true;
             // 
-            // sexoDataGridViewTextBoxColumn20
+            // pesoDataGridViewTextBoxColumn19
             // 
-            sexoDataGridViewTextBoxColumn20.DataPropertyName = "Sexo";
-            sexoDataGridViewTextBoxColumn20.HeaderText = "Sexo";
-            sexoDataGridViewTextBoxColumn20.Name = "sexoDataGridViewTextBoxColumn20";
-            sexoDataGridViewTextBoxColumn20.ReadOnly = true;
-            // 
-            // profesorDataGridViewTextBoxColumn20
-            // 
-            profesorDataGridViewTextBoxColumn20.DataPropertyName = "Profesor";
-            profesorDataGridViewTextBoxColumn20.HeaderText = "Profesor";
-            profesorDataGridViewTextBoxColumn20.Name = "profesorDataGridViewTextBoxColumn20";
-            profesorDataGridViewTextBoxColumn20.ReadOnly = true;
-            profesorDataGridViewTextBoxColumn20.Width = 180;
+            pesoDataGridViewTextBoxColumn19.DataPropertyName = "Peso";
+            pesoDataGridViewTextBoxColumn19.HeaderText = "Peso";
+            pesoDataGridViewTextBoxColumn19.Name = "pesoDataGridViewTextBoxColumn19";
+            pesoDataGridViewTextBoxColumn19.ReadOnly = true;
             // 
             // cantidadPeleasDataGridViewTextBoxColumn15
             // 
@@ -2030,6 +2024,14 @@
             cantidadPeleasDataGridViewTextBoxColumn15.HeaderText = "Cantidad Peleas";
             cantidadPeleasDataGridViewTextBoxColumn15.Name = "cantidadPeleasDataGridViewTextBoxColumn15";
             cantidadPeleasDataGridViewTextBoxColumn15.ReadOnly = true;
+            // 
+            // profesorDataGridViewTextBoxColumn20
+            // 
+            profesorDataGridViewTextBoxColumn20.DataPropertyName = "Profesor";
+            profesorDataGridViewTextBoxColumn20.HeaderText = "Profesor/Escuela";
+            profesorDataGridViewTextBoxColumn20.Name = "profesorDataGridViewTextBoxColumn20";
+            profesorDataGridViewTextBoxColumn20.ReadOnly = true;
+            profesorDataGridViewTextBoxColumn20.Width = 180;
             // 
             // asignadoDataGridViewCheckBoxColumn16
             // 
@@ -2045,7 +2047,7 @@
             grillaFemCat91.AllowUserToDeleteRows = false;
             grillaFemCat91.AutoGenerateColumns = false;
             grillaFemCat91.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            grillaFemCat91.Columns.AddRange(new DataGridViewColumn[] { iDDataGridViewTextBoxColumn18, nombreDataGridViewTextBoxColumn20, pesoDataGridViewTextBoxColumn20, edadDataGridViewTextBoxColumn20, sexoDataGridViewTextBoxColumn21, profesorDataGridViewTextBoxColumn21, cantidadPeleasDataGridViewTextBoxColumn16, asignadoDataGridViewCheckBoxColumn17 });
+            grillaFemCat91.Columns.AddRange(new DataGridViewColumn[] { iDDataGridViewTextBoxColumn18, nombreDataGridViewTextBoxColumn20, sexoDataGridViewTextBoxColumn21, edadDataGridViewTextBoxColumn20, pesoDataGridViewTextBoxColumn20, cantidadPeleasDataGridViewTextBoxColumn16, profesorDataGridViewTextBoxColumn21, asignadoDataGridViewCheckBoxColumn17 });
             grillaFemCat91.ContextMenuStrip = contextArmarPelea;
             grillaFemCat91.DataSource = boxeadorBindingSource1;
             grillaFemCat91.Dock = DockStyle.Fill;
@@ -2071,12 +2073,12 @@
             nombreDataGridViewTextBoxColumn20.ReadOnly = true;
             nombreDataGridViewTextBoxColumn20.Width = 180;
             // 
-            // pesoDataGridViewTextBoxColumn20
+            // sexoDataGridViewTextBoxColumn21
             // 
-            pesoDataGridViewTextBoxColumn20.DataPropertyName = "Peso";
-            pesoDataGridViewTextBoxColumn20.HeaderText = "Peso";
-            pesoDataGridViewTextBoxColumn20.Name = "pesoDataGridViewTextBoxColumn20";
-            pesoDataGridViewTextBoxColumn20.ReadOnly = true;
+            sexoDataGridViewTextBoxColumn21.DataPropertyName = "Sexo";
+            sexoDataGridViewTextBoxColumn21.HeaderText = "Sexo";
+            sexoDataGridViewTextBoxColumn21.Name = "sexoDataGridViewTextBoxColumn21";
+            sexoDataGridViewTextBoxColumn21.ReadOnly = true;
             // 
             // edadDataGridViewTextBoxColumn20
             // 
@@ -2085,20 +2087,12 @@
             edadDataGridViewTextBoxColumn20.Name = "edadDataGridViewTextBoxColumn20";
             edadDataGridViewTextBoxColumn20.ReadOnly = true;
             // 
-            // sexoDataGridViewTextBoxColumn21
+            // pesoDataGridViewTextBoxColumn20
             // 
-            sexoDataGridViewTextBoxColumn21.DataPropertyName = "Sexo";
-            sexoDataGridViewTextBoxColumn21.HeaderText = "Sexo";
-            sexoDataGridViewTextBoxColumn21.Name = "sexoDataGridViewTextBoxColumn21";
-            sexoDataGridViewTextBoxColumn21.ReadOnly = true;
-            // 
-            // profesorDataGridViewTextBoxColumn21
-            // 
-            profesorDataGridViewTextBoxColumn21.DataPropertyName = "Profesor";
-            profesorDataGridViewTextBoxColumn21.HeaderText = "Profesor";
-            profesorDataGridViewTextBoxColumn21.Name = "profesorDataGridViewTextBoxColumn21";
-            profesorDataGridViewTextBoxColumn21.ReadOnly = true;
-            profesorDataGridViewTextBoxColumn21.Width = 180;
+            pesoDataGridViewTextBoxColumn20.DataPropertyName = "Peso";
+            pesoDataGridViewTextBoxColumn20.HeaderText = "Peso";
+            pesoDataGridViewTextBoxColumn20.Name = "pesoDataGridViewTextBoxColumn20";
+            pesoDataGridViewTextBoxColumn20.ReadOnly = true;
             // 
             // cantidadPeleasDataGridViewTextBoxColumn16
             // 
@@ -2106,6 +2100,14 @@
             cantidadPeleasDataGridViewTextBoxColumn16.HeaderText = "Cantidad Peleas";
             cantidadPeleasDataGridViewTextBoxColumn16.Name = "cantidadPeleasDataGridViewTextBoxColumn16";
             cantidadPeleasDataGridViewTextBoxColumn16.ReadOnly = true;
+            // 
+            // profesorDataGridViewTextBoxColumn21
+            // 
+            profesorDataGridViewTextBoxColumn21.DataPropertyName = "Profesor";
+            profesorDataGridViewTextBoxColumn21.HeaderText = "Profesor/Escuela";
+            profesorDataGridViewTextBoxColumn21.Name = "profesorDataGridViewTextBoxColumn21";
+            profesorDataGridViewTextBoxColumn21.ReadOnly = true;
+            profesorDataGridViewTextBoxColumn21.Width = 180;
             // 
             // asignadoDataGridViewCheckBoxColumn17
             // 
@@ -2150,7 +2152,7 @@
             grillaMascCatMas91.AllowUserToDeleteRows = false;
             grillaMascCatMas91.AutoGenerateColumns = false;
             grillaMascCatMas91.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            grillaMascCatMas91.Columns.AddRange(new DataGridViewColumn[] { dataGridViewTextBoxColumn3, dataGridViewTextBoxColumn4, dataGridViewTextBoxColumn5, dataGridViewTextBoxColumn6, dataGridViewTextBoxColumn7, dataGridViewTextBoxColumn8, dataGridViewTextBoxColumn9, dataGridViewCheckBoxColumn1 });
+            grillaMascCatMas91.Columns.AddRange(new DataGridViewColumn[] { dataGridViewTextBoxColumn3, dataGridViewTextBoxColumn4, dataGridViewTextBoxColumn7, dataGridViewTextBoxColumn6, dataGridViewTextBoxColumn5, dataGridViewTextBoxColumn9, dataGridViewTextBoxColumn8, dataGridViewCheckBoxColumn1 });
             grillaMascCatMas91.ContextMenuStrip = contextArmarPelea;
             grillaMascCatMas91.DataSource = boxeadorBindingSource1;
             grillaMascCatMas91.Dock = DockStyle.Fill;
@@ -2176,12 +2178,12 @@
             dataGridViewTextBoxColumn4.ReadOnly = true;
             dataGridViewTextBoxColumn4.Width = 180;
             // 
-            // dataGridViewTextBoxColumn5
+            // dataGridViewTextBoxColumn7
             // 
-            dataGridViewTextBoxColumn5.DataPropertyName = "Peso";
-            dataGridViewTextBoxColumn5.HeaderText = "Peso";
-            dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            dataGridViewTextBoxColumn5.ReadOnly = true;
+            dataGridViewTextBoxColumn7.DataPropertyName = "Sexo";
+            dataGridViewTextBoxColumn7.HeaderText = "Sexo";
+            dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            dataGridViewTextBoxColumn7.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn6
             // 
@@ -2190,20 +2192,12 @@
             dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
             dataGridViewTextBoxColumn6.ReadOnly = true;
             // 
-            // dataGridViewTextBoxColumn7
+            // dataGridViewTextBoxColumn5
             // 
-            dataGridViewTextBoxColumn7.DataPropertyName = "Sexo";
-            dataGridViewTextBoxColumn7.HeaderText = "Sexo";
-            dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            dataGridViewTextBoxColumn7.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn8
-            // 
-            dataGridViewTextBoxColumn8.DataPropertyName = "Profesor";
-            dataGridViewTextBoxColumn8.HeaderText = "Profesor";
-            dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
-            dataGridViewTextBoxColumn8.ReadOnly = true;
-            dataGridViewTextBoxColumn8.Width = 180;
+            dataGridViewTextBoxColumn5.DataPropertyName = "Peso";
+            dataGridViewTextBoxColumn5.HeaderText = "Peso";
+            dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            dataGridViewTextBoxColumn5.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn9
             // 
@@ -2211,6 +2205,14 @@
             dataGridViewTextBoxColumn9.HeaderText = "Cantidad Peleas";
             dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
             dataGridViewTextBoxColumn9.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn8
+            // 
+            dataGridViewTextBoxColumn8.DataPropertyName = "Profesor";
+            dataGridViewTextBoxColumn8.HeaderText = "Profesor/Escuela";
+            dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            dataGridViewTextBoxColumn8.ReadOnly = true;
+            dataGridViewTextBoxColumn8.Width = 180;
             // 
             // dataGridViewCheckBoxColumn1
             // 
@@ -2226,7 +2228,7 @@
             grillaFemCatMas91.AllowUserToDeleteRows = false;
             grillaFemCatMas91.AutoGenerateColumns = false;
             grillaFemCatMas91.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            grillaFemCatMas91.Columns.AddRange(new DataGridViewColumn[] { dataGridViewTextBoxColumn10, dataGridViewTextBoxColumn11, dataGridViewTextBoxColumn12, dataGridViewTextBoxColumn13, dataGridViewTextBoxColumn14, dataGridViewTextBoxColumn15, dataGridViewTextBoxColumn16, dataGridViewCheckBoxColumn2 });
+            grillaFemCatMas91.Columns.AddRange(new DataGridViewColumn[] { dataGridViewTextBoxColumn10, dataGridViewTextBoxColumn11, dataGridViewTextBoxColumn14, dataGridViewTextBoxColumn13, dataGridViewTextBoxColumn12, dataGridViewTextBoxColumn16, dataGridViewTextBoxColumn15, dataGridViewCheckBoxColumn2 });
             grillaFemCatMas91.ContextMenuStrip = contextArmarPelea;
             grillaFemCatMas91.DataSource = boxeadorBindingSource1;
             grillaFemCatMas91.Dock = DockStyle.Fill;
@@ -2252,12 +2254,12 @@
             dataGridViewTextBoxColumn11.ReadOnly = true;
             dataGridViewTextBoxColumn11.Width = 180;
             // 
-            // dataGridViewTextBoxColumn12
+            // dataGridViewTextBoxColumn14
             // 
-            dataGridViewTextBoxColumn12.DataPropertyName = "Peso";
-            dataGridViewTextBoxColumn12.HeaderText = "Peso";
-            dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
-            dataGridViewTextBoxColumn12.ReadOnly = true;
+            dataGridViewTextBoxColumn14.DataPropertyName = "Sexo";
+            dataGridViewTextBoxColumn14.HeaderText = "Sexo";
+            dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
+            dataGridViewTextBoxColumn14.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn13
             // 
@@ -2266,20 +2268,12 @@
             dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
             dataGridViewTextBoxColumn13.ReadOnly = true;
             // 
-            // dataGridViewTextBoxColumn14
+            // dataGridViewTextBoxColumn12
             // 
-            dataGridViewTextBoxColumn14.DataPropertyName = "Sexo";
-            dataGridViewTextBoxColumn14.HeaderText = "Sexo";
-            dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
-            dataGridViewTextBoxColumn14.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn15
-            // 
-            dataGridViewTextBoxColumn15.DataPropertyName = "Profesor";
-            dataGridViewTextBoxColumn15.HeaderText = "Profesor";
-            dataGridViewTextBoxColumn15.Name = "dataGridViewTextBoxColumn15";
-            dataGridViewTextBoxColumn15.ReadOnly = true;
-            dataGridViewTextBoxColumn15.Width = 180;
+            dataGridViewTextBoxColumn12.DataPropertyName = "Peso";
+            dataGridViewTextBoxColumn12.HeaderText = "Peso";
+            dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
+            dataGridViewTextBoxColumn12.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn16
             // 
@@ -2287,6 +2281,14 @@
             dataGridViewTextBoxColumn16.HeaderText = "Cantidad Peleas";
             dataGridViewTextBoxColumn16.Name = "dataGridViewTextBoxColumn16";
             dataGridViewTextBoxColumn16.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn15
+            // 
+            dataGridViewTextBoxColumn15.DataPropertyName = "Profesor";
+            dataGridViewTextBoxColumn15.HeaderText = "Profesor/Escuela";
+            dataGridViewTextBoxColumn15.Name = "dataGridViewTextBoxColumn15";
+            dataGridViewTextBoxColumn15.ReadOnly = true;
+            dataGridViewTextBoxColumn15.Width = 180;
             // 
             // dataGridViewCheckBoxColumn2
             // 
@@ -2313,7 +2315,7 @@
             grillaPeleas.AllowUserToOrderColumns = true;
             grillaPeleas.AutoGenerateColumns = false;
             grillaPeleas.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            grillaPeleas.Columns.AddRange(new DataGridViewColumn[] { iDDataGridViewTextBoxColumn19, ordenDataGridViewTextBoxColumn, sexoDataGridViewTextBoxColumn22, categoriaDataGridViewTextBoxColumn, boxeador1IDDataGridViewTextBoxColumn, boxeador1DataGridViewTextBoxColumn, boxeador2IDDataGridViewTextBoxColumn, boxeador2DataGridViewTextBoxColumn });
+            grillaPeleas.Columns.AddRange(new DataGridViewColumn[] { ordenDataGridViewTextBoxColumn, sexoDataGridViewTextBoxColumn22, categoriaDataGridViewTextBoxColumn, boxeador1DataGridViewTextBoxColumn, profesorBoxeador1DataGridViewTextBoxColumn, boxeador2DataGridViewTextBoxColumn, profesorBoxeador2DataGridViewTextBoxColumn, iDDataGridViewTextBoxColumn19, boxeador1IDDataGridViewTextBoxColumn, boxeador2IDDataGridViewTextBoxColumn });
             grillaPeleas.ContextMenuStrip = contextDesarmarPelea;
             grillaPeleas.DataSource = peleaBindingSource;
             grillaPeleas.Dock = DockStyle.Fill;
@@ -2324,67 +2326,6 @@
             grillaPeleas.TabIndex = 1;
             grillaPeleas.ColumnHeaderMouseClick += grillaPeleas_ColumnHeaderMouseClick;
             grillaPeleas.UserDeletingRow += grillaPeleas_UserDeletingRow;
-            // 
-            // iDDataGridViewTextBoxColumn19
-            // 
-            iDDataGridViewTextBoxColumn19.DataPropertyName = "ID";
-            iDDataGridViewTextBoxColumn19.HeaderText = "ID";
-            iDDataGridViewTextBoxColumn19.Name = "iDDataGridViewTextBoxColumn19";
-            iDDataGridViewTextBoxColumn19.ReadOnly = true;
-            iDDataGridViewTextBoxColumn19.Visible = false;
-            // 
-            // ordenDataGridViewTextBoxColumn
-            // 
-            ordenDataGridViewTextBoxColumn.DataPropertyName = "Orden";
-            ordenDataGridViewTextBoxColumn.HeaderText = "Orden";
-            ordenDataGridViewTextBoxColumn.Name = "ordenDataGridViewTextBoxColumn";
-            ordenDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // sexoDataGridViewTextBoxColumn22
-            // 
-            sexoDataGridViewTextBoxColumn22.DataPropertyName = "Sexo";
-            sexoDataGridViewTextBoxColumn22.HeaderText = "Sexo";
-            sexoDataGridViewTextBoxColumn22.Name = "sexoDataGridViewTextBoxColumn22";
-            sexoDataGridViewTextBoxColumn22.ReadOnly = true;
-            // 
-            // categoriaDataGridViewTextBoxColumn
-            // 
-            categoriaDataGridViewTextBoxColumn.DataPropertyName = "Categoria";
-            categoriaDataGridViewTextBoxColumn.HeaderText = "Categoria";
-            categoriaDataGridViewTextBoxColumn.Name = "categoriaDataGridViewTextBoxColumn";
-            categoriaDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // boxeador1IDDataGridViewTextBoxColumn
-            // 
-            boxeador1IDDataGridViewTextBoxColumn.DataPropertyName = "Boxeador1ID";
-            boxeador1IDDataGridViewTextBoxColumn.HeaderText = "Boxeador1ID";
-            boxeador1IDDataGridViewTextBoxColumn.Name = "boxeador1IDDataGridViewTextBoxColumn";
-            boxeador1IDDataGridViewTextBoxColumn.ReadOnly = true;
-            boxeador1IDDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // boxeador1DataGridViewTextBoxColumn
-            // 
-            boxeador1DataGridViewTextBoxColumn.DataPropertyName = "Boxeador1";
-            boxeador1DataGridViewTextBoxColumn.HeaderText = "Rincon Rojo";
-            boxeador1DataGridViewTextBoxColumn.Name = "boxeador1DataGridViewTextBoxColumn";
-            boxeador1DataGridViewTextBoxColumn.ReadOnly = true;
-            boxeador1DataGridViewTextBoxColumn.Width = 180;
-            // 
-            // boxeador2IDDataGridViewTextBoxColumn
-            // 
-            boxeador2IDDataGridViewTextBoxColumn.DataPropertyName = "Boxeador2ID";
-            boxeador2IDDataGridViewTextBoxColumn.HeaderText = "Boxeador2ID";
-            boxeador2IDDataGridViewTextBoxColumn.Name = "boxeador2IDDataGridViewTextBoxColumn";
-            boxeador2IDDataGridViewTextBoxColumn.ReadOnly = true;
-            boxeador2IDDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // boxeador2DataGridViewTextBoxColumn
-            // 
-            boxeador2DataGridViewTextBoxColumn.DataPropertyName = "Boxeador2";
-            boxeador2DataGridViewTextBoxColumn.HeaderText = "Rincon Azul";
-            boxeador2DataGridViewTextBoxColumn.Name = "boxeador2DataGridViewTextBoxColumn";
-            boxeador2DataGridViewTextBoxColumn.ReadOnly = true;
-            boxeador2DataGridViewTextBoxColumn.Width = 180;
             // 
             // contextDesarmarPelea
             // 
@@ -2485,6 +2426,20 @@
             exportarPeleasAExcelToolStripMenuItem.Size = new Size(202, 22);
             exportarPeleasAExcelToolStripMenuItem.Text = "Exportar peleas a Excel...";
             exportarPeleasAExcelToolStripMenuItem.Click += exportarPeleasAExcelToolStripMenuItem_Click;
+            // 
+            // ayudaToolStripMenuItem
+            // 
+            ayudaToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { guiaDeUsoToolStripMenuItem });
+            ayudaToolStripMenuItem.Name = "ayudaToolStripMenuItem";
+            ayudaToolStripMenuItem.Size = new Size(53, 20);
+            ayudaToolStripMenuItem.Text = "Ayuda";
+            // 
+            // guiaDeUsoToolStripMenuItem
+            // 
+            guiaDeUsoToolStripMenuItem.Name = "guiaDeUsoToolStripMenuItem";
+            guiaDeUsoToolStripMenuItem.Size = new Size(145, 22);
+            guiaDeUsoToolStripMenuItem.Text = "Guia de uso...";
+            guiaDeUsoToolStripMenuItem.Click += guiaDeUsoToolStripMenuItem_Click;
             // 
             // nombre
             // 
@@ -2624,19 +2579,85 @@
             profesorDataGridViewTextBoxColumn2.HeaderText = "Profesor";
             profesorDataGridViewTextBoxColumn2.Name = "profesorDataGridViewTextBoxColumn2";
             // 
-            // ayudaToolStripMenuItem
+            // ordenDataGridViewTextBoxColumn
             // 
-            ayudaToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { guiaDeUsoToolStripMenuItem });
-            ayudaToolStripMenuItem.Name = "ayudaToolStripMenuItem";
-            ayudaToolStripMenuItem.Size = new Size(53, 20);
-            ayudaToolStripMenuItem.Text = "Ayuda";
+            ordenDataGridViewTextBoxColumn.DataPropertyName = "Orden";
+            ordenDataGridViewTextBoxColumn.HeaderText = "Orden";
+            ordenDataGridViewTextBoxColumn.Name = "ordenDataGridViewTextBoxColumn";
+            ordenDataGridViewTextBoxColumn.ReadOnly = true;
+            ordenDataGridViewTextBoxColumn.Width = 80;
             // 
-            // guiaDeUsoToolStripMenuItem
+            // sexoDataGridViewTextBoxColumn22
             // 
-            guiaDeUsoToolStripMenuItem.Name = "guiaDeUsoToolStripMenuItem";
-            guiaDeUsoToolStripMenuItem.Size = new Size(180, 22);
-            guiaDeUsoToolStripMenuItem.Text = "Guia de uso...";
-            guiaDeUsoToolStripMenuItem.Click += guiaDeUsoToolStripMenuItem_Click;
+            sexoDataGridViewTextBoxColumn22.DataPropertyName = "Sexo";
+            sexoDataGridViewTextBoxColumn22.HeaderText = "Sexo";
+            sexoDataGridViewTextBoxColumn22.Name = "sexoDataGridViewTextBoxColumn22";
+            sexoDataGridViewTextBoxColumn22.ReadOnly = true;
+            sexoDataGridViewTextBoxColumn22.Width = 80;
+            // 
+            // categoriaDataGridViewTextBoxColumn
+            // 
+            categoriaDataGridViewTextBoxColumn.DataPropertyName = "Categoria";
+            categoriaDataGridViewTextBoxColumn.HeaderText = "Categoria";
+            categoriaDataGridViewTextBoxColumn.Name = "categoriaDataGridViewTextBoxColumn";
+            categoriaDataGridViewTextBoxColumn.ReadOnly = true;
+            categoriaDataGridViewTextBoxColumn.Width = 80;
+            // 
+            // boxeador1DataGridViewTextBoxColumn
+            // 
+            boxeador1DataGridViewTextBoxColumn.DataPropertyName = "Boxeador1";
+            boxeador1DataGridViewTextBoxColumn.HeaderText = "Rincon Rojo";
+            boxeador1DataGridViewTextBoxColumn.Name = "boxeador1DataGridViewTextBoxColumn";
+            boxeador1DataGridViewTextBoxColumn.ReadOnly = true;
+            boxeador1DataGridViewTextBoxColumn.Width = 150;
+            // 
+            // profesorBoxeador1DataGridViewTextBoxColumn
+            // 
+            profesorBoxeador1DataGridViewTextBoxColumn.DataPropertyName = "ProfesorBoxeador1";
+            profesorBoxeador1DataGridViewTextBoxColumn.HeaderText = "Profe/Esc. Rojo";
+            profesorBoxeador1DataGridViewTextBoxColumn.Name = "profesorBoxeador1DataGridViewTextBoxColumn";
+            profesorBoxeador1DataGridViewTextBoxColumn.ReadOnly = true;
+            profesorBoxeador1DataGridViewTextBoxColumn.Width = 120;
+            // 
+            // boxeador2DataGridViewTextBoxColumn
+            // 
+            boxeador2DataGridViewTextBoxColumn.DataPropertyName = "Boxeador2";
+            boxeador2DataGridViewTextBoxColumn.HeaderText = "Rincon Azul";
+            boxeador2DataGridViewTextBoxColumn.Name = "boxeador2DataGridViewTextBoxColumn";
+            boxeador2DataGridViewTextBoxColumn.ReadOnly = true;
+            boxeador2DataGridViewTextBoxColumn.Width = 150;
+            // 
+            // profesorBoxeador2DataGridViewTextBoxColumn
+            // 
+            profesorBoxeador2DataGridViewTextBoxColumn.DataPropertyName = "ProfesorBoxeador2";
+            profesorBoxeador2DataGridViewTextBoxColumn.HeaderText = "Profe/Esc. Azul";
+            profesorBoxeador2DataGridViewTextBoxColumn.Name = "profesorBoxeador2DataGridViewTextBoxColumn";
+            profesorBoxeador2DataGridViewTextBoxColumn.ReadOnly = true;
+            profesorBoxeador2DataGridViewTextBoxColumn.Width = 120;
+            // 
+            // iDDataGridViewTextBoxColumn19
+            // 
+            iDDataGridViewTextBoxColumn19.DataPropertyName = "ID";
+            iDDataGridViewTextBoxColumn19.HeaderText = "ID";
+            iDDataGridViewTextBoxColumn19.Name = "iDDataGridViewTextBoxColumn19";
+            iDDataGridViewTextBoxColumn19.ReadOnly = true;
+            iDDataGridViewTextBoxColumn19.Visible = false;
+            // 
+            // boxeador1IDDataGridViewTextBoxColumn
+            // 
+            boxeador1IDDataGridViewTextBoxColumn.DataPropertyName = "Boxeador1ID";
+            boxeador1IDDataGridViewTextBoxColumn.HeaderText = "Boxeador1ID";
+            boxeador1IDDataGridViewTextBoxColumn.Name = "boxeador1IDDataGridViewTextBoxColumn";
+            boxeador1IDDataGridViewTextBoxColumn.ReadOnly = true;
+            boxeador1IDDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // boxeador2IDDataGridViewTextBoxColumn
+            // 
+            boxeador2IDDataGridViewTextBoxColumn.DataPropertyName = "Boxeador2ID";
+            boxeador2IDDataGridViewTextBoxColumn.HeaderText = "Boxeador2ID";
+            boxeador2IDDataGridViewTextBoxColumn.Name = "boxeador2IDDataGridViewTextBoxColumn";
+            boxeador2IDDataGridViewTextBoxColumn.ReadOnly = true;
+            boxeador2IDDataGridViewTextBoxColumn.Visible = false;
             // 
             // FormMatchMaker
             // 
@@ -2811,190 +2832,192 @@
         private ToolStripMenuItem herramientasToolStripMenuItem;
         private ToolStripMenuItem exportarPeleasAExcelToolStripMenuItem;
         private SaveFileDialog saveFileDialog1;
-        private DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn;
-        private DataGridViewTextBoxColumn nombreDataGridViewTextBoxColumn2;
-        private DataGridViewTextBoxColumn pesoDataGridViewTextBoxColumn2;
-        private DataGridViewTextBoxColumn edadDataGridViewTextBoxColumn2;
-        private DataGridViewComboBoxColumn sexoDataGridViewTextBoxColumn3;
-        private DataGridViewTextBoxColumn profesorDataGridViewTextBoxColumn3;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private DataGridViewCheckBoxColumn asignadoDataGridViewCheckBoxColumn18;
-        private DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn2;
-        private DataGridViewTextBoxColumn nombreDataGridViewTextBoxColumn4;
-        private DataGridViewTextBoxColumn pesoDataGridViewTextBoxColumn4;
-        private DataGridViewTextBoxColumn edadDataGridViewTextBoxColumn4;
-        private DataGridViewTextBoxColumn sexoDataGridViewTextBoxColumn5;
-        private DataGridViewTextBoxColumn profesorDataGridViewTextBoxColumn5;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private DataGridViewCheckBoxColumn asignadoDataGridViewCheckBoxColumn1;
-        private DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn1;
-        private DataGridViewTextBoxColumn nombreDataGridViewTextBoxColumn3;
-        private DataGridViewTextBoxColumn pesoDataGridViewTextBoxColumn3;
-        private DataGridViewTextBoxColumn edadDataGridViewTextBoxColumn3;
-        private DataGridViewTextBoxColumn sexoDataGridViewTextBoxColumn4;
-        private DataGridViewTextBoxColumn profesorDataGridViewTextBoxColumn4;
-        private DataGridViewTextBoxColumn cantidadPeleasDataGridViewTextBoxColumn;
-        private DataGridViewCheckBoxColumn asignadoDataGridViewCheckBoxColumn;
-        private DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn3;
-        private DataGridViewTextBoxColumn nombreDataGridViewTextBoxColumn5;
-        private DataGridViewTextBoxColumn pesoDataGridViewTextBoxColumn5;
-        private DataGridViewTextBoxColumn edadDataGridViewTextBoxColumn5;
-        private DataGridViewTextBoxColumn sexoDataGridViewTextBoxColumn6;
-        private DataGridViewTextBoxColumn profesorDataGridViewTextBoxColumn6;
-        private DataGridViewTextBoxColumn cantidadPeleasDataGridViewTextBoxColumn1;
-        private DataGridViewCheckBoxColumn asignadoDataGridViewCheckBoxColumn2;
-        private DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn4;
-        private DataGridViewTextBoxColumn nombreDataGridViewTextBoxColumn6;
-        private DataGridViewTextBoxColumn pesoDataGridViewTextBoxColumn6;
-        private DataGridViewTextBoxColumn edadDataGridViewTextBoxColumn6;
-        private DataGridViewTextBoxColumn sexoDataGridViewTextBoxColumn7;
-        private DataGridViewTextBoxColumn profesorDataGridViewTextBoxColumn7;
-        private DataGridViewTextBoxColumn cantidadPeleasDataGridViewTextBoxColumn2;
-        private DataGridViewCheckBoxColumn asignadoDataGridViewCheckBoxColumn3;
-        private DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn5;
-        private DataGridViewTextBoxColumn nombreDataGridViewTextBoxColumn7;
-        private DataGridViewTextBoxColumn pesoDataGridViewTextBoxColumn7;
-        private DataGridViewTextBoxColumn edadDataGridViewTextBoxColumn7;
-        private DataGridViewTextBoxColumn sexoDataGridViewTextBoxColumn8;
-        private DataGridViewTextBoxColumn profesorDataGridViewTextBoxColumn8;
-        private DataGridViewTextBoxColumn cantidadPeleasDataGridViewTextBoxColumn3;
-        private DataGridViewCheckBoxColumn asignadoDataGridViewCheckBoxColumn4;
-        private DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn6;
-        private DataGridViewTextBoxColumn nombreDataGridViewTextBoxColumn8;
-        private DataGridViewTextBoxColumn pesoDataGridViewTextBoxColumn8;
-        private DataGridViewTextBoxColumn edadDataGridViewTextBoxColumn8;
-        private DataGridViewTextBoxColumn sexoDataGridViewTextBoxColumn9;
-        private DataGridViewTextBoxColumn profesorDataGridViewTextBoxColumn9;
-        private DataGridViewTextBoxColumn cantidadPeleasDataGridViewTextBoxColumn4;
-        private DataGridViewCheckBoxColumn asignadoDataGridViewCheckBoxColumn5;
-        private DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn7;
-        private DataGridViewTextBoxColumn nombreDataGridViewTextBoxColumn9;
-        private DataGridViewTextBoxColumn pesoDataGridViewTextBoxColumn9;
-        private DataGridViewTextBoxColumn edadDataGridViewTextBoxColumn9;
-        private DataGridViewTextBoxColumn sexoDataGridViewTextBoxColumn10;
-        private DataGridViewTextBoxColumn profesorDataGridViewTextBoxColumn10;
-        private DataGridViewTextBoxColumn cantidadPeleasDataGridViewTextBoxColumn5;
-        private DataGridViewCheckBoxColumn asignadoDataGridViewCheckBoxColumn6;
-        private DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn8;
-        private DataGridViewTextBoxColumn nombreDataGridViewTextBoxColumn10;
-        private DataGridViewTextBoxColumn pesoDataGridViewTextBoxColumn10;
-        private DataGridViewTextBoxColumn edadDataGridViewTextBoxColumn10;
-        private DataGridViewTextBoxColumn sexoDataGridViewTextBoxColumn11;
-        private DataGridViewTextBoxColumn profesorDataGridViewTextBoxColumn11;
-        private DataGridViewTextBoxColumn cantidadPeleasDataGridViewTextBoxColumn6;
-        private DataGridViewCheckBoxColumn asignadoDataGridViewCheckBoxColumn7;
-        private DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn9;
-        private DataGridViewTextBoxColumn nombreDataGridViewTextBoxColumn11;
-        private DataGridViewTextBoxColumn pesoDataGridViewTextBoxColumn11;
-        private DataGridViewTextBoxColumn edadDataGridViewTextBoxColumn11;
-        private DataGridViewTextBoxColumn sexoDataGridViewTextBoxColumn12;
-        private DataGridViewTextBoxColumn profesorDataGridViewTextBoxColumn12;
-        private DataGridViewTextBoxColumn cantidadPeleasDataGridViewTextBoxColumn7;
-        private DataGridViewCheckBoxColumn asignadoDataGridViewCheckBoxColumn8;
-        private DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn10;
-        private DataGridViewTextBoxColumn nombreDataGridViewTextBoxColumn12;
-        private DataGridViewTextBoxColumn pesoDataGridViewTextBoxColumn12;
-        private DataGridViewTextBoxColumn edadDataGridViewTextBoxColumn12;
-        private DataGridViewTextBoxColumn sexoDataGridViewTextBoxColumn13;
-        private DataGridViewTextBoxColumn profesorDataGridViewTextBoxColumn13;
-        private DataGridViewTextBoxColumn cantidadPeleasDataGridViewTextBoxColumn8;
-        private DataGridViewCheckBoxColumn asignadoDataGridViewCheckBoxColumn9;
-        private DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn11;
-        private DataGridViewTextBoxColumn nombreDataGridViewTextBoxColumn13;
-        private DataGridViewTextBoxColumn pesoDataGridViewTextBoxColumn13;
-        private DataGridViewTextBoxColumn edadDataGridViewTextBoxColumn13;
-        private DataGridViewTextBoxColumn sexoDataGridViewTextBoxColumn14;
-        private DataGridViewTextBoxColumn profesorDataGridViewTextBoxColumn14;
-        private DataGridViewTextBoxColumn cantidadPeleasDataGridViewTextBoxColumn9;
-        private DataGridViewCheckBoxColumn asignadoDataGridViewCheckBoxColumn10;
-        private DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn12;
-        private DataGridViewTextBoxColumn nombreDataGridViewTextBoxColumn14;
-        private DataGridViewTextBoxColumn pesoDataGridViewTextBoxColumn14;
-        private DataGridViewTextBoxColumn edadDataGridViewTextBoxColumn14;
-        private DataGridViewTextBoxColumn sexoDataGridViewTextBoxColumn15;
-        private DataGridViewTextBoxColumn profesorDataGridViewTextBoxColumn15;
-        private DataGridViewTextBoxColumn cantidadPeleasDataGridViewTextBoxColumn10;
-        private DataGridViewCheckBoxColumn asignadoDataGridViewCheckBoxColumn11;
-        private DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn13;
-        private DataGridViewTextBoxColumn nombreDataGridViewTextBoxColumn15;
-        private DataGridViewTextBoxColumn pesoDataGridViewTextBoxColumn15;
-        private DataGridViewTextBoxColumn edadDataGridViewTextBoxColumn15;
-        private DataGridViewTextBoxColumn sexoDataGridViewTextBoxColumn16;
-        private DataGridViewTextBoxColumn profesorDataGridViewTextBoxColumn16;
-        private DataGridViewTextBoxColumn cantidadPeleasDataGridViewTextBoxColumn11;
-        private DataGridViewCheckBoxColumn asignadoDataGridViewCheckBoxColumn12;
-        private DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn14;
-        private DataGridViewTextBoxColumn nombreDataGridViewTextBoxColumn16;
-        private DataGridViewTextBoxColumn pesoDataGridViewTextBoxColumn16;
-        private DataGridViewTextBoxColumn edadDataGridViewTextBoxColumn16;
-        private DataGridViewTextBoxColumn sexoDataGridViewTextBoxColumn17;
-        private DataGridViewTextBoxColumn profesorDataGridViewTextBoxColumn17;
-        private DataGridViewTextBoxColumn cantidadPeleasDataGridViewTextBoxColumn12;
-        private DataGridViewCheckBoxColumn asignadoDataGridViewCheckBoxColumn13;
-        private DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn15;
-        private DataGridViewTextBoxColumn nombreDataGridViewTextBoxColumn17;
-        private DataGridViewTextBoxColumn pesoDataGridViewTextBoxColumn17;
-        private DataGridViewTextBoxColumn edadDataGridViewTextBoxColumn17;
-        private DataGridViewTextBoxColumn sexoDataGridViewTextBoxColumn18;
-        private DataGridViewTextBoxColumn profesorDataGridViewTextBoxColumn18;
-        private DataGridViewTextBoxColumn cantidadPeleasDataGridViewTextBoxColumn13;
-        private DataGridViewCheckBoxColumn asignadoDataGridViewCheckBoxColumn14;
-        private DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn16;
-        private DataGridViewTextBoxColumn nombreDataGridViewTextBoxColumn18;
-        private DataGridViewTextBoxColumn pesoDataGridViewTextBoxColumn18;
-        private DataGridViewTextBoxColumn edadDataGridViewTextBoxColumn18;
-        private DataGridViewTextBoxColumn sexoDataGridViewTextBoxColumn19;
-        private DataGridViewTextBoxColumn profesorDataGridViewTextBoxColumn19;
-        private DataGridViewTextBoxColumn cantidadPeleasDataGridViewTextBoxColumn14;
-        private DataGridViewCheckBoxColumn asignadoDataGridViewCheckBoxColumn15;
-        private DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn17;
-        private DataGridViewTextBoxColumn nombreDataGridViewTextBoxColumn19;
-        private DataGridViewTextBoxColumn pesoDataGridViewTextBoxColumn19;
-        private DataGridViewTextBoxColumn edadDataGridViewTextBoxColumn19;
-        private DataGridViewTextBoxColumn sexoDataGridViewTextBoxColumn20;
-        private DataGridViewTextBoxColumn profesorDataGridViewTextBoxColumn20;
-        private DataGridViewTextBoxColumn cantidadPeleasDataGridViewTextBoxColumn15;
-        private DataGridViewCheckBoxColumn asignadoDataGridViewCheckBoxColumn16;
-        private DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn18;
-        private DataGridViewTextBoxColumn nombreDataGridViewTextBoxColumn20;
-        private DataGridViewTextBoxColumn pesoDataGridViewTextBoxColumn20;
-        private DataGridViewTextBoxColumn edadDataGridViewTextBoxColumn20;
-        private DataGridViewTextBoxColumn sexoDataGridViewTextBoxColumn21;
-        private DataGridViewTextBoxColumn profesorDataGridViewTextBoxColumn21;
-        private DataGridViewTextBoxColumn cantidadPeleasDataGridViewTextBoxColumn16;
-        private DataGridViewCheckBoxColumn asignadoDataGridViewCheckBoxColumn17;
         private TabPage tabMas91;
         private SplitContainer splitContainer10;
         private DataGridView grillaMascCatMas91;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
-        private DataGridViewCheckBoxColumn dataGridViewCheckBoxColumn1;
         private DataGridView grillaFemCatMas91;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn13;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn14;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn15;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn16;
-        private DataGridViewCheckBoxColumn dataGridViewCheckBoxColumn2;
         private ToolStripSeparator toolStripSeparator2;
         private ToolStripMenuItem toolSubir;
         private ToolStripMenuItem toolBajar;
-        private DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn19;
+        private ToolStripMenuItem ayudaToolStripMenuItem;
+        private ToolStripMenuItem guiaDeUsoToolStripMenuItem;
+        private DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn2;
+        private DataGridViewTextBoxColumn nombreDataGridViewTextBoxColumn4;
+        private DataGridViewTextBoxColumn sexoDataGridViewTextBoxColumn5;
+        private DataGridViewTextBoxColumn edadDataGridViewTextBoxColumn4;
+        private DataGridViewTextBoxColumn pesoDataGridViewTextBoxColumn4;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private DataGridViewTextBoxColumn profesorDataGridViewTextBoxColumn5;
+        private DataGridViewCheckBoxColumn asignadoDataGridViewCheckBoxColumn1;
+        private DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn1;
+        private DataGridViewTextBoxColumn nombreDataGridViewTextBoxColumn3;
+        private DataGridViewTextBoxColumn sexoDataGridViewTextBoxColumn4;
+        private DataGridViewTextBoxColumn edadDataGridViewTextBoxColumn3;
+        private DataGridViewTextBoxColumn pesoDataGridViewTextBoxColumn3;
+        private DataGridViewTextBoxColumn cantidadPeleasDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn profesorDataGridViewTextBoxColumn4;
+        private DataGridViewCheckBoxColumn asignadoDataGridViewCheckBoxColumn;
+        private DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn3;
+        private DataGridViewTextBoxColumn nombreDataGridViewTextBoxColumn5;
+        private DataGridViewTextBoxColumn sexoDataGridViewTextBoxColumn6;
+        private DataGridViewTextBoxColumn edadDataGridViewTextBoxColumn5;
+        private DataGridViewTextBoxColumn pesoDataGridViewTextBoxColumn5;
+        private DataGridViewTextBoxColumn cantidadPeleasDataGridViewTextBoxColumn1;
+        private DataGridViewTextBoxColumn profesorDataGridViewTextBoxColumn6;
+        private DataGridViewCheckBoxColumn asignadoDataGridViewCheckBoxColumn2;
+        private DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn4;
+        private DataGridViewTextBoxColumn nombreDataGridViewTextBoxColumn6;
+        private DataGridViewTextBoxColumn sexoDataGridViewTextBoxColumn7;
+        private DataGridViewTextBoxColumn edadDataGridViewTextBoxColumn6;
+        private DataGridViewTextBoxColumn pesoDataGridViewTextBoxColumn6;
+        private DataGridViewTextBoxColumn cantidadPeleasDataGridViewTextBoxColumn2;
+        private DataGridViewTextBoxColumn profesorDataGridViewTextBoxColumn7;
+        private DataGridViewCheckBoxColumn asignadoDataGridViewCheckBoxColumn3;
+        private DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn5;
+        private DataGridViewTextBoxColumn nombreDataGridViewTextBoxColumn7;
+        private DataGridViewTextBoxColumn sexoDataGridViewTextBoxColumn8;
+        private DataGridViewTextBoxColumn edadDataGridViewTextBoxColumn7;
+        private DataGridViewTextBoxColumn pesoDataGridViewTextBoxColumn7;
+        private DataGridViewTextBoxColumn cantidadPeleasDataGridViewTextBoxColumn3;
+        private DataGridViewTextBoxColumn profesorDataGridViewTextBoxColumn8;
+        private DataGridViewCheckBoxColumn asignadoDataGridViewCheckBoxColumn4;
+        private DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn6;
+        private DataGridViewTextBoxColumn nombreDataGridViewTextBoxColumn8;
+        private DataGridViewTextBoxColumn sexoDataGridViewTextBoxColumn9;
+        private DataGridViewTextBoxColumn edadDataGridViewTextBoxColumn8;
+        private DataGridViewTextBoxColumn pesoDataGridViewTextBoxColumn8;
+        private DataGridViewTextBoxColumn cantidadPeleasDataGridViewTextBoxColumn4;
+        private DataGridViewTextBoxColumn profesorDataGridViewTextBoxColumn9;
+        private DataGridViewCheckBoxColumn asignadoDataGridViewCheckBoxColumn5;
+        private DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn7;
+        private DataGridViewTextBoxColumn nombreDataGridViewTextBoxColumn9;
+        private DataGridViewTextBoxColumn sexoDataGridViewTextBoxColumn10;
+        private DataGridViewTextBoxColumn edadDataGridViewTextBoxColumn9;
+        private DataGridViewTextBoxColumn pesoDataGridViewTextBoxColumn9;
+        private DataGridViewTextBoxColumn cantidadPeleasDataGridViewTextBoxColumn5;
+        private DataGridViewTextBoxColumn profesorDataGridViewTextBoxColumn10;
+        private DataGridViewCheckBoxColumn asignadoDataGridViewCheckBoxColumn6;
+        private DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn8;
+        private DataGridViewTextBoxColumn nombreDataGridViewTextBoxColumn10;
+        private DataGridViewTextBoxColumn sexoDataGridViewTextBoxColumn11;
+        private DataGridViewTextBoxColumn edadDataGridViewTextBoxColumn10;
+        private DataGridViewTextBoxColumn pesoDataGridViewTextBoxColumn10;
+        private DataGridViewTextBoxColumn cantidadPeleasDataGridViewTextBoxColumn6;
+        private DataGridViewTextBoxColumn profesorDataGridViewTextBoxColumn11;
+        private DataGridViewCheckBoxColumn asignadoDataGridViewCheckBoxColumn7;
+        private DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn9;
+        private DataGridViewTextBoxColumn nombreDataGridViewTextBoxColumn11;
+        private DataGridViewTextBoxColumn sexoDataGridViewTextBoxColumn12;
+        private DataGridViewTextBoxColumn edadDataGridViewTextBoxColumn11;
+        private DataGridViewTextBoxColumn pesoDataGridViewTextBoxColumn11;
+        private DataGridViewTextBoxColumn cantidadPeleasDataGridViewTextBoxColumn7;
+        private DataGridViewTextBoxColumn profesorDataGridViewTextBoxColumn12;
+        private DataGridViewCheckBoxColumn asignadoDataGridViewCheckBoxColumn8;
+        private DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn10;
+        private DataGridViewTextBoxColumn nombreDataGridViewTextBoxColumn12;
+        private DataGridViewTextBoxColumn sexoDataGridViewTextBoxColumn13;
+        private DataGridViewTextBoxColumn edadDataGridViewTextBoxColumn12;
+        private DataGridViewTextBoxColumn pesoDataGridViewTextBoxColumn12;
+        private DataGridViewTextBoxColumn cantidadPeleasDataGridViewTextBoxColumn8;
+        private DataGridViewTextBoxColumn profesorDataGridViewTextBoxColumn13;
+        private DataGridViewCheckBoxColumn asignadoDataGridViewCheckBoxColumn9;
+        private DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn11;
+        private DataGridViewTextBoxColumn nombreDataGridViewTextBoxColumn13;
+        private DataGridViewTextBoxColumn sexoDataGridViewTextBoxColumn14;
+        private DataGridViewTextBoxColumn edadDataGridViewTextBoxColumn13;
+        private DataGridViewTextBoxColumn pesoDataGridViewTextBoxColumn13;
+        private DataGridViewTextBoxColumn cantidadPeleasDataGridViewTextBoxColumn9;
+        private DataGridViewTextBoxColumn profesorDataGridViewTextBoxColumn14;
+        private DataGridViewCheckBoxColumn asignadoDataGridViewCheckBoxColumn10;
+        private DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn12;
+        private DataGridViewTextBoxColumn nombreDataGridViewTextBoxColumn14;
+        private DataGridViewTextBoxColumn sexoDataGridViewTextBoxColumn15;
+        private DataGridViewTextBoxColumn edadDataGridViewTextBoxColumn14;
+        private DataGridViewTextBoxColumn pesoDataGridViewTextBoxColumn14;
+        private DataGridViewTextBoxColumn cantidadPeleasDataGridViewTextBoxColumn10;
+        private DataGridViewTextBoxColumn profesorDataGridViewTextBoxColumn15;
+        private DataGridViewCheckBoxColumn asignadoDataGridViewCheckBoxColumn11;
+        private DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn13;
+        private DataGridViewTextBoxColumn nombreDataGridViewTextBoxColumn15;
+        private DataGridViewTextBoxColumn sexoDataGridViewTextBoxColumn16;
+        private DataGridViewTextBoxColumn edadDataGridViewTextBoxColumn15;
+        private DataGridViewTextBoxColumn pesoDataGridViewTextBoxColumn15;
+        private DataGridViewTextBoxColumn cantidadPeleasDataGridViewTextBoxColumn11;
+        private DataGridViewTextBoxColumn profesorDataGridViewTextBoxColumn16;
+        private DataGridViewCheckBoxColumn asignadoDataGridViewCheckBoxColumn12;
+        private DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn14;
+        private DataGridViewTextBoxColumn nombreDataGridViewTextBoxColumn16;
+        private DataGridViewTextBoxColumn sexoDataGridViewTextBoxColumn17;
+        private DataGridViewTextBoxColumn edadDataGridViewTextBoxColumn16;
+        private DataGridViewTextBoxColumn pesoDataGridViewTextBoxColumn16;
+        private DataGridViewTextBoxColumn cantidadPeleasDataGridViewTextBoxColumn12;
+        private DataGridViewTextBoxColumn profesorDataGridViewTextBoxColumn17;
+        private DataGridViewCheckBoxColumn asignadoDataGridViewCheckBoxColumn13;
+        private DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn15;
+        private DataGridViewTextBoxColumn nombreDataGridViewTextBoxColumn17;
+        private DataGridViewTextBoxColumn sexoDataGridViewTextBoxColumn18;
+        private DataGridViewTextBoxColumn edadDataGridViewTextBoxColumn17;
+        private DataGridViewTextBoxColumn pesoDataGridViewTextBoxColumn17;
+        private DataGridViewTextBoxColumn cantidadPeleasDataGridViewTextBoxColumn13;
+        private DataGridViewTextBoxColumn profesorDataGridViewTextBoxColumn18;
+        private DataGridViewCheckBoxColumn asignadoDataGridViewCheckBoxColumn14;
+        private DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn16;
+        private DataGridViewTextBoxColumn nombreDataGridViewTextBoxColumn18;
+        private DataGridViewTextBoxColumn sexoDataGridViewTextBoxColumn19;
+        private DataGridViewTextBoxColumn edadDataGridViewTextBoxColumn18;
+        private DataGridViewTextBoxColumn pesoDataGridViewTextBoxColumn18;
+        private DataGridViewTextBoxColumn cantidadPeleasDataGridViewTextBoxColumn14;
+        private DataGridViewTextBoxColumn profesorDataGridViewTextBoxColumn19;
+        private DataGridViewCheckBoxColumn asignadoDataGridViewCheckBoxColumn15;
+        private DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn17;
+        private DataGridViewTextBoxColumn nombreDataGridViewTextBoxColumn19;
+        private DataGridViewTextBoxColumn sexoDataGridViewTextBoxColumn20;
+        private DataGridViewTextBoxColumn edadDataGridViewTextBoxColumn19;
+        private DataGridViewTextBoxColumn pesoDataGridViewTextBoxColumn19;
+        private DataGridViewTextBoxColumn cantidadPeleasDataGridViewTextBoxColumn15;
+        private DataGridViewTextBoxColumn profesorDataGridViewTextBoxColumn20;
+        private DataGridViewCheckBoxColumn asignadoDataGridViewCheckBoxColumn16;
+        private DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn18;
+        private DataGridViewTextBoxColumn nombreDataGridViewTextBoxColumn20;
+        private DataGridViewTextBoxColumn sexoDataGridViewTextBoxColumn21;
+        private DataGridViewTextBoxColumn edadDataGridViewTextBoxColumn20;
+        private DataGridViewTextBoxColumn pesoDataGridViewTextBoxColumn20;
+        private DataGridViewTextBoxColumn cantidadPeleasDataGridViewTextBoxColumn16;
+        private DataGridViewTextBoxColumn profesorDataGridViewTextBoxColumn21;
+        private DataGridViewCheckBoxColumn asignadoDataGridViewCheckBoxColumn17;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
+        private DataGridViewCheckBoxColumn dataGridViewCheckBoxColumn1;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn14;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn13;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn16;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn15;
+        private DataGridViewCheckBoxColumn dataGridViewCheckBoxColumn2;
+        private DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn nombreDataGridViewTextBoxColumn2;
+        private DataGridViewComboBoxColumn sexoDataGridViewTextBoxColumn3;
+        private DataGridViewTextBoxColumn edadDataGridViewTextBoxColumn2;
+        private DataGridViewTextBoxColumn pesoDataGridViewTextBoxColumn2;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private DataGridViewTextBoxColumn profesorDataGridViewTextBoxColumn3;
+        private DataGridViewCheckBoxColumn asignadoDataGridViewCheckBoxColumn18;
         private DataGridViewTextBoxColumn ordenDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn sexoDataGridViewTextBoxColumn22;
         private DataGridViewTextBoxColumn categoriaDataGridViewTextBoxColumn;
-        private DataGridViewTextBoxColumn boxeador1IDDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn boxeador1DataGridViewTextBoxColumn;
-        private DataGridViewTextBoxColumn boxeador2IDDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn profesorBoxeador1DataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn boxeador2DataGridViewTextBoxColumn;
-        private ToolStripMenuItem ayudaToolStripMenuItem;
-        private ToolStripMenuItem guiaDeUsoToolStripMenuItem;
+        private DataGridViewTextBoxColumn profesorBoxeador2DataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn19;
+        private DataGridViewTextBoxColumn boxeador1IDDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn boxeador2IDDataGridViewTextBoxColumn;
     }
 }

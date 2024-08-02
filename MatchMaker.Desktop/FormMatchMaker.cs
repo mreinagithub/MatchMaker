@@ -140,10 +140,10 @@ namespace MatchMaker
         private void grillaIngreso_EditingControlShowing(object sender, DataGridViewEditingControlShowingEventArgs e)
         {
             e.Control.KeyPress -= new KeyPressEventHandler(ColumnNumber_KeyPress);
-            _grillaAllowDecimalSeparator = grillaIngreso.CurrentCell.ColumnIndex == 2;
-            if (grillaIngreso.CurrentCell.ColumnIndex == 2
-                || grillaIngreso.CurrentCell.ColumnIndex == 3
-                || grillaIngreso.CurrentCell.ColumnIndex == 6)
+            _grillaAllowDecimalSeparator = grillaIngreso.CurrentCell.ColumnIndex == 4;
+            if (grillaIngreso.CurrentCell.ColumnIndex == 3
+                || grillaIngreso.CurrentCell.ColumnIndex == 4
+                || grillaIngreso.CurrentCell.ColumnIndex == 5)
             {
                 _grillaAllowDecimalSeparator = true;
                 TextBox tb = e.Control as TextBox;
@@ -172,7 +172,7 @@ namespace MatchMaker
         }
         private void grillaIngreso_CellValidated(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.ColumnIndex == 2)
+            if (e.ColumnIndex == 4)
             {
                 string texto = grillaIngreso.CurrentCell.EditedFormattedValue.ToString();
                 texto = texto.Replace(".", ",");
@@ -348,8 +348,11 @@ namespace MatchMaker
         {
             try
             {
+                System.Reflection.Assembly assembly = System.Reflection.Assembly.GetExecutingAssembly();                
+                System.Diagnostics.FileVersionInfo fvi = System.Diagnostics.FileVersionInfo.GetVersionInfo(assembly.Location);
+                string version = fvi.FileVersion;
 
-                this.Text = $"Match Maker - {(string.IsNullOrWhiteSpace(backup) ? "Evento Actual" : backup.Substring(0, 15) + " (evento guardado)")}";
+                this.Text = $"Match Maker (v{version}) - {(string.IsNullOrWhiteSpace(backup) ? "Evento Actual" : backup.Substring(0, 15) + " (evento guardado)")}";
 
 
                 _SoloLectura = !string.IsNullOrWhiteSpace(backup);
@@ -938,8 +941,10 @@ namespace MatchMaker
                 Sexo = bx1.Sexo,
                 Boxeador1 = bx1,
                 Boxeador1ID = bx1.ID.Value,
+                ProfesorBoxeador1 = bx1.Profesor,
                 Boxeador2 = bx2,
-                Boxeador2ID = bx2.ID.Value
+                Boxeador2ID = bx2.ID.Value,
+                ProfesorBoxeador2 = bx2.Profesor,
             };
 
             int orden = _peleas.OrderByDescending(p => p.Orden).FirstOrDefault()?.Orden ?? 0;
