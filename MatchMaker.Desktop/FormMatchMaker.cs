@@ -348,6 +348,8 @@ namespace MatchMaker
         {
             try
             {
+                Task.Delay(2000);
+
                 System.Reflection.Assembly assembly = System.Reflection.Assembly.GetExecutingAssembly();                
                 System.Diagnostics.FileVersionInfo fvi = System.Diagnostics.FileVersionInfo.GetVersionInfo(assembly.Location);
                 string version = fvi.FileVersion;
