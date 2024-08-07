@@ -99,17 +99,21 @@ namespace MatchMaker
             //Para que se refresque el valor de la ultima celda en el boxeador.
             if (grillaIngreso.IsCurrentCellInEditMode) { grillaIngreso.EndEdit(); }
 
-            Boxeador boxActualizado = _boxeadores[e.RowIndex];
-            if (boxActualizado == null) { return; }
-            if (boxActualizado.ID == null) //Alta
+            if (_boxeadores.Count > 0)
             {
-                InsertBoxeador(boxActualizado);
+
+                Boxeador boxActualizado = _boxeadores[e.RowIndex];
+                if (boxActualizado == null) { return; }
+                if (boxActualizado.ID == null) //Alta
+                {
+                    InsertBoxeador(boxActualizado);
+                }
+                else //Update
+                {
+                    UpdateBoxeador(boxActualizado);
+                }
+                ArmarCategorias();
             }
-            else //Update
-            {
-                UpdateBoxeador(boxActualizado);
-            }
-            ArmarCategorias();
         }
         private void GrillaIngreso_UserDeletingRow(object sender, DataGridViewRowCancelEventArgs e)
         {
@@ -237,10 +241,16 @@ namespace MatchMaker
                 DesarmarPelea(src);
 
             if (e.ClickedItem.Name == "toolSubir")
-                SubirPelea(src);
+            {
+                int? nIndice = SubirPelea(src);
+                SeleccionManualGrilla((DataGridView)src, nIndice);
+            }
 
             if (e.ClickedItem.Name == "toolBajar")
-                BajarPelea(src);
+            {
+                int? nIndice = BajarPelea(grillaPeleas);
+                SeleccionManualGrilla((DataGridView)src, nIndice);
+            }
 
         }
         private void grillaPeleas_UserDeletingRow(object sender, DataGridViewRowCancelEventArgs e)
@@ -248,6 +258,39 @@ namespace MatchMaker
             e.Cancel = true;
 
             DesarmarPelea(sender);
+        }
+
+        private void btnSubir_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (_SoloLectura)
+                    return;
+
+                int? nIndice = SubirPelea(grillaPeleas);
+                SeleccionManualGrilla(grillaPeleas, nIndice);
+            }
+            catch (Exception ex) 
+            {
+                MessageBox.Show(this, ex.Message, "Error al reordenar", MessageBoxButtons.OK);
+            }
+            
+        }
+        private void btnBajar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (_SoloLectura)
+                    return;
+
+                int? nIndice = BajarPelea(grillaPeleas);
+                SeleccionManualGrilla(grillaPeleas, nIndice);
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(this, ex.Message, "Error al reordenar", MessageBoxButtons.OK);
+            }            
         }
 
         private void nuevoEventoToolStripMenuItem_Click(object sender, EventArgs e)
@@ -350,7 +393,7 @@ namespace MatchMaker
             {
                 Task.Delay(2000);
 
-                System.Reflection.Assembly assembly = System.Reflection.Assembly.GetExecutingAssembly();                
+                System.Reflection.Assembly assembly = System.Reflection.Assembly.GetExecutingAssembly();
                 System.Diagnostics.FileVersionInfo fvi = System.Diagnostics.FileVersionInfo.GetVersionInfo(assembly.Location);
                 string version = fvi.FileVersion;
 
@@ -578,247 +621,6 @@ namespace MatchMaker
                 }
             }
 
-            //#region GRILLAS FEMENINO
-
-            //foreach (DataGridViewRow row in grillaFemCat49.Rows)
-            //{
-            //    var bx = row.DataBoundItem as Boxeador;
-            //    if (bx != null && bx.Asignado)
-            //    {                    
-            //        row.DefaultCellStyle.BackColor = Color.LightBlue;
-            //    }
-            //    else
-            //    {                 
-            //        row.DefaultCellStyle.BackColor = Color.White;
-            //    }
-            //}
-
-            //foreach (DataGridViewRow row in grillaFemCat52.Rows)
-            //{
-            //    var bx = row.DataBoundItem as Boxeador;
-            //    if (bx != null && bx.Asignado)
-            //    {
-            //        row.DefaultCellStyle.BackColor = Color.LightBlue;
-            //    }
-            //    else
-            //    {
-            //        row.DefaultCellStyle.BackColor = Color.White;
-            //    }
-            //}
-
-            //foreach (DataGridViewRow row in grillaFemCat56.Rows)
-            //{
-            //    var bx = row.DataBoundItem as Boxeador;
-            //    if (bx != null && bx.Asignado)
-            //    {
-            //        row.DefaultCellStyle.BackColor = Color.LightBlue;
-            //    }
-            //    else
-            //    {
-            //        row.DefaultCellStyle.BackColor = Color.White;
-            //    }
-            //}
-
-            //foreach (DataGridViewRow row in grillaFemCat60.Rows)
-            //{
-            //    var bx = row.DataBoundItem as Boxeador;
-            //    if (bx != null && bx.Asignado)
-            //    {
-            //        row.DefaultCellStyle.BackColor = Color.LightBlue;
-            //    }
-            //    else
-            //    {
-            //        row.DefaultCellStyle.BackColor = Color.White;
-            //    }
-            //}
-
-            //foreach (DataGridViewRow row in grillaFemCat64.Rows)
-            //{
-            //    var bx = row.DataBoundItem as Boxeador;
-            //    if (bx != null && bx.Asignado)
-            //    {
-            //        row.DefaultCellStyle.BackColor = Color.LightBlue;
-            //    }
-            //    else
-            //    {
-            //        row.DefaultCellStyle.BackColor = Color.White;
-            //    }
-            //}
-
-            //foreach (DataGridViewRow row in grillaFemCat69.Rows)
-            //{
-            //    var bx = row.DataBoundItem as Boxeador;
-            //    if (bx != null && bx.Asignado)
-            //    {
-            //        row.DefaultCellStyle.BackColor = Color.LightBlue;
-            //    }
-            //    else
-            //    {
-            //        row.DefaultCellStyle.BackColor = Color.White;
-            //    }
-            //}
-
-            //foreach (DataGridViewRow row in grillaFemCat75.Rows)
-            //{
-            //    var bx = row.DataBoundItem as Boxeador;
-            //    if (bx != null && bx.Asignado)
-            //    {
-            //        row.DefaultCellStyle.BackColor = Color.LightBlue;
-            //    }
-            //    else
-            //    {
-            //        row.DefaultCellStyle.BackColor = Color.White;
-            //    }
-            //}
-
-            //foreach (DataGridViewRow row in grillaFemCat81.Rows)
-            //{
-            //    var bx = row.DataBoundItem as Boxeador;
-            //    if (bx != null && bx.Asignado)
-            //    {
-            //        row.DefaultCellStyle.BackColor = Color.LightBlue;
-            //    }
-            //    else
-            //    {
-            //        row.DefaultCellStyle.BackColor = Color.White;
-            //    }
-            //}
-
-            //foreach (DataGridViewRow row in grillaFemCat91.Rows)
-            //{
-            //    var bx = row.DataBoundItem as Boxeador;
-            //    if (bx != null && bx.Asignado)
-            //    {
-            //        row.DefaultCellStyle.BackColor = Color.LightBlue;
-            //    }
-            //    else
-            //    {
-            //        row.DefaultCellStyle.BackColor = Color.White;
-            //    }
-            //}
-
-            //#endregion
-
-            //#region GRILLAS MASCULINO
-
-            //foreach (DataGridViewRow row in grillaMascCat49.Rows)
-            //{
-            //    var bx = row.DataBoundItem as Boxeador;
-            //    if (bx != null && bx.Asignado)
-            //    {
-            //        row.DefaultCellStyle.BackColor = Color.LightBlue;
-            //    }
-            //    else
-            //    {
-            //        row.DefaultCellStyle.BackColor = Color.White;
-            //    }
-            //}
-
-            //foreach (DataGridViewRow row in grillaMascCat52.Rows)
-            //{
-            //    var bx = row.DataBoundItem as Boxeador;
-            //    if (bx != null && bx.Asignado)
-            //    {
-            //        row.DefaultCellStyle.BackColor = Color.LightBlue;
-            //    }
-            //    else
-            //    {
-            //        row.DefaultCellStyle.BackColor = Color.White;
-            //    }
-            //}
-
-            //foreach (DataGridViewRow row in grillaMascCat56.Rows)
-            //{
-            //    var bx = row.DataBoundItem as Boxeador;
-            //    if (bx != null && bx.Asignado)
-            //    {
-            //        row.DefaultCellStyle.BackColor = Color.LightBlue;
-            //    }
-            //    else
-            //    {
-            //        row.DefaultCellStyle.BackColor = Color.White;
-            //    }
-            //}
-
-            //foreach (DataGridViewRow row in grillaMascCat60.Rows)
-            //{
-            //    var bx = row.DataBoundItem as Boxeador;
-            //    if (bx != null && bx.Asignado)
-            //    {
-            //        row.DefaultCellStyle.BackColor = Color.LightBlue;
-            //    }
-            //    else
-            //    {
-            //        row.DefaultCellStyle.BackColor = Color.White;
-            //    }
-            //}
-
-            //foreach (DataGridViewRow row in grillaMascCat64.Rows)
-            //{
-            //    var bx = row.DataBoundItem as Boxeador;
-            //    if (bx != null && bx.Asignado)
-            //    {
-            //        row.DefaultCellStyle.BackColor = Color.LightBlue;
-            //    }
-            //    else
-            //    {
-            //        row.DefaultCellStyle.BackColor = Color.White;
-            //    }
-            //}
-
-            //foreach (DataGridViewRow row in grillaMascCat69.Rows)
-            //{
-            //    var bx = row.DataBoundItem as Boxeador;
-            //    if (bx != null && bx.Asignado)
-            //    {
-            //        row.DefaultCellStyle.BackColor = Color.LightBlue;
-            //    }
-            //    else
-            //    {
-            //        row.DefaultCellStyle.BackColor = Color.White;
-            //    }
-            //}
-
-            //foreach (DataGridViewRow row in grillaMascCat75.Rows)
-            //{
-            //    var bx = row.DataBoundItem as Boxeador;
-            //    if (bx != null && bx.Asignado)
-            //    {
-            //        row.DefaultCellStyle.BackColor = Color.LightBlue;
-            //    }
-            //    else
-            //    {
-            //        row.DefaultCellStyle.BackColor = Color.White;
-            //    }
-            //}
-
-            //foreach (DataGridViewRow row in grillaMascCat81.Rows)
-            //{
-            //    var bx = row.DataBoundItem as Boxeador;
-            //    if (bx != null && bx.Asignado)
-            //    {
-            //        row.DefaultCellStyle.BackColor = Color.LightBlue;
-            //    }
-            //    else
-            //    {
-            //        row.DefaultCellStyle.BackColor = Color.White;
-            //    }
-            //}
-
-            //foreach (DataGridViewRow row in grillaMascCat91.Rows)
-            //{
-            //    var bx = row.DataBoundItem as Boxeador;
-            //    if (bx != null && bx.Asignado)
-            //    {
-            //        row.DefaultCellStyle.BackColor = Color.LightBlue;
-            //    }
-            //    else
-            //    {
-            //        row.DefaultCellStyle.BackColor = Color.White;
-            //    }
-            //}
-
-            //#endregion
         }
         private void ValidarSiPuedeArmarPelea(object sender)
         {
@@ -1010,22 +812,22 @@ namespace MatchMaker
             BloquearAsignadosYColorearGrillas();
             ReordenarPeleas();
         }
-        private void SubirPelea(object src)
+        private int? SubirPelea(object src)
         {
-
+            int? nuevOrden = null;
 
             if (src == null || src is not DataGridView)
-                return;
+                return nuevOrden;
 
             var grd = (DataGridView)src;
             var slc = grd.SelectedRows;
             if (slc.Count != 1)
-                return;
+                return nuevOrden;
 
             var pelea = slc[0].DataBoundItem as Pelea;
 
             if (pelea == null)
-                return;
+                return nuevOrden;
 
             int orden = pelea.Orden;
             var pelaAnt = _peleas.Where(p => p.Orden < orden)
@@ -1033,29 +835,32 @@ namespace MatchMaker
                                 .FirstOrDefault();
             if (pelaAnt != null)
             {
+                nuevOrden = grd.CurrentRow.Index - 1;
+
                 pelea.Orden = pelaAnt.Orden;
                 pelaAnt.Orden = orden;
 
                 ReordenarPeleas();
             }
-
+            return nuevOrden;
         }
-        private void BajarPelea(object src)
+        private int? BajarPelea(object src)
         {
 
+            int? nuevOrden = null;
 
             if (src == null || src is not DataGridView)
-                return;
+                return nuevOrden;
 
             var grd = (DataGridView)src;
             var slc = grd.SelectedRows;
             if (slc.Count != 1)
-                return;
+                return nuevOrden;
 
             var pelea = slc[0].DataBoundItem as Pelea;
 
             if (pelea == null)
-                return;
+                return nuevOrden;
 
             int orden = pelea.Orden;
             var pelaPost = _peleas
@@ -1064,12 +869,16 @@ namespace MatchMaker
                 .FirstOrDefault();
             if (pelaPost != null)
             {
+                nuevOrden = grd.CurrentRow.Index+1;
+
                 pelea.Orden = pelaPost.Orden;
                 pelaPost.Orden = orden;
 
                 ReordenarPeleas();
+                
 
             }
+            return nuevOrden;
 
         }
         private void ReordenarPeleas()
@@ -1086,6 +895,16 @@ namespace MatchMaker
 
             _peleas = new BindingList<Pelea>(_peleas.OrderBy(p => p.Orden).ToList());
             grillaPeleas.DataSource = _peleas;
+        }
+        private void SeleccionManualGrilla(DataGridView dgv, int? nIndice)
+        {
+            if (nIndice.HasValue)
+            {
+                dgv.ClearSelection();
+                dgv.CurrentCell = null;
+                dgv.Rows[nIndice.Value].Selected = true;
+                dgv.CurrentCell = dgv[0, nIndice.Value];
+            }
         }
         public static DataTable DataGridView_To_Datatable(DataGridView dg)
         {
@@ -1112,6 +931,7 @@ namespace MatchMaker
             }
             return ExportDataTable;
         }
+        
 
         //DataSave
         public List<Boxeador> GetBoxeadores(string backup = "")
@@ -1287,6 +1107,6 @@ namespace MatchMaker
             return fueGuardado;
         }
 
-       
+        
     }
 }

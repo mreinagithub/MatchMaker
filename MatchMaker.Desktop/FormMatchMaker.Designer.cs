@@ -250,6 +250,16 @@
             dataGridViewCheckBoxColumn2 = new DataGridViewCheckBoxColumn();
             tabPeleas = new TabPage();
             grillaPeleas = new DataGridView();
+            ordenDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            sexoDataGridViewTextBoxColumn22 = new DataGridViewTextBoxColumn();
+            categoriaDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            boxeador1DataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            profesorBoxeador1DataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            boxeador2DataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            profesorBoxeador2DataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            iDDataGridViewTextBoxColumn19 = new DataGridViewTextBoxColumn();
+            boxeador1IDDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            boxeador2IDDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             contextDesarmarPelea = new ContextMenuStrip(components);
             toolDesarmarPelea = new ToolStripMenuItem();
             toolStripSeparator2 = new ToolStripSeparator();
@@ -283,16 +293,8 @@
             sexoDataGridViewTextBoxColumn2 = new DataGridViewTextBoxColumn();
             profesorDataGridViewTextBoxColumn2 = new DataGridViewTextBoxColumn();
             saveFileDialog1 = new SaveFileDialog();
-            ordenDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
-            sexoDataGridViewTextBoxColumn22 = new DataGridViewTextBoxColumn();
-            categoriaDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
-            boxeador1DataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
-            profesorBoxeador1DataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
-            boxeador2DataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
-            profesorBoxeador2DataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
-            iDDataGridViewTextBoxColumn19 = new DataGridViewTextBoxColumn();
-            boxeador1IDDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
-            boxeador2IDDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            btnSubir = new Button();
+            btnBajar = new Button();
             tabPrincipal.SuspendLayout();
             tabIngreso.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)grillaIngreso).BeginInit();
@@ -2300,6 +2302,8 @@
             // 
             // tabPeleas
             // 
+            tabPeleas.Controls.Add(btnBajar);
+            tabPeleas.Controls.Add(btnSubir);
             tabPeleas.Controls.Add(grillaPeleas);
             tabPeleas.Location = new Point(4, 24);
             tabPeleas.Name = "tabPeleas";
@@ -2313,19 +2317,99 @@
             // 
             grillaPeleas.AllowUserToAddRows = false;
             grillaPeleas.AllowUserToOrderColumns = true;
+            grillaPeleas.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             grillaPeleas.AutoGenerateColumns = false;
             grillaPeleas.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             grillaPeleas.Columns.AddRange(new DataGridViewColumn[] { ordenDataGridViewTextBoxColumn, sexoDataGridViewTextBoxColumn22, categoriaDataGridViewTextBoxColumn, boxeador1DataGridViewTextBoxColumn, profesorBoxeador1DataGridViewTextBoxColumn, boxeador2DataGridViewTextBoxColumn, profesorBoxeador2DataGridViewTextBoxColumn, iDDataGridViewTextBoxColumn19, boxeador1IDDataGridViewTextBoxColumn, boxeador2IDDataGridViewTextBoxColumn });
             grillaPeleas.ContextMenuStrip = contextDesarmarPelea;
             grillaPeleas.DataSource = peleaBindingSource;
-            grillaPeleas.Dock = DockStyle.Fill;
-            grillaPeleas.Location = new Point(3, 3);
+            grillaPeleas.Location = new Point(41, 3);
             grillaPeleas.Name = "grillaPeleas";
             grillaPeleas.ReadOnly = true;
-            grillaPeleas.Size = new Size(833, 392);
+            grillaPeleas.Size = new Size(795, 392);
             grillaPeleas.TabIndex = 1;
             grillaPeleas.ColumnHeaderMouseClick += grillaPeleas_ColumnHeaderMouseClick;
             grillaPeleas.UserDeletingRow += grillaPeleas_UserDeletingRow;
+            // 
+            // ordenDataGridViewTextBoxColumn
+            // 
+            ordenDataGridViewTextBoxColumn.DataPropertyName = "Orden";
+            ordenDataGridViewTextBoxColumn.HeaderText = "Orden";
+            ordenDataGridViewTextBoxColumn.Name = "ordenDataGridViewTextBoxColumn";
+            ordenDataGridViewTextBoxColumn.ReadOnly = true;
+            ordenDataGridViewTextBoxColumn.Width = 60;
+            // 
+            // sexoDataGridViewTextBoxColumn22
+            // 
+            sexoDataGridViewTextBoxColumn22.DataPropertyName = "Sexo";
+            sexoDataGridViewTextBoxColumn22.HeaderText = "Sexo";
+            sexoDataGridViewTextBoxColumn22.Name = "sexoDataGridViewTextBoxColumn22";
+            sexoDataGridViewTextBoxColumn22.ReadOnly = true;
+            sexoDataGridViewTextBoxColumn22.Width = 60;
+            // 
+            // categoriaDataGridViewTextBoxColumn
+            // 
+            categoriaDataGridViewTextBoxColumn.DataPropertyName = "Categoria";
+            categoriaDataGridViewTextBoxColumn.HeaderText = "Categoria";
+            categoriaDataGridViewTextBoxColumn.Name = "categoriaDataGridViewTextBoxColumn";
+            categoriaDataGridViewTextBoxColumn.ReadOnly = true;
+            categoriaDataGridViewTextBoxColumn.Width = 80;
+            // 
+            // boxeador1DataGridViewTextBoxColumn
+            // 
+            boxeador1DataGridViewTextBoxColumn.DataPropertyName = "Boxeador1";
+            boxeador1DataGridViewTextBoxColumn.HeaderText = "Rincon Rojo";
+            boxeador1DataGridViewTextBoxColumn.Name = "boxeador1DataGridViewTextBoxColumn";
+            boxeador1DataGridViewTextBoxColumn.ReadOnly = true;
+            boxeador1DataGridViewTextBoxColumn.Width = 150;
+            // 
+            // profesorBoxeador1DataGridViewTextBoxColumn
+            // 
+            profesorBoxeador1DataGridViewTextBoxColumn.DataPropertyName = "ProfesorBoxeador1";
+            profesorBoxeador1DataGridViewTextBoxColumn.HeaderText = "Profe/Esc. Rojo";
+            profesorBoxeador1DataGridViewTextBoxColumn.Name = "profesorBoxeador1DataGridViewTextBoxColumn";
+            profesorBoxeador1DataGridViewTextBoxColumn.ReadOnly = true;
+            profesorBoxeador1DataGridViewTextBoxColumn.Width = 120;
+            // 
+            // boxeador2DataGridViewTextBoxColumn
+            // 
+            boxeador2DataGridViewTextBoxColumn.DataPropertyName = "Boxeador2";
+            boxeador2DataGridViewTextBoxColumn.HeaderText = "Rincon Azul";
+            boxeador2DataGridViewTextBoxColumn.Name = "boxeador2DataGridViewTextBoxColumn";
+            boxeador2DataGridViewTextBoxColumn.ReadOnly = true;
+            boxeador2DataGridViewTextBoxColumn.Width = 150;
+            // 
+            // profesorBoxeador2DataGridViewTextBoxColumn
+            // 
+            profesorBoxeador2DataGridViewTextBoxColumn.DataPropertyName = "ProfesorBoxeador2";
+            profesorBoxeador2DataGridViewTextBoxColumn.HeaderText = "Profe/Esc. Azul";
+            profesorBoxeador2DataGridViewTextBoxColumn.Name = "profesorBoxeador2DataGridViewTextBoxColumn";
+            profesorBoxeador2DataGridViewTextBoxColumn.ReadOnly = true;
+            profesorBoxeador2DataGridViewTextBoxColumn.Width = 120;
+            // 
+            // iDDataGridViewTextBoxColumn19
+            // 
+            iDDataGridViewTextBoxColumn19.DataPropertyName = "ID";
+            iDDataGridViewTextBoxColumn19.HeaderText = "ID";
+            iDDataGridViewTextBoxColumn19.Name = "iDDataGridViewTextBoxColumn19";
+            iDDataGridViewTextBoxColumn19.ReadOnly = true;
+            iDDataGridViewTextBoxColumn19.Visible = false;
+            // 
+            // boxeador1IDDataGridViewTextBoxColumn
+            // 
+            boxeador1IDDataGridViewTextBoxColumn.DataPropertyName = "Boxeador1ID";
+            boxeador1IDDataGridViewTextBoxColumn.HeaderText = "Boxeador1ID";
+            boxeador1IDDataGridViewTextBoxColumn.Name = "boxeador1IDDataGridViewTextBoxColumn";
+            boxeador1IDDataGridViewTextBoxColumn.ReadOnly = true;
+            boxeador1IDDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // boxeador2IDDataGridViewTextBoxColumn
+            // 
+            boxeador2IDDataGridViewTextBoxColumn.DataPropertyName = "Boxeador2ID";
+            boxeador2IDDataGridViewTextBoxColumn.HeaderText = "Boxeador2ID";
+            boxeador2IDDataGridViewTextBoxColumn.Name = "boxeador2IDDataGridViewTextBoxColumn";
+            boxeador2IDDataGridViewTextBoxColumn.ReadOnly = true;
+            boxeador2IDDataGridViewTextBoxColumn.Visible = false;
             // 
             // contextDesarmarPelea
             // 
@@ -2579,85 +2663,25 @@
             profesorDataGridViewTextBoxColumn2.HeaderText = "Profesor";
             profesorDataGridViewTextBoxColumn2.Name = "profesorDataGridViewTextBoxColumn2";
             // 
-            // ordenDataGridViewTextBoxColumn
+            // btnSubir
             // 
-            ordenDataGridViewTextBoxColumn.DataPropertyName = "Orden";
-            ordenDataGridViewTextBoxColumn.HeaderText = "Orden";
-            ordenDataGridViewTextBoxColumn.Name = "ordenDataGridViewTextBoxColumn";
-            ordenDataGridViewTextBoxColumn.ReadOnly = true;
-            ordenDataGridViewTextBoxColumn.Width = 80;
+            btnSubir.Image = Desktop.Properties.Resources.arrow_up_green;
+            btnSubir.Location = new Point(6, 6);
+            btnSubir.Name = "btnSubir";
+            btnSubir.Size = new Size(29, 47);
+            btnSubir.TabIndex = 2;
+            btnSubir.UseVisualStyleBackColor = true;
+            btnSubir.Click += btnSubir_Click;
             // 
-            // sexoDataGridViewTextBoxColumn22
+            // btnBajar
             // 
-            sexoDataGridViewTextBoxColumn22.DataPropertyName = "Sexo";
-            sexoDataGridViewTextBoxColumn22.HeaderText = "Sexo";
-            sexoDataGridViewTextBoxColumn22.Name = "sexoDataGridViewTextBoxColumn22";
-            sexoDataGridViewTextBoxColumn22.ReadOnly = true;
-            sexoDataGridViewTextBoxColumn22.Width = 80;
-            // 
-            // categoriaDataGridViewTextBoxColumn
-            // 
-            categoriaDataGridViewTextBoxColumn.DataPropertyName = "Categoria";
-            categoriaDataGridViewTextBoxColumn.HeaderText = "Categoria";
-            categoriaDataGridViewTextBoxColumn.Name = "categoriaDataGridViewTextBoxColumn";
-            categoriaDataGridViewTextBoxColumn.ReadOnly = true;
-            categoriaDataGridViewTextBoxColumn.Width = 80;
-            // 
-            // boxeador1DataGridViewTextBoxColumn
-            // 
-            boxeador1DataGridViewTextBoxColumn.DataPropertyName = "Boxeador1";
-            boxeador1DataGridViewTextBoxColumn.HeaderText = "Rincon Rojo";
-            boxeador1DataGridViewTextBoxColumn.Name = "boxeador1DataGridViewTextBoxColumn";
-            boxeador1DataGridViewTextBoxColumn.ReadOnly = true;
-            boxeador1DataGridViewTextBoxColumn.Width = 150;
-            // 
-            // profesorBoxeador1DataGridViewTextBoxColumn
-            // 
-            profesorBoxeador1DataGridViewTextBoxColumn.DataPropertyName = "ProfesorBoxeador1";
-            profesorBoxeador1DataGridViewTextBoxColumn.HeaderText = "Profe/Esc. Rojo";
-            profesorBoxeador1DataGridViewTextBoxColumn.Name = "profesorBoxeador1DataGridViewTextBoxColumn";
-            profesorBoxeador1DataGridViewTextBoxColumn.ReadOnly = true;
-            profesorBoxeador1DataGridViewTextBoxColumn.Width = 120;
-            // 
-            // boxeador2DataGridViewTextBoxColumn
-            // 
-            boxeador2DataGridViewTextBoxColumn.DataPropertyName = "Boxeador2";
-            boxeador2DataGridViewTextBoxColumn.HeaderText = "Rincon Azul";
-            boxeador2DataGridViewTextBoxColumn.Name = "boxeador2DataGridViewTextBoxColumn";
-            boxeador2DataGridViewTextBoxColumn.ReadOnly = true;
-            boxeador2DataGridViewTextBoxColumn.Width = 150;
-            // 
-            // profesorBoxeador2DataGridViewTextBoxColumn
-            // 
-            profesorBoxeador2DataGridViewTextBoxColumn.DataPropertyName = "ProfesorBoxeador2";
-            profesorBoxeador2DataGridViewTextBoxColumn.HeaderText = "Profe/Esc. Azul";
-            profesorBoxeador2DataGridViewTextBoxColumn.Name = "profesorBoxeador2DataGridViewTextBoxColumn";
-            profesorBoxeador2DataGridViewTextBoxColumn.ReadOnly = true;
-            profesorBoxeador2DataGridViewTextBoxColumn.Width = 120;
-            // 
-            // iDDataGridViewTextBoxColumn19
-            // 
-            iDDataGridViewTextBoxColumn19.DataPropertyName = "ID";
-            iDDataGridViewTextBoxColumn19.HeaderText = "ID";
-            iDDataGridViewTextBoxColumn19.Name = "iDDataGridViewTextBoxColumn19";
-            iDDataGridViewTextBoxColumn19.ReadOnly = true;
-            iDDataGridViewTextBoxColumn19.Visible = false;
-            // 
-            // boxeador1IDDataGridViewTextBoxColumn
-            // 
-            boxeador1IDDataGridViewTextBoxColumn.DataPropertyName = "Boxeador1ID";
-            boxeador1IDDataGridViewTextBoxColumn.HeaderText = "Boxeador1ID";
-            boxeador1IDDataGridViewTextBoxColumn.Name = "boxeador1IDDataGridViewTextBoxColumn";
-            boxeador1IDDataGridViewTextBoxColumn.ReadOnly = true;
-            boxeador1IDDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // boxeador2IDDataGridViewTextBoxColumn
-            // 
-            boxeador2IDDataGridViewTextBoxColumn.DataPropertyName = "Boxeador2ID";
-            boxeador2IDDataGridViewTextBoxColumn.HeaderText = "Boxeador2ID";
-            boxeador2IDDataGridViewTextBoxColumn.Name = "boxeador2IDDataGridViewTextBoxColumn";
-            boxeador2IDDataGridViewTextBoxColumn.ReadOnly = true;
-            boxeador2IDDataGridViewTextBoxColumn.Visible = false;
+            btnBajar.Image = Desktop.Properties.Resources.arrow_down_green;
+            btnBajar.Location = new Point(6, 59);
+            btnBajar.Name = "btnBajar";
+            btnBajar.Size = new Size(29, 47);
+            btnBajar.TabIndex = 3;
+            btnBajar.UseVisualStyleBackColor = true;
+            btnBajar.Click += btnBajar_Click;
             // 
             // FormMatchMaker
             // 
@@ -3019,5 +3043,7 @@
         private DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn19;
         private DataGridViewTextBoxColumn boxeador1IDDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn boxeador2IDDataGridViewTextBoxColumn;
+        private Button btnSubir;
+        private Button btnBajar;
     }
 }
