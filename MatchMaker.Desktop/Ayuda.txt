@@ -1,6 +1,6 @@
 ¿Como usar MatchMaker?
 
-1. En la solapa "Ingreso" se cargan los boxeadores del evento: Nombre, Peso, Edad, Sexo (M/F), y opcionalmente Profesor y Cantidad de Peleas (experiencia).
+1. En la solapa "Ingreso" se cargan los boxeadores del evento: Nombre, Peso, Edad, Sexo (M/F), y opcionalmente Profesor/Escuela y Cantidad de Peleas (experiencia).
    Mientras un boxeador no esté asignado a una pelea, este se podrá modificar o eliminar.
    Para Eliminar un boxeador se debe pintar la fila y preisonal la tecla "Supr".
    Un boxeador asignado a una pelea NO se podrá modificar y se verá pintado en celeste.
@@ -15,6 +15,7 @@
 
 4. En la solapa "Peleas" puede desarmar las peleas, pintando la fila, haciendo botón derecho "Desarmar Pelea..." (también puede presionar la tecla "Supr").
    En esta solapa también se permite reordenar las peleas pintando una fila, botón recho "Subir pelea..." o "Bajar pelea..." según necesite.
+   También puede reordenar pintando la fila y utilizar los botones de la izquierda (arriba y abajo).
 
 
 Cambiar de evento.
