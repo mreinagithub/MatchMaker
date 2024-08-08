@@ -156,6 +156,24 @@ namespace MatchMaker
                     tb.KeyPress += new KeyPressEventHandler(ColumnNumber_KeyPress);
                 }
             }
+            else if(grillaIngreso.CurrentCell.ColumnIndex == 6)
+            {
+                TextBox txtBx = e.Control as TextBox;
+                txtBx.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+                txtBx.AutoCompleteSource = AutoCompleteSource.CustomSource;
+
+                //Get values
+                AutoCompleteStringCollection data = new AutoCompleteStringCollection();
+                foreach (DataGridViewRow row in grillaIngreso.Rows)
+                {
+                    string value = Convert.ToString(row.Cells[grillaIngreso.CurrentCell.ColumnIndex].Value);
+                    if (!string.IsNullOrWhiteSpace(value) && !data.Contains(value))
+                    {
+                        data.Add(value);
+                    }
+                }
+                txtBx.AutoCompleteCustomSource = data;
+            }
 
         }
         private void ColumnNumber_KeyPress(object sender, KeyPressEventArgs e)
@@ -182,7 +200,7 @@ namespace MatchMaker
                 texto = texto.Replace(".", ",");
                 grillaIngreso.CurrentCell.Value = texto;
             }
-        }
+        }       
 
         private void grillaPeleas_ColumnHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
@@ -270,11 +288,11 @@ namespace MatchMaker
                 int? nIndice = SubirPelea(grillaPeleas);
                 SeleccionManualGrilla(grillaPeleas, nIndice);
             }
-            catch (Exception ex) 
+            catch (Exception ex)
             {
                 MessageBox.Show(this, ex.Message, "Error al reordenar", MessageBoxButtons.OK);
             }
-            
+
         }
         private void btnBajar_Click(object sender, EventArgs e)
         {
@@ -290,7 +308,7 @@ namespace MatchMaker
             catch (Exception ex)
             {
                 MessageBox.Show(this, ex.Message, "Error al reordenar", MessageBoxButtons.OK);
-            }            
+            }
         }
 
         private void nuevoEventoToolStripMenuItem_Click(object sender, EventArgs e)
@@ -869,13 +887,13 @@ namespace MatchMaker
                 .FirstOrDefault();
             if (pelaPost != null)
             {
-                nuevOrden = grd.CurrentRow.Index+1;
+                nuevOrden = grd.CurrentRow.Index + 1;
 
                 pelea.Orden = pelaPost.Orden;
                 pelaPost.Orden = orden;
 
                 ReordenarPeleas();
-                
+
 
             }
             return nuevOrden;
@@ -931,7 +949,7 @@ namespace MatchMaker
             }
             return ExportDataTable;
         }
-        
+
 
         //DataSave
         public List<Boxeador> GetBoxeadores(string backup = "")
@@ -1107,6 +1125,6 @@ namespace MatchMaker
             return fueGuardado;
         }
 
-        
+      
     }
 }

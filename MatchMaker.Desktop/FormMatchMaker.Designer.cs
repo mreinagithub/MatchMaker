@@ -249,6 +249,8 @@
             dataGridViewTextBoxColumn15 = new DataGridViewTextBoxColumn();
             dataGridViewCheckBoxColumn2 = new DataGridViewCheckBoxColumn();
             tabPeleas = new TabPage();
+            btnBajar = new Button();
+            btnSubir = new Button();
             grillaPeleas = new DataGridView();
             ordenDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             sexoDataGridViewTextBoxColumn22 = new DataGridViewTextBoxColumn();
@@ -293,8 +295,6 @@
             sexoDataGridViewTextBoxColumn2 = new DataGridViewTextBoxColumn();
             profesorDataGridViewTextBoxColumn2 = new DataGridViewTextBoxColumn();
             saveFileDialog1 = new SaveFileDialog();
-            btnSubir = new Button();
-            btnBajar = new Button();
             tabPrincipal.SuspendLayout();
             tabIngreso.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)grillaIngreso).BeginInit();
@@ -421,7 +421,7 @@
             grillaIngreso.Location = new Point(3, 3);
             grillaIngreso.Name = "grillaIngreso";
             grillaIngreso.Size = new Size(833, 392);
-            grillaIngreso.TabIndex = 0;
+            grillaIngreso.TabIndex = 0;            
             // 
             // iDDataGridViewTextBoxColumn
             // 
@@ -2313,6 +2313,26 @@
             tabPeleas.Text = "Peleas";
             tabPeleas.UseVisualStyleBackColor = true;
             // 
+            // btnBajar
+            // 
+            btnBajar.Image = Desktop.Properties.Resources.arrow_down_green;
+            btnBajar.Location = new Point(6, 59);
+            btnBajar.Name = "btnBajar";
+            btnBajar.Size = new Size(29, 47);
+            btnBajar.TabIndex = 3;
+            btnBajar.UseVisualStyleBackColor = true;
+            btnBajar.Click += btnBajar_Click;
+            // 
+            // btnSubir
+            // 
+            btnSubir.Image = Desktop.Properties.Resources.arrow_up_green;
+            btnSubir.Location = new Point(6, 6);
+            btnSubir.Name = "btnSubir";
+            btnSubir.Size = new Size(29, 47);
+            btnSubir.TabIndex = 2;
+            btnSubir.UseVisualStyleBackColor = true;
+            btnSubir.Click += btnSubir_Click;
+            // 
             // grillaPeleas
             // 
             grillaPeleas.AllowUserToAddRows = false;
@@ -2662,26 +2682,6 @@
             profesorDataGridViewTextBoxColumn2.DataPropertyName = "Profesor";
             profesorDataGridViewTextBoxColumn2.HeaderText = "Profesor";
             profesorDataGridViewTextBoxColumn2.Name = "profesorDataGridViewTextBoxColumn2";
-            // 
-            // btnSubir
-            // 
-            btnSubir.Image = Desktop.Properties.Resources.arrow_up_green;
-            btnSubir.Location = new Point(6, 6);
-            btnSubir.Name = "btnSubir";
-            btnSubir.Size = new Size(29, 47);
-            btnSubir.TabIndex = 2;
-            btnSubir.UseVisualStyleBackColor = true;
-            btnSubir.Click += btnSubir_Click;
-            // 
-            // btnBajar
-            // 
-            btnBajar.Image = Desktop.Properties.Resources.arrow_down_green;
-            btnBajar.Location = new Point(6, 59);
-            btnBajar.Name = "btnBajar";
-            btnBajar.Size = new Size(29, 47);
-            btnBajar.TabIndex = 3;
-            btnBajar.UseVisualStyleBackColor = true;
-            btnBajar.Click += btnBajar_Click;
             // 
             // FormMatchMaker
             // 
