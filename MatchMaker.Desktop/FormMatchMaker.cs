@@ -56,6 +56,7 @@ namespace MatchMaker
 
         IList<ReglaEdad> _reglasEdad = new List<ReglaEdad>();
 
+        System.Windows.Forms.Timer _timer;
 
         FormAyuda _fayuda = null;
 
@@ -405,6 +406,26 @@ namespace MatchMaker
 
         }
 
+        private void _timer_Tick(object sender, EventArgs e)
+        {
+            if (_SoloLectura) return;
+
+            try
+            {
+                _timer.Stop();
+                //Tomar backup del archivo
+                _dataBase.TomarBackupEvento();
+            }
+            catch
+            {
+               //Consumimos
+            }
+            finally
+            {
+                _timer.Start();
+            }
+        }
+
         private void Iniciar(string backup = "")
         {
             try
@@ -435,16 +456,31 @@ namespace MatchMaker
 
                 ArmarCategorias();
 
+                //Eventos
+                grillaIngreso.RowLeave -= GrillaIngreso_RowLeave;
+                grillaIngreso.CellLeave -= GrillaIngreso_CellLeave;
+                grillaIngreso.UserDeletingRow -= GrillaIngreso_UserDeletingRow;
+                grillaIngreso.CellValidating -= GrillaIngreso_CellValidating;
+                grillaIngreso.CellValidated -= grillaIngreso_CellValidated;
+                grillaIngreso.EditingControlShowing -= grillaIngreso_EditingControlShowing;
+
+                _timer = null;
+
                 if (!_SoloLectura)
                 {
 
-                    //Eventos
-                    grillaIngreso.RowLeave -= GrillaIngreso_RowLeave;
-                    grillaIngreso.CellLeave -= GrillaIngreso_CellLeave;
-                    grillaIngreso.UserDeletingRow -= GrillaIngreso_UserDeletingRow;
-                    grillaIngreso.CellValidating -= GrillaIngreso_CellValidating;
-                    grillaIngreso.CellValidated -= grillaIngreso_CellValidated;
-                    grillaIngreso.EditingControlShowing -= grillaIngreso_EditingControlShowing;
+                    //IniciarTimer
+                    _timer = new System.Windows.Forms.Timer();
+                    _timer.Interval = (60*10*1000); //Respaldo c/10 minutos
+                    _timer.Tick += _timer_Tick;                    
+
+                    ////Eventos
+                    //grillaIngreso.RowLeave -= GrillaIngreso_RowLeave;
+                    //grillaIngreso.CellLeave -= GrillaIngreso_CellLeave;
+                    //grillaIngreso.UserDeletingRow -= GrillaIngreso_UserDeletingRow;
+                    //grillaIngreso.CellValidating -= GrillaIngreso_CellValidating;
+                    //grillaIngreso.CellValidated -= grillaIngreso_CellValidated;
+                    //grillaIngreso.EditingControlShowing -= grillaIngreso_EditingControlShowing;
 
                     grillaIngreso.RowLeave += GrillaIngreso_RowLeave;
                     grillaIngreso.CellLeave += GrillaIngreso_CellLeave;
@@ -459,12 +495,15 @@ namespace MatchMaker
 
                 BloquearAsignadosYColorearGrillas();
 
+                if (!_SoloLectura && _timer != null) _timer.Start();
+
             }
             catch
             {
                 throw;
             }
-        }
+        }       
+
         private bool ValidarBoxeador(Boxeador boxeador)
         {
             if (boxeador == null)

@@ -10,10 +10,11 @@
     <div class="custom-body-tv">
 
         <div class="row fixedElement">
-            <div class="col-8">
+            <div class="col-7">
                 <img src="img/logo_is.png" width="60" height="50" />
                 <span style="color:white; text-align:center;font-size:35px; font-weight:bold; vertical-align:bottom;">PROMOTIONS</span>
             </div>
+            <button class="btn btn-info col-1" @onclick="Refresh"><i class="fa-solid fa-arrow-rotate-right"></i></button>
             <button class="btn btn-danger col-2" @onclick="RetrocederPelea">@("<<")</button>
             <button class="btn btn-success col-2 float-end" id="btnAvanzar" @onclick="AvanzarPelea">@(">>")</button>
         </div>
@@ -35,9 +36,9 @@
                 {
                     <tr style="background-color: @pelea.ColorFila; color: @pelea.ColorLetra;">
                         <td class="row-vs-tv-style">@pelea.Orden</td>
-                        <td class="center-tv-style row-tv-style">@pelea.BoxeadorRinconRojo</td>
+                        <td class="center-tv-style row-tv-style">@pelea.BoxeadorRinconRojo (@pelea.ProfeEscueltaRinconRojo)</td>
                         <td class="center-tv-style row-vs-tv-style">VS</td>
-                        <td class="center-tv-style row-tv-style">@pelea.BoxeadorRinconAzul</td>
+                        <td class="center-tv-style row-tv-style">@pelea.BoxeadorRinconAzul (@pelea.ProfeEscueltaRinconAzul)</td>
                     </tr>
                 }
         
@@ -131,6 +132,13 @@
             }
 
         }
+    }
+
+    void Refresh()
+    {
+        _peleas = _dbSup.GetPeleas();
+        if (_peleaActual > 0) _peleaActual--;
+        AvanzarPelea();
     }
 
 }

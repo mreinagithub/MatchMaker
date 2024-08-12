@@ -32,7 +32,9 @@ namespace MatchMaker.TVShow
                     var pdto = new PeleaDTO();
                     pdto.Orden = pelea.Orden;
                     pdto.BoxeadorRinconRojo = boxeadores.FirstOrDefault(b => b.ID == pelea.Boxeador1ID).Nombre;
+                    pdto.ProfeEscueltaRinconRojo = boxeadores.FirstOrDefault(b => b.ID == pelea.Boxeador1ID).Profesor;
                     pdto.BoxeadorRinconAzul = boxeadores.FirstOrDefault(b => b.ID == pelea.Boxeador2ID).Nombre;
+                    pdto.ProfeEscueltaRinconAzul = boxeadores.FirstOrDefault(b => b.ID == pelea.Boxeador2ID).Profesor;
 
                     _peleas.Add(pdto);                    
                 }

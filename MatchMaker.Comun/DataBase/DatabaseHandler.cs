@@ -16,6 +16,7 @@ namespace MatchMaker.Comun.Data
         string backupFolder = "Backups";        
         string DataSource = "MatchMaker.sqlite3";
         string DataSourceBackUp = "Backups.sqlite3";
+        string DataSourceInstantanea = "MatchMaker_Respaldo.sqlite3";
 
         string folder;
 
@@ -73,6 +74,13 @@ namespace MatchMaker.Comun.Data
             _db.Insert(bck);
             _db.Close();
 
+        }
+        public void TomarBackupEvento()
+        {
+            string fullPathWithFile = Path.Combine(folder, DataSource);
+            string fullPathWithFileInst = Path.Combine(folder, DataSourceInstantanea);
+
+            File.Copy(fullPathWithFile, fullPathWithFileInst, overwrite: true);
         }
 
         public SQLiteConnection GetConnection(string backup = "")
