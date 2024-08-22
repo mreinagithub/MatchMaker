@@ -48,7 +48,7 @@ namespace MatchMaker.Comun.Data
             CloseConnection();
         }
 
-        public void GenerarBackup(DateTime fecha)
+        public void GenerarBackup(DateTime fecha, string tipoEvento)
         {
             string fullPathWithFile = Path.Combine(folder, DataSource);            
             string fullPathBackup = Path.Combine(folder, backupFolder);
@@ -58,7 +58,7 @@ namespace MatchMaker.Comun.Data
                 Directory.CreateDirectory(fullPathBackup);
             }
 
-            string nombreBackup = $"Evento_{fecha:yyyyMMdd}_{DateTime.Now:yyyyMMdd_hhmmss}.sqlite3";          
+            string nombreBackup = $"Evento_{tipoEvento}_{fecha:yyyyMMdd}_{DateTime.Now:yyyyMMdd_hhmmss}.sqlite3";          
            
 
             File.Copy(fullPathWithFile, Path.Combine(fullPathBackup, nombreBackup), overwrite: false);

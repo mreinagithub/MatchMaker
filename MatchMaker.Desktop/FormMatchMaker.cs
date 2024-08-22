@@ -75,6 +75,15 @@ namespace MatchMaker
 
         private void GrillaIngreso_CellLeave(object sender, DataGridViewCellEventArgs e)
         {
+            //if (e.ColumnIndex == 3)
+            //{
+            //    string texto = grillaIngreso.CurrentCell.EditedFormattedValue.ToString();
+            //    if (!DateTime.TryParse(texto, out DateTime fechaValida))
+            //    {
+            //        grillaIngreso.CurrentCell.Value = "";                    
+            //    }
+            //}
+
 
             ////Para que se refresque el valor de la ultima celda en el boxeador.
             //if (grillaIngreso.IsCurrentCellInEditMode) { grillaIngreso.EndEdit(); }
@@ -88,12 +97,14 @@ namespace MatchMaker
         }
         private void GrillaIngreso_CellValidating(object sender, DataGridViewCellValidatingEventArgs e)
         {
-            //if (e.ColumnIndex == 2)
-            //{
-            //    string texto = grillaIngreso.CurrentCell.EditedFormattedValue.ToString();
-            //    texto = texto.Replace(".", ",");
-            //    grillaIngreso.CurrentCell.Value = texto;
-            //}
+            if (e.ColumnIndex == 3)
+            {
+                string texto = grillaIngreso.CurrentCell.EditedFormattedValue.ToString();
+                if (!DateTime.TryParse(texto, out DateTime fechaValida))
+                {
+                    grillaIngreso.CurrentCell.Value = null;                    
+                }
+            }
         }
         private void GrillaIngreso_RowLeave(object sender, DataGridViewCellEventArgs e)
         {
@@ -145,10 +156,10 @@ namespace MatchMaker
         private void grillaIngreso_EditingControlShowing(object sender, DataGridViewEditingControlShowingEventArgs e)
         {
             e.Control.KeyPress -= new KeyPressEventHandler(ColumnNumber_KeyPress);
-            _grillaAllowDecimalSeparator = grillaIngreso.CurrentCell.ColumnIndex == 4;
-            if (grillaIngreso.CurrentCell.ColumnIndex == 3
-                || grillaIngreso.CurrentCell.ColumnIndex == 4
-                || grillaIngreso.CurrentCell.ColumnIndex == 5)
+            _grillaAllowDecimalSeparator = grillaIngreso.CurrentCell.ColumnIndex == 5;
+            if (grillaIngreso.CurrentCell.ColumnIndex == 4
+                || grillaIngreso.CurrentCell.ColumnIndex == 5
+                || grillaIngreso.CurrentCell.ColumnIndex == 6)
             {
                 _grillaAllowDecimalSeparator = true;
                 TextBox tb = e.Control as TextBox;
@@ -157,7 +168,7 @@ namespace MatchMaker
                     tb.KeyPress += new KeyPressEventHandler(ColumnNumber_KeyPress);
                 }
             }
-            else if(grillaIngreso.CurrentCell.ColumnIndex == 6)
+            else if(grillaIngreso.CurrentCell.ColumnIndex == 7)
             {
                 TextBox txtBx = e.Control as TextBox;
                 txtBx.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
@@ -195,7 +206,23 @@ namespace MatchMaker
         }
         private void grillaIngreso_CellValidated(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.ColumnIndex == 4)
+            if(e.ColumnIndex == 3)
+            {
+                bool edadEstablecida = false;
+                string texto = grillaIngreso.CurrentCell.EditedFormattedValue.ToString();
+                if (DateTime.TryParse(texto, out DateTime fechaNacim))
+                {
+                    //Calcular edad
+                    int edad = CalcularEdad(fechaNacim);
+                    if (edad > 0)
+                    {
+                        grillaIngreso.CurrentRow.Cells[4].Value = edad;
+                    }
+                    edadEstablecida = true;
+                }
+                grillaIngreso.CurrentRow.Cells[4].ReadOnly = edadEstablecida;
+            }
+            else if (e.ColumnIndex == 5)
             {
                 string texto = grillaIngreso.CurrentCell.EditedFormattedValue.ToString();
                 texto = texto.Replace(".", ",");
@@ -320,7 +347,7 @@ namespace MatchMaker
                 var resu = fNuevo.ShowDialog();
                 if (resu == DialogResult.Yes)
                 {
-                    _dataBase.GenerarBackup(fNuevo.FechaElegida);
+                    _dataBase.GenerarBackup(fNuevo.FechaElegida, fNuevo.TipoEventoElegido);
                     _dataBase.RestoreDB();
                     Iniciar();
                 }
@@ -462,7 +489,7 @@ namespace MatchMaker
                 grillaIngreso.UserDeletingRow -= GrillaIngreso_UserDeletingRow;
                 grillaIngreso.CellValidating -= GrillaIngreso_CellValidating;
                 grillaIngreso.CellValidated -= grillaIngreso_CellValidated;
-                grillaIngreso.EditingControlShowing -= grillaIngreso_EditingControlShowing;
+                grillaIngreso.EditingControlShowing -= grillaIngreso_EditingControlShowing;                
 
                 _timer = null;
 
@@ -487,7 +514,7 @@ namespace MatchMaker
                     grillaIngreso.UserDeletingRow += GrillaIngreso_UserDeletingRow;
                     grillaIngreso.CellValidating += GrillaIngreso_CellValidating;
                     grillaIngreso.CellValidated += grillaIngreso_CellValidated;
-                    grillaIngreso.EditingControlShowing += grillaIngreso_EditingControlShowing;
+                    grillaIngreso.EditingControlShowing += grillaIngreso_EditingControlShowing;                    
 
                     //Cargar Reglas Edades
                     _reglasEdad = ReglaEdad.ObtenerReglas();
@@ -502,7 +529,9 @@ namespace MatchMaker
             {
                 throw;
             }
-        }       
+        }
+
+       
 
         private bool ValidarBoxeador(Boxeador boxeador)
         {
@@ -989,6 +1018,38 @@ namespace MatchMaker
             return ExportDataTable;
         }
 
+
+        private int CalcularEdad(DateTime fechaNacimiento)
+        {
+            // Obtiene la fecha actual:
+            DateTime fechaActual = DateTime.Today;
+
+            // Comprueba que la se haya introducido una fecha válida; si 
+            // la fecha de nacimiento es mayor a la fecha actual se muestra mensaje 
+            // de advertencia:
+            if (fechaNacimiento > fechaActual)
+            {                
+                return -1;
+            }
+            else
+            {
+                int edad = fechaActual.Year - fechaNacimiento.Year;
+
+                // Comprueba que el mes de la fecha de nacimiento es mayor 
+                // que el mes de la fecha actual:
+                if (fechaNacimiento.Month > fechaActual.Month)
+                {
+                    --edad;
+                }
+                else if (fechaNacimiento.Month == fechaActual.Month
+                    && fechaNacimiento.Day > fechaActual.Day)
+                {
+                    --edad;
+                }
+
+                return edad;
+            }
+        }
 
         //DataSave
         public List<Boxeador> GetBoxeadores(string backup = "")

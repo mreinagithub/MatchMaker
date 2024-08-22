@@ -17,6 +17,7 @@ namespace MatchMaker.Comun.Modelos
         [Required(ErrorMessage = "Campo Nombre requerido.")]
         public string Nombre { get; set; }
         public decimal Peso { get; set; }
+        public DateTime? FechaNacimiento { get; set; }
         public int Edad { get; set; }
         public string Sexo { get; set; }
         public string Profesor { get; set; }
