@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             btnCerrar = new Button();
             boxeadorAgendaBindingSource = new BindingSource(components);
             grillaAgendaBoxeadores = new DataGridView();
@@ -49,6 +49,7 @@
             txtFiltroNombre = new TextBox();
             txtFiltroCategoria = new TextBox();
             txtFiltroProfEsc = new TextBox();
+            txtBorrarFiltros = new Button();
             ((System.ComponentModel.ISupportInitialize)boxeadorAgendaBindingSource).BeginInit();
             ((System.ComponentModel.ISupportInitialize)grillaAgendaBoxeadores).BeginInit();
             SuspendLayout();
@@ -115,8 +116,8 @@
             // fechaNacimientoDataGridViewTextBoxColumn
             // 
             fechaNacimientoDataGridViewTextBoxColumn.DataPropertyName = "FechaNacimiento";
-            dataGridViewCellStyle2.Format = "dd/MM/yyyy";
-            fechaNacimientoDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Format = "dd/MM/yyyy";
+            fechaNacimientoDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle1;
             fechaNacimientoDataGridViewTextBoxColumn.HeaderText = "Fecha Nacim.";
             fechaNacimientoDataGridViewTextBoxColumn.Name = "fechaNacimientoDataGridViewTextBoxColumn";
             // 
@@ -200,11 +201,22 @@
             txtFiltroProfEsc.Size = new Size(150, 23);
             txtFiltroProfEsc.TabIndex = 2;
             // 
+            // txtBorrarFiltros
+            // 
+            txtBorrarFiltros.Location = new Point(528, 6);
+            txtBorrarFiltros.Name = "txtBorrarFiltros";
+            txtBorrarFiltros.Size = new Size(111, 23);
+            txtBorrarFiltros.TabIndex = 5;
+            txtBorrarFiltros.Text = "Borrar filtros...";
+            txtBorrarFiltros.UseVisualStyleBackColor = true;
+            txtBorrarFiltros.Click += txtBorrarFiltros_Click;
+            // 
             // FormAgendaBoxeadores
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(972, 530);
+            Controls.Add(txtBorrarFiltros);
             Controls.Add(txtFiltroProfEsc);
             Controls.Add(txtFiltroCategoria);
             Controls.Add(txtFiltroNombre);
@@ -244,5 +256,6 @@
         private TextBox txtFiltroNombre;
         private TextBox txtFiltroCategoria;
         private TextBox txtFiltroProfEsc;
+        private Button txtBorrarFiltros;
     }
 }

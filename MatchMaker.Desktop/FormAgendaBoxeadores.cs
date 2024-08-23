@@ -41,12 +41,8 @@ namespace MatchMaker.Desktop
 
                 //Iniciamos la base de datos
                 _dataBase = new DatabaseHandler();
-                var lstBx = GetBoxeadoresAgenda();
-                _boxeadores = new BindingList<BoxeadorAgenda>(lstBx);
 
-                //Binding
-                grillaAgendaBoxeadores.Rows.Clear();
-                grillaAgendaBoxeadores.DataSource = _boxeadores;
+                BindearGrilla();
 
                 //Eventos
                 //grillaAgendaBoxeadores.RowLeave += 
@@ -69,15 +65,11 @@ namespace MatchMaker.Desktop
                 _esLoad = false;
             }
         }
-
         private void TxtFiltroProfEsc_TextChanged(object sender, EventArgs e)
         {
             try
             {
-                var lstBx = GetBoxeadoresAgenda();
-                _boxeadores = new BindingList<BoxeadorAgenda>(lstBx);
-                grillaAgendaBoxeadores.Rows.Clear();
-                grillaAgendaBoxeadores.DataSource = _boxeadores;
+                BindearGrilla();
             }
             catch (Exception ex)
             {
@@ -88,26 +80,20 @@ namespace MatchMaker.Desktop
         {
             try
             {
-                var lstBx = GetBoxeadoresAgenda();
-                _boxeadores = new BindingList<BoxeadorAgenda>(lstBx);
-                grillaAgendaBoxeadores.Rows.Clear();
-                grillaAgendaBoxeadores.DataSource = _boxeadores;
+                BindearGrilla();
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show(this, ex.Message, "Error al leer la agenda", MessageBoxButtons.OK);
             }
 
-            
+
         }
         private void TxtFiltroNombre_TextChanged(object sender, EventArgs e)
         {
             try
             {
-                var lstBx = GetBoxeadoresAgenda();
-                _boxeadores = new BindingList<BoxeadorAgenda>(lstBx);
-                grillaAgendaBoxeadores.Rows.Clear();
-                grillaAgendaBoxeadores.DataSource = _boxeadores;
+                BindearGrilla();
             }
             catch (Exception ex)
             {
@@ -143,6 +129,21 @@ namespace MatchMaker.Desktop
                 this.Cursor = Cursors.Default;
             }
         }
+        private void txtBorrarFiltros_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                txtFiltroNombre.Text = "";
+                txtFiltroCategoria.Text = "";
+                txtFiltroProfEsc.Text = "";
+                BindearGrilla();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(this, ex.Message, "Error al leer la agenda", MessageBoxButtons.OK);
+            }
+        }
+
 
         private List<BoxeadorAgenda> GetBoxeadoresAgenda()
         {
@@ -177,7 +178,7 @@ namespace MatchMaker.Desktop
 
                 results = results.Where(b => b.Nombre.ToUpper().Contains(fNombre.ToUpper())
                                           && b.Categoria.ToUpper().Contains(fCat.ToUpper())
-                                          && b.Profesor.ToUpper().Contains(fProfesor.ToUpper())).ToList() ;
+                                          && b.Profesor.ToUpper().Contains(fProfesor.ToUpper())).ToList();
                 return results;
             }
             catch
@@ -185,7 +186,28 @@ namespace MatchMaker.Desktop
                 throw;
             }
         }
-       
+        private void ConfigurarGrillaBoxeadores()
+        {
+            foreach (DataGridViewRow row in grillaAgendaBoxeadores.Rows)
+            {
+                var bx = row.DataBoundItem as BoxeadorAgenda;
+
+                if (bx != null && bx.FechaNacimiento is not null)
+                {
+                    row.Cells[5].ReadOnly = true;
+                }
+            }
+
+        }
+        private void BindearGrilla()
+        {
+            var lstBx = GetBoxeadoresAgenda();
+            _boxeadores = new BindingList<BoxeadorAgenda>(lstBx);
+            grillaAgendaBoxeadores.Rows.Clear();
+            grillaAgendaBoxeadores.DataSource = _boxeadores;
+
+            ConfigurarGrillaBoxeadores();
+        }
 
       
     }
