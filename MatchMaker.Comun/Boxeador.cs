@@ -22,7 +22,7 @@ namespace MatchMaker.Comun.Modelos
         public string Sexo { get; set; }
         public string Profesor { get; set; }
         public int CantidadPeleas { get; set; }  
-        public bool Asignado { get; set; } = false;
+        public bool Asignado { get; set; } = false;      
 
         public override string ToString()
         {

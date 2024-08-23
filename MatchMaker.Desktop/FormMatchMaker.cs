@@ -102,7 +102,7 @@ namespace MatchMaker
                 string texto = grillaIngreso.CurrentCell.EditedFormattedValue.ToString();
                 if (!DateTime.TryParse(texto, out DateTime fechaValida))
                 {
-                    grillaIngreso.CurrentCell.Value = null;                    
+                    grillaIngreso.CurrentCell.Value = null;
                 }
             }
         }
@@ -168,7 +168,7 @@ namespace MatchMaker
                     tb.KeyPress += new KeyPressEventHandler(ColumnNumber_KeyPress);
                 }
             }
-            else if(grillaIngreso.CurrentCell.ColumnIndex == 7)
+            else if (grillaIngreso.CurrentCell.ColumnIndex == 7)
             {
                 TextBox txtBx = e.Control as TextBox;
                 txtBx.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
@@ -206,14 +206,14 @@ namespace MatchMaker
         }
         private void grillaIngreso_CellValidated(object sender, DataGridViewCellEventArgs e)
         {
-            if(e.ColumnIndex == 3)
+            if (e.ColumnIndex == 3)
             {
                 bool edadEstablecida = false;
                 string texto = grillaIngreso.CurrentCell.EditedFormattedValue.ToString();
                 if (DateTime.TryParse(texto, out DateTime fechaNacim))
                 {
                     //Calcular edad
-                    int edad = CalcularEdad(fechaNacim);
+                    int edad = Utilidades.CalcularEdad(fechaNacim);
                     if (edad > 0)
                     {
                         grillaIngreso.CurrentRow.Cells[4].Value = edad;
@@ -228,7 +228,7 @@ namespace MatchMaker
                 texto = texto.Replace(".", ",");
                 grillaIngreso.CurrentCell.Value = texto;
             }
-        }       
+        }
 
         private void grillaPeleas_ColumnHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
@@ -347,7 +347,16 @@ namespace MatchMaker
                 var resu = fNuevo.ShowDialog();
                 if (resu == DialogResult.Yes)
                 {
-                    _dataBase.GenerarBackup(fNuevo.FechaElegida, fNuevo.TipoEventoElegido);
+                    //Guardar evento
+                    string nombreEventoGuardado = _dataBase.GuardarEvento(fNuevo.FechaElegida, fNuevo.TipoEventoElegido);
+
+                    //Si es AMATEUR_FAB, agregar a la agenda
+                    if (fNuevo.TipoEventoElegido == "AMATEUR_FAB")
+                    {
+                        UpdateAgendaBoxeadores(nombreEventoGuardado);
+                    }
+
+
                     _dataBase.RestoreDB();
                     Iniciar();
                 }
@@ -403,8 +412,20 @@ namespace MatchMaker
                 MessageBox.Show(this, ex.Message, "Error al iniciar el evento actual", MessageBoxButtons.OK);
             }
         }
+        private void agendaBoxeadoresToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                FormAgendaBoxeadores f = new FormAgendaBoxeadores();
+               f.Show();               
 
+            }
+            catch (Exception ex)
+            {
 
+                MessageBox.Show(this, ex.Message, "Error al iniciar la pantalla", MessageBoxButtons.OK);
+            }
+        }
         private void exportarPeleasAExcelToolStripMenuItem_Click(object sender, EventArgs e)
         {
             try
@@ -424,15 +445,12 @@ namespace MatchMaker
             }
             catch (Exception ex) { MessageBox.Show(ex.Message); }
         }
-
-
         private void guiaDeUsoToolStripMenuItem_Click(object sender, EventArgs e)
         {
             _fayuda = new FormAyuda();
             _fayuda.ShowDialog();
 
         }
-
         private void _timer_Tick(object sender, EventArgs e)
         {
             if (_SoloLectura) return;
@@ -442,10 +460,11 @@ namespace MatchMaker
                 _timer.Stop();
                 //Tomar backup del archivo
                 _dataBase.TomarBackupEvento();
+                _dataBase.TomarBackupAgendaBoxeadores();
             }
             catch
             {
-               //Consumimos
+                //Consumimos
             }
             finally
             {
@@ -489,7 +508,7 @@ namespace MatchMaker
                 grillaIngreso.UserDeletingRow -= GrillaIngreso_UserDeletingRow;
                 grillaIngreso.CellValidating -= GrillaIngreso_CellValidating;
                 grillaIngreso.CellValidated -= grillaIngreso_CellValidated;
-                grillaIngreso.EditingControlShowing -= grillaIngreso_EditingControlShowing;                
+                grillaIngreso.EditingControlShowing -= grillaIngreso_EditingControlShowing;
 
                 _timer = null;
 
@@ -498,8 +517,8 @@ namespace MatchMaker
 
                     //IniciarTimer
                     _timer = new System.Windows.Forms.Timer();
-                    _timer.Interval = (60*10*1000); //Respaldo c/10 minutos
-                    _timer.Tick += _timer_Tick;                    
+                    _timer.Interval = (60 * 5 * 1000); //Respaldo c/5 minutos                    
+                    _timer.Tick += _timer_Tick;
 
                     ////Eventos
                     //grillaIngreso.RowLeave -= GrillaIngreso_RowLeave;
@@ -514,7 +533,7 @@ namespace MatchMaker
                     grillaIngreso.UserDeletingRow += GrillaIngreso_UserDeletingRow;
                     grillaIngreso.CellValidating += GrillaIngreso_CellValidating;
                     grillaIngreso.CellValidated += grillaIngreso_CellValidated;
-                    grillaIngreso.EditingControlShowing += grillaIngreso_EditingControlShowing;                    
+                    grillaIngreso.EditingControlShowing += grillaIngreso_EditingControlShowing;
 
                     //Cargar Reglas Edades
                     _reglasEdad = ReglaEdad.ObtenerReglas();
@@ -530,8 +549,6 @@ namespace MatchMaker
                 throw;
             }
         }
-
-       
 
         private bool ValidarBoxeador(Boxeador boxeador)
         {
@@ -685,11 +702,7 @@ namespace MatchMaker
             //BloquearAsignadosYColorearGrillas();
 
         }
-        private object GetPropValue(object src, string propName)
-        {
-            //Obtiene el valor de la propiedad desde el source por reflexión.            
-            return src.GetType().GetProperty(propName).GetValue(src, null);
-        }
+       
         private void BloquearAsignadosYColorearGrillas()
         {
             foreach (DataGridViewRow row in grillaIngreso.Rows)
@@ -1018,39 +1031,6 @@ namespace MatchMaker
             return ExportDataTable;
         }
 
-
-        private int CalcularEdad(DateTime fechaNacimiento)
-        {
-            // Obtiene la fecha actual:
-            DateTime fechaActual = DateTime.Today;
-
-            // Comprueba que la se haya introducido una fecha válida; si 
-            // la fecha de nacimiento es mayor a la fecha actual se muestra mensaje 
-            // de advertencia:
-            if (fechaNacimiento > fechaActual)
-            {                
-                return -1;
-            }
-            else
-            {
-                int edad = fechaActual.Year - fechaNacimiento.Year;
-
-                // Comprueba que el mes de la fecha de nacimiento es mayor 
-                // que el mes de la fecha actual:
-                if (fechaNacimiento.Month > fechaActual.Month)
-                {
-                    --edad;
-                }
-                else if (fechaNacimiento.Month == fechaActual.Month
-                    && fechaNacimiento.Day > fechaActual.Day)
-                {
-                    --edad;
-                }
-
-                return edad;
-            }
-        }
-
         //DataSave
         public List<Boxeador> GetBoxeadores(string backup = "")
         {
@@ -1225,6 +1205,27 @@ namespace MatchMaker
             return fueGuardado;
         }
 
-      
+        public void UpdateAgendaBoxeadores(string evento)
+        {
+            try
+            {
+                //Convertir en boxeadorAgenda
+                IList<BoxeadorAgenda> _bxAgenda = new List<BoxeadorAgenda>();
+                foreach (Boxeador bx in _boxeadores)
+                {
+                    _bxAgenda.Add(BoxeadorAgenda.Crear(bx, evento));
+                }
+
+                var conn = _dataBase.GetAgendaConnection();
+                conn.InsertAll(_bxAgenda);
+                _dataBase.CloseConnection();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(this, ex.Message, "Error en base de datos", MessageBoxButtons.OK);
+            }
+        }
+
+       
     }
 }

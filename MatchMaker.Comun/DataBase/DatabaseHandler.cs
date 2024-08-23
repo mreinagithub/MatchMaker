@@ -13,31 +13,54 @@ namespace MatchMaker.Comun.Data
     {
         private SQLiteConnection _db;
 
-        string backupFolder = "Backups";        
+        string otrosEventosFolder = "OtrosEventos";        
+
         string DataSource = "MatchMaker.sqlite3";
         string DataSourceBackUp = "Backups.sqlite3";
-        string DataSourceInstantanea = "MatchMaker_Respaldo.sqlite3";
+        string DataSourceAgenda = "AgendaBoxeadores.sqlite3";
 
-        string folder;
+        string DataSourceRespaldo = "MatchMaker_Respaldo.sqlite3";   
+        string DataSourdeAgendaRespaldo = "AgendaBoxeadores_Respaldo.sqlite3";
 
-        public DatabaseHandler()        
+        string baseFolder;
+        string agendaFolder;
+        string respaldoFolder;
+
+        public DatabaseHandler()
         {
             
             string pDataFolder = Environment.GetEnvironmentVariable("programdata");
 
-            folder = Path.Combine(pDataFolder, "MatchMaker", "DataBase");
+            baseFolder = Path.Combine(pDataFolder, "MatchMaker", "DataBase");
 
-            if (!Directory.Exists(folder))
+            if (!Directory.Exists(baseFolder))
             {
-                Directory.CreateDirectory(folder);
+                Directory.CreateDirectory(baseFolder);
             }
 
-            _db = new SQLiteConnection(Path.Combine(folder, DataSource));
+            _db = new SQLiteConnection(Path.Combine(baseFolder, DataSource));
             _db.CreateTable<Boxeador>();
             _db.CreateTable<Pelea>();
 
-            _db = new SQLiteConnection(Path.Combine(folder, DataSourceBackUp));
-            _db.CreateTable<Backup>();            
+            _db = new SQLiteConnection(Path.Combine(baseFolder, DataSourceBackUp));
+            _db.CreateTable<Backup>();
+
+            agendaFolder = Path.Combine(baseFolder, "Agenda");
+
+            if (!Directory.Exists(agendaFolder))
+            {
+                Directory.CreateDirectory(agendaFolder);
+            }
+
+            _db = new SQLiteConnection(Path.Combine(agendaFolder, DataSourceAgenda));
+            _db.CreateTable<BoxeadorAgenda>();
+
+            respaldoFolder = Path.Combine(baseFolder, "Respaldos");
+
+            if (!Directory.Exists(respaldoFolder))
+            {
+                Directory.CreateDirectory(respaldoFolder);
+            }
         }
 
         public void RestoreDB()
@@ -48,20 +71,21 @@ namespace MatchMaker.Comun.Data
             CloseConnection();
         }
 
-        public void GenerarBackup(DateTime fecha, string tipoEvento)
+        public string GuardarEvento(DateTime fecha, string tipoEvento)
         {
-            string fullPathWithFile = Path.Combine(folder, DataSource);            
-            string fullPathBackup = Path.Combine(folder, backupFolder);
+            string fullPathWithFile = Path.Combine(baseFolder, DataSource);            
+            string fullPathOtroEvento = Path.Combine(baseFolder, otrosEventosFolder);
 
-            if (!Directory.Exists(fullPathBackup))
+            if (!Directory.Exists(fullPathOtroEvento))
             {
-                Directory.CreateDirectory(fullPathBackup);
+                Directory.CreateDirectory(fullPathOtroEvento);
             }
 
-            string nombreBackup = $"Evento_{tipoEvento}_{fecha:yyyyMMdd}_{DateTime.Now:yyyyMMdd_hhmmss}.sqlite3";          
+            string nomBackupBase = $"{tipoEvento}_{fecha:yyyyMMdd}_({DateTime.Now:yyyyMMdd_HHmmss})";
+            string nombreBackup = $"{nomBackupBase}.sqlite3";          
            
 
-            File.Copy(fullPathWithFile, Path.Combine(fullPathBackup, nombreBackup), overwrite: false);
+            File.Copy(fullPathWithFile, Path.Combine(fullPathOtroEvento, nombreBackup), overwrite: false);
 
             Backup bck = new Backup
             {
@@ -70,15 +94,23 @@ namespace MatchMaker.Comun.Data
                 NombreArchivo = nombreBackup
             };
 
-            _db = new SQLiteConnection(Path.Combine(folder, DataSourceBackUp));
+            _db = new SQLiteConnection(Path.Combine(baseFolder, DataSourceBackUp));
             _db.Insert(bck);
             _db.Close();
 
+            return nomBackupBase;
         }
         public void TomarBackupEvento()
         {
-            string fullPathWithFile = Path.Combine(folder, DataSource);
-            string fullPathWithFileInst = Path.Combine(folder, DataSourceInstantanea);
+            string fullPathWithFile = Path.Combine(baseFolder, DataSource);
+            string fullPathWithFileInst = Path.Combine(respaldoFolder, DataSourceRespaldo);
+
+            File.Copy(fullPathWithFile, fullPathWithFileInst, overwrite: true);
+        }
+        public void TomarBackupAgendaBoxeadores()
+        {
+            string fullPathWithFile = Path.Combine(agendaFolder, DataSourceAgenda);
+            string fullPathWithFileInst = Path.Combine(respaldoFolder, DataSourdeAgendaRespaldo);
 
             File.Copy(fullPathWithFile, fullPathWithFileInst, overwrite: true);
         }
@@ -87,17 +119,22 @@ namespace MatchMaker.Comun.Data
         {
             if (!string.IsNullOrEmpty(backup))
             {
-                _db = new SQLiteConnection(Path.Combine(folder, backupFolder, backup));
+                _db = new SQLiteConnection(Path.Combine(baseFolder, otrosEventosFolder, backup));
             }
             else
             {
-                _db = new SQLiteConnection(Path.Combine(folder, DataSource));
+                _db = new SQLiteConnection(Path.Combine(baseFolder, DataSource));
             }
             return _db;
         }
         public SQLiteConnection GetBackupConnection()
         {
-            _db = new SQLiteConnection(Path.Combine(folder, DataSourceBackUp));
+            _db = new SQLiteConnection(Path.Combine(baseFolder, DataSourceBackUp));
+            return _db;
+        }
+        public SQLiteConnection GetAgendaConnection()
+        {
+            _db = new SQLiteConnection(Path.Combine(agendaFolder, DataSourceAgenda));
             return _db;
         }
         public void CloseConnection()

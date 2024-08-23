@@ -101,7 +101,7 @@
             // 
             cmbTipoEvento.DropDownStyle = ComboBoxStyle.DropDownList;
             cmbTipoEvento.FormattingEnabled = true;
-            cmbTipoEvento.Items.AddRange(new object[] { "<Seleccione...>", "AMATEUR", "EXHIBICION" });
+            cmbTipoEvento.Items.AddRange(new object[] { "<Seleccione...>", "AMATEUR_FAB", "EXHIBICION" });
             cmbTipoEvento.Location = new Point(261, 140);
             cmbTipoEvento.Name = "cmbTipoEvento";
             cmbTipoEvento.Size = new Size(159, 23);
