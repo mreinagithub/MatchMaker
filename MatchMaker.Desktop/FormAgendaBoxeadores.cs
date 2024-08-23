@@ -25,8 +25,7 @@ namespace MatchMaker.Desktop
         DatabaseHandler _dataBase;
         BindingList<BoxeadorAgenda> _boxeadores = new BindingList<BoxeadorAgenda>();
 
-        public string FiltroNombre { get; set; }
-        public string FiltroCategoria { get; set; }
+        bool _esLoad = false;
 
         private void btnCerrar_Click(object sender, EventArgs e)
         {
@@ -38,6 +37,8 @@ namespace MatchMaker.Desktop
             {
                 Task.Delay(2000);
 
+                _esLoad = true;
+
                 //Iniciamos la base de datos
                 _dataBase = new DatabaseHandler();
                 var lstBx = GetBoxeadoresAgenda();
@@ -47,9 +48,6 @@ namespace MatchMaker.Desktop
                 grillaAgendaBoxeadores.Rows.Clear();
                 grillaAgendaBoxeadores.DataSource = _boxeadores;
 
-                FiltroNombre = "";
-                FiltroCategoria = "";
-               
                 //Eventos
                 //grillaAgendaBoxeadores.RowLeave += 
                 //grillaAgendaBoxeadores.CellLeave += 
@@ -57,15 +55,65 @@ namespace MatchMaker.Desktop
                 //grillaAgendaBoxeadores.CellValidating += 
                 //grillaAgendaBoxeadores.CellValidated += 
                 //grillaAgendaBoxeadores.EditingControlShowing += 
+                txtFiltroNombre.TextChanged += TxtFiltroNombre_TextChanged;
+                txtFiltroCategoria.TextChanged += TxtFiltroCategoria_TextChanged;
+                txtFiltroProfEsc.TextChanged += TxtFiltroProfEsc_TextChanged;
             }
             catch (Exception ex)
             {
                 MessageBox.Show(this, ex.Message, "Error al iniciar el programa", MessageBoxButtons.OK);
                 this.Close();
             }
+            finally
+            {
+                _esLoad = false;
+            }
         }
 
-       
+        private void TxtFiltroProfEsc_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                var lstBx = GetBoxeadoresAgenda();
+                _boxeadores = new BindingList<BoxeadorAgenda>(lstBx);
+                grillaAgendaBoxeadores.Rows.Clear();
+                grillaAgendaBoxeadores.DataSource = _boxeadores;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(this, ex.Message, "Error al leer la agenda", MessageBoxButtons.OK);
+            }
+        }
+        private void TxtFiltroCategoria_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                var lstBx = GetBoxeadoresAgenda();
+                _boxeadores = new BindingList<BoxeadorAgenda>(lstBx);
+                grillaAgendaBoxeadores.Rows.Clear();
+                grillaAgendaBoxeadores.DataSource = _boxeadores;
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(this, ex.Message, "Error al leer la agenda", MessageBoxButtons.OK);
+            }
+
+            
+        }
+        private void TxtFiltroNombre_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                var lstBx = GetBoxeadoresAgenda();
+                _boxeadores = new BindingList<BoxeadorAgenda>(lstBx);
+                grillaAgendaBoxeadores.Rows.Clear();
+                grillaAgendaBoxeadores.DataSource = _boxeadores;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(this, ex.Message, "Error al leer la agenda", MessageBoxButtons.OK);
+            }
+        }
         private void grillaAgendaBoxeadores_ColumnHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             try
@@ -96,14 +144,40 @@ namespace MatchMaker.Desktop
             }
         }
 
-        public List<BoxeadorAgenda> GetBoxeadoresAgenda()
+        private List<BoxeadorAgenda> GetBoxeadoresAgenda()
         {
             try
             {
                 var conn = _dataBase.GetAgendaConnection();
                 var results = conn.Table<BoxeadorAgenda>().ToList();
+
+                //Actualizar edad boxeadores
+                if (_esLoad)
+                {
+                    bool hayActualizaciones = false;
+                    foreach (BoxeadorAgenda bx in results.Where(b => b.FechaNacimiento is not null))
+                    {
+                        //Calcular edad
+                        int edad = Utilidades.CalcularEdad(bx.FechaNacimiento.Value);
+                        if (edad > 0 && edad != bx.Edad)
+                        {
+                            bx.Edad = edad;
+                            hayActualizaciones = true;
+                        }
+                    }
+                    if (hayActualizaciones)
+                        conn.UpdateAll(results.Where(b => b.FechaNacimiento is not null), true);
+                }
+
                 _dataBase.CloseConnection();
 
+                string fNombre = txtFiltroNombre.Text;
+                string fCat = txtFiltroCategoria.Text;
+                string fProfesor = txtFiltroProfEsc.Text;
+
+                results = results.Where(b => b.Nombre.ToUpper().Contains(fNombre.ToUpper())
+                                          && b.Categoria.ToUpper().Contains(fCat.ToUpper())
+                                          && b.Profesor.ToUpper().Contains(fProfesor.ToUpper())).ToList() ;
                 return results;
             }
             catch
@@ -111,6 +185,7 @@ namespace MatchMaker.Desktop
                 throw;
             }
         }
+       
 
       
     }

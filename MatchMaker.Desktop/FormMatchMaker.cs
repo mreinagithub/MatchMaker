@@ -539,7 +539,7 @@ namespace MatchMaker
                     _reglasEdad = ReglaEdad.ObtenerReglas();
                 }
 
-                BloquearAsignadosYColorearGrillas();
+                ConfigurarGrillaIngreso();
 
                 if (!_SoloLectura && _timer != null) _timer.Start();
 
@@ -703,7 +703,7 @@ namespace MatchMaker
 
         }
        
-        private void BloquearAsignadosYColorearGrillas()
+        private void ConfigurarGrillaIngreso()
         {
             foreach (DataGridViewRow row in grillaIngreso.Rows)
             {
@@ -717,6 +717,11 @@ namespace MatchMaker
                 {
                     row.ReadOnly = _SoloLectura;
                     row.DefaultCellStyle.BackColor = Color.White;
+                }
+
+                if(bx != null && bx.FechaNacimiento is not null)
+                {
+                    row.Cells[4].ReadOnly = true;
                 }
             }
 
@@ -869,7 +874,7 @@ namespace MatchMaker
                 //MessageBox.Show(this, "Pelea armada.", "Información", MessageBoxButtons.OK);
             }
             ArmarCategorias();
-            BloquearAsignadosYColorearGrillas();
+            ConfigurarGrillaIngreso();
         }
         private void DesarmarPelea(object src)
         {
@@ -908,7 +913,7 @@ namespace MatchMaker
                 //MessageBox.Show(this, "Pelea desarmada.", "Información", MessageBoxButtons.OK);
             }
             ArmarCategorias();
-            BloquearAsignadosYColorearGrillas();
+            ConfigurarGrillaIngreso();
             ReordenarPeleas();
         }
         private int? SubirPelea(object src)
@@ -1038,7 +1043,29 @@ namespace MatchMaker
             {
                 var conn = _dataBase.GetConnection(backup);
                 var results = conn.Table<Boxeador>().ToList();
+
+                //Actualizar edad boxeadores
+                if(string.IsNullOrWhiteSpace(backup))
+                {
+                    bool hayActualizaciones = false;
+                    foreach(Boxeador bx in results.Where(b => b.FechaNacimiento is not null))
+                    {
+                        //Calcular edad
+                        int edad = Utilidades.CalcularEdad(bx.FechaNacimiento.Value);
+                        if (edad > 0 && edad != bx.Edad)
+                        {
+                            bx.Edad = edad;
+                            hayActualizaciones = true;
+                        }
+                    }
+                    if (hayActualizaciones)
+                        conn.UpdateAll(results.Where(b => b.FechaNacimiento is not null), true);
+                }
+
+
                 _dataBase.CloseConnection();
+
+               
 
                 return results;
             }
@@ -1089,7 +1116,7 @@ namespace MatchMaker
                 if (ValidarBoxeador(boxeador))
                 {
                     var conn = _dataBase.GetConnection();
-                    conn.Update(boxeador);
+                    conn.Update(boxeador);                    
                     _dataBase.CloseConnection();
                 }
                 else
