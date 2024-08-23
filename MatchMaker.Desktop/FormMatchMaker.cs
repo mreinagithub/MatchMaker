@@ -60,6 +60,13 @@ namespace MatchMaker
 
         FormAyuda _fayuda = null;
 
+       
+        const int _indiceFechaNacimiento = 3;
+        const int _indiceEdad = 4;
+        const int _indicePeso = 5;
+        const int _indiceCantidadPeleas = 6;
+        const int _indiceProfesor = 7;
+
         private void Form1_Load(object sender, EventArgs e)
         {
             try
@@ -97,7 +104,7 @@ namespace MatchMaker
         }
         private void GrillaIngreso_CellValidating(object sender, DataGridViewCellValidatingEventArgs e)
         {
-            if (e.ColumnIndex == 3)
+            if (e.ColumnIndex == _indiceFechaNacimiento)
             {
                 string texto = grillaIngreso.CurrentCell.EditedFormattedValue.ToString();
                 if (!DateTime.TryParse(texto, out DateTime fechaValida))
@@ -156,10 +163,10 @@ namespace MatchMaker
         private void grillaIngreso_EditingControlShowing(object sender, DataGridViewEditingControlShowingEventArgs e)
         {
             e.Control.KeyPress -= new KeyPressEventHandler(ColumnNumber_KeyPress);
-            _grillaAllowDecimalSeparator = grillaIngreso.CurrentCell.ColumnIndex == 5;
-            if (grillaIngreso.CurrentCell.ColumnIndex == 4
-                || grillaIngreso.CurrentCell.ColumnIndex == 5
-                || grillaIngreso.CurrentCell.ColumnIndex == 6)
+            _grillaAllowDecimalSeparator = grillaIngreso.CurrentCell.ColumnIndex == _indicePeso;
+            if (grillaIngreso.CurrentCell.ColumnIndex == _indiceEdad
+                || grillaIngreso.CurrentCell.ColumnIndex == _indicePeso
+                || grillaIngreso.CurrentCell.ColumnIndex == _indiceCantidadPeleas)
             {
                 _grillaAllowDecimalSeparator = true;
                 TextBox tb = e.Control as TextBox;
@@ -168,7 +175,7 @@ namespace MatchMaker
                     tb.KeyPress += new KeyPressEventHandler(ColumnNumber_KeyPress);
                 }
             }
-            else if (grillaIngreso.CurrentCell.ColumnIndex == 7)
+            else if (grillaIngreso.CurrentCell.ColumnIndex == _indiceProfesor)
             {
                 TextBox txtBx = e.Control as TextBox;
                 txtBx.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
@@ -206,7 +213,7 @@ namespace MatchMaker
         }
         private void grillaIngreso_CellValidated(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.ColumnIndex == 3)
+            if (e.ColumnIndex == _indiceFechaNacimiento)
             {
                 bool edadEstablecida = false;
                 string texto = grillaIngreso.CurrentCell.EditedFormattedValue.ToString();
@@ -216,13 +223,13 @@ namespace MatchMaker
                     int edad = Utilidades.CalcularEdad(fechaNacim);
                     if (edad > 0)
                     {
-                        grillaIngreso.CurrentRow.Cells[4].Value = edad;
+                        grillaIngreso.CurrentRow.Cells[_indiceEdad].Value = edad;
                     }
                     edadEstablecida = true;
                 }
-                grillaIngreso.CurrentRow.Cells[4].ReadOnly = edadEstablecida;
+                grillaIngreso.CurrentRow.Cells[_indiceEdad].ReadOnly = edadEstablecida;
             }
-            else if (e.ColumnIndex == 5)
+            else if (e.ColumnIndex == _indicePeso)
             {
                 string texto = grillaIngreso.CurrentCell.EditedFormattedValue.ToString();
                 texto = texto.Replace(".", ",");

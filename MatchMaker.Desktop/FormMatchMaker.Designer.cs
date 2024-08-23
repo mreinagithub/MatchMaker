@@ -315,6 +315,8 @@
             nuevoEventoToolStripMenuItem = new ToolStripMenuItem();
             verOtrosEventosToolStripMenuItem = new ToolStripMenuItem();
             volverAlEventoActualToolStripMenuItem = new ToolStripMenuItem();
+            toolStripSeparator3 = new ToolStripSeparator();
+            agendaBoxeadoresToolStripMenuItem = new ToolStripMenuItem();
             toolStripSeparator1 = new ToolStripSeparator();
             salirToolStripMenuItem = new ToolStripMenuItem();
             herramientasToolStripMenuItem = new ToolStripMenuItem();
@@ -337,8 +339,6 @@
             sexoDataGridViewTextBoxColumn2 = new DataGridViewTextBoxColumn();
             profesorDataGridViewTextBoxColumn2 = new DataGridViewTextBoxColumn();
             saveFileDialog1 = new SaveFileDialog();
-            agendaBoxeadoresToolStripMenuItem = new ToolStripMenuItem();
-            toolStripSeparator3 = new ToolStripSeparator();
             tabPrincipal.SuspendLayout();
             tabIngreso.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)grillaIngreso).BeginInit();
@@ -440,7 +440,7 @@
             tabPrincipal.Location = new Point(0, 24);
             tabPrincipal.Name = "tabPrincipal";
             tabPrincipal.SelectedIndex = 0;
-            tabPrincipal.Size = new Size(847, 426);
+            tabPrincipal.Size = new Size(934, 539);
             tabPrincipal.TabIndex = 0;
             // 
             // tabIngreso
@@ -449,7 +449,7 @@
             tabIngreso.Location = new Point(4, 24);
             tabIngreso.Name = "tabIngreso";
             tabIngreso.Padding = new Padding(3);
-            tabIngreso.Size = new Size(839, 398);
+            tabIngreso.Size = new Size(926, 511);
             tabIngreso.TabIndex = 0;
             tabIngreso.Text = "Ingreso";
             tabIngreso.UseVisualStyleBackColor = true;
@@ -464,7 +464,7 @@
             grillaIngreso.Dock = DockStyle.Fill;
             grillaIngreso.Location = new Point(3, 3);
             grillaIngreso.Name = "grillaIngreso";
-            grillaIngreso.Size = new Size(833, 392);
+            grillaIngreso.Size = new Size(920, 505);
             grillaIngreso.TabIndex = 0;
             // 
             // iDDataGridViewTextBoxColumn
@@ -2704,7 +2704,7 @@
             menuStrip1.Items.AddRange(new ToolStripItem[] { archivoToolStripMenuItem, herramientasToolStripMenuItem, ayudaToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new Size(847, 24);
+            menuStrip1.Size = new Size(934, 24);
             menuStrip1.TabIndex = 1;
             menuStrip1.Text = "menuStrip1";
             menuStrip1.MenuActivate += menuStrip1_MenuActivate;
@@ -2736,6 +2736,18 @@
             volverAlEventoActualToolStripMenuItem.Size = new Size(201, 22);
             volverAlEventoActualToolStripMenuItem.Text = "Volver al evento actual...";
             volverAlEventoActualToolStripMenuItem.Click += volverAlEventoActualToolStripMenuItem_Click;
+            // 
+            // toolStripSeparator3
+            // 
+            toolStripSeparator3.Name = "toolStripSeparator3";
+            toolStripSeparator3.Size = new Size(198, 6);
+            // 
+            // agendaBoxeadoresToolStripMenuItem
+            // 
+            agendaBoxeadoresToolStripMenuItem.Name = "agendaBoxeadoresToolStripMenuItem";
+            agendaBoxeadoresToolStripMenuItem.Size = new Size(201, 22);
+            agendaBoxeadoresToolStripMenuItem.Text = "Agenda boxeadores...";
+            agendaBoxeadoresToolStripMenuItem.Click += agendaBoxeadoresToolStripMenuItem_Click;
             // 
             // toolStripSeparator1
             // 
@@ -2915,23 +2927,11 @@
             profesorDataGridViewTextBoxColumn2.HeaderText = "Profesor";
             profesorDataGridViewTextBoxColumn2.Name = "profesorDataGridViewTextBoxColumn2";
             // 
-            // agendaBoxeadoresToolStripMenuItem
-            // 
-            agendaBoxeadoresToolStripMenuItem.Name = "agendaBoxeadoresToolStripMenuItem";
-            agendaBoxeadoresToolStripMenuItem.Size = new Size(201, 22);
-            agendaBoxeadoresToolStripMenuItem.Text = "Agenda boxeadores...";
-            agendaBoxeadoresToolStripMenuItem.Click += agendaBoxeadoresToolStripMenuItem_Click;
-            // 
-            // toolStripSeparator3
-            // 
-            toolStripSeparator3.Name = "toolStripSeparator3";
-            toolStripSeparator3.Size = new Size(198, 6);
-            // 
             // FormMatchMaker
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(847, 450);
+            ClientSize = new Size(934, 563);
             Controls.Add(tabPrincipal);
             Controls.Add(menuStrip1);
             Icon = (Icon)resources.GetObject("$this.Icon");
