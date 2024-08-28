@@ -29,23 +29,11 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             btnCerrar = new Button();
             boxeadorAgendaBindingSource = new BindingSource(components);
             grillaAgendaBoxeadores = new DataGridView();
-            iDDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
-            asignadoDataGridViewCheckBoxColumn = new DataGridViewCheckBoxColumn();
-            nombreDataGridViewTextBoxColumn1 = new DataGridViewTextBoxColumn();
-            sexoDataGridViewTextBoxColumn = new DataGridViewComboBoxColumn();
-            fechaNacimientoDataGridViewTextBoxColumn1 = new DataGridViewTextBoxColumn();
-            edadDataGridViewTextBoxColumn1 = new DataGridViewTextBoxColumn();
-            pesoDataGridViewTextBoxColumn1 = new DataGridViewTextBoxColumn();
-            categoriaDataGridViewTextBoxColumn1 = new DataGridViewTextBoxColumn();
-            cantidadPeleasDataGridViewTextBoxColumn1 = new DataGridViewTextBoxColumn();
-            profesorDataGridViewTextBoxColumn1 = new DataGridViewTextBoxColumn();
-            uRLDataGridViewTextBoxColumn1 = new DataGridViewTextBoxColumn();
-            eventoDataGridViewTextBoxColumn1 = new DataGridViewTextBoxColumn();
             label1 = new Label();
             txtFiltroNombre = new TextBox();
             txtFiltroCategoria = new TextBox();
@@ -62,6 +50,18 @@
             uRLDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             Navigate = new DataGridViewButtonColumn();
             eventoDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            iDDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            asignadoDataGridViewCheckBoxColumn = new DataGridViewCheckBoxColumn();
+            nombreDataGridViewTextBoxColumn1 = new DataGridViewTextBoxColumn();
+            sexoDataGridViewTextBoxColumn = new DataGridViewComboBoxColumn();
+            fechaNacimientoDataGridViewTextBoxColumn1 = new DataGridViewTextBoxColumn();
+            edadDataGridViewTextBoxColumn1 = new DataGridViewTextBoxColumn();
+            pesoDataGridViewTextBoxColumn1 = new DataGridViewTextBoxColumn();
+            categoriaDataGridViewTextBoxColumn1 = new DataGridViewTextBoxColumn();
+            cantidadPeleasDataGridViewTextBoxColumn1 = new DataGridViewTextBoxColumn();
+            profesorDataGridViewTextBoxColumn1 = new DataGridViewTextBoxColumn();
+            uRLDataGridViewTextBoxColumn1 = new DataGridViewTextBoxColumn();
+            eventoDataGridViewTextBoxColumn1 = new DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)boxeadorAgendaBindingSource).BeginInit();
             ((System.ComponentModel.ISupportInitialize)grillaAgendaBoxeadores).BeginInit();
             SuspendLayout();
@@ -94,91 +94,6 @@
             grillaAgendaBoxeadores.TabIndex = 3;
             grillaAgendaBoxeadores.CellContentClick += grillaAgendaBoxeadores_CellContentClick;
             grillaAgendaBoxeadores.ColumnHeaderMouseClick += grillaAgendaBoxeadores_ColumnHeaderMouseClick;
-            // 
-            // iDDataGridViewTextBoxColumn
-            // 
-            iDDataGridViewTextBoxColumn.DataPropertyName = "ID";
-            iDDataGridViewTextBoxColumn.HeaderText = "ID";
-            iDDataGridViewTextBoxColumn.Name = "iDDataGridViewTextBoxColumn";
-            iDDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // asignadoDataGridViewCheckBoxColumn
-            // 
-            asignadoDataGridViewCheckBoxColumn.DataPropertyName = "Asignado";
-            asignadoDataGridViewCheckBoxColumn.HeaderText = "Asignado";
-            asignadoDataGridViewCheckBoxColumn.Name = "asignadoDataGridViewCheckBoxColumn";
-            asignadoDataGridViewCheckBoxColumn.Visible = false;
-            // 
-            // nombreDataGridViewTextBoxColumn1
-            // 
-            nombreDataGridViewTextBoxColumn1.DataPropertyName = "Nombre";
-            nombreDataGridViewTextBoxColumn1.HeaderText = "Nombre";
-            nombreDataGridViewTextBoxColumn1.MaxInputLength = 100;
-            nombreDataGridViewTextBoxColumn1.Name = "nombreDataGridViewTextBoxColumn1";
-            nombreDataGridViewTextBoxColumn1.Width = 180;
-            // 
-            // sexoDataGridViewTextBoxColumn
-            // 
-            sexoDataGridViewTextBoxColumn.DataPropertyName = "Sexo";
-            sexoDataGridViewTextBoxColumn.HeaderText = "Sexo";
-            sexoDataGridViewTextBoxColumn.Items.AddRange(new object[] { "M", "F" });
-            sexoDataGridViewTextBoxColumn.Name = "sexoDataGridViewTextBoxColumn";
-            sexoDataGridViewTextBoxColumn.Resizable = DataGridViewTriState.True;
-            sexoDataGridViewTextBoxColumn.SortMode = DataGridViewColumnSortMode.Automatic;
-            // 
-            // fechaNacimientoDataGridViewTextBoxColumn1
-            // 
-            fechaNacimientoDataGridViewTextBoxColumn1.DataPropertyName = "FechaNacimiento";
-            dataGridViewCellStyle1.Format = "dd/MM/yyyy";
-            fechaNacimientoDataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle1;
-            fechaNacimientoDataGridViewTextBoxColumn1.HeaderText = "Fecha Nacim.";
-            fechaNacimientoDataGridViewTextBoxColumn1.Name = "fechaNacimientoDataGridViewTextBoxColumn1";
-            // 
-            // edadDataGridViewTextBoxColumn1
-            // 
-            edadDataGridViewTextBoxColumn1.DataPropertyName = "Edad";
-            edadDataGridViewTextBoxColumn1.HeaderText = "Edad";
-            edadDataGridViewTextBoxColumn1.Name = "edadDataGridViewTextBoxColumn1";
-            // 
-            // pesoDataGridViewTextBoxColumn1
-            // 
-            pesoDataGridViewTextBoxColumn1.DataPropertyName = "Peso";
-            pesoDataGridViewTextBoxColumn1.HeaderText = "Peso";
-            pesoDataGridViewTextBoxColumn1.Name = "pesoDataGridViewTextBoxColumn1";
-            // 
-            // categoriaDataGridViewTextBoxColumn1
-            // 
-            categoriaDataGridViewTextBoxColumn1.DataPropertyName = "Categoria";
-            categoriaDataGridViewTextBoxColumn1.HeaderText = "Categoria";
-            categoriaDataGridViewTextBoxColumn1.Name = "categoriaDataGridViewTextBoxColumn1";
-            categoriaDataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // cantidadPeleasDataGridViewTextBoxColumn1
-            // 
-            cantidadPeleasDataGridViewTextBoxColumn1.DataPropertyName = "CantidadPeleas";
-            cantidadPeleasDataGridViewTextBoxColumn1.HeaderText = "Cant. Peleas";
-            cantidadPeleasDataGridViewTextBoxColumn1.Name = "cantidadPeleasDataGridViewTextBoxColumn1";
-            // 
-            // profesorDataGridViewTextBoxColumn1
-            // 
-            profesorDataGridViewTextBoxColumn1.DataPropertyName = "Profesor";
-            profesorDataGridViewTextBoxColumn1.HeaderText = "Profesor";
-            profesorDataGridViewTextBoxColumn1.Name = "profesorDataGridViewTextBoxColumn1";
-            // 
-            // uRLDataGridViewTextBoxColumn1
-            // 
-            uRLDataGridViewTextBoxColumn1.DataPropertyName = "URL";
-            uRLDataGridViewTextBoxColumn1.HeaderText = "URL";
-            uRLDataGridViewTextBoxColumn1.Name = "uRLDataGridViewTextBoxColumn1";
-            uRLDataGridViewTextBoxColumn1.Width = 250;
-            // 
-            // eventoDataGridViewTextBoxColumn1
-            // 
-            eventoDataGridViewTextBoxColumn1.DataPropertyName = "Evento";
-            eventoDataGridViewTextBoxColumn1.HeaderText = "Evento";
-            eventoDataGridViewTextBoxColumn1.Name = "eventoDataGridViewTextBoxColumn1";
-            eventoDataGridViewTextBoxColumn1.ReadOnly = true;
-            eventoDataGridViewTextBoxColumn1.Width = 250;
             // 
             // label1
             // 
@@ -310,6 +225,91 @@
             eventoDataGridViewTextBoxColumn.Name = "eventoDataGridViewTextBoxColumn";
             eventoDataGridViewTextBoxColumn.ReadOnly = true;
             eventoDataGridViewTextBoxColumn.Width = 250;
+            // 
+            // iDDataGridViewTextBoxColumn
+            // 
+            iDDataGridViewTextBoxColumn.DataPropertyName = "ID";
+            iDDataGridViewTextBoxColumn.HeaderText = "ID";
+            iDDataGridViewTextBoxColumn.Name = "iDDataGridViewTextBoxColumn";
+            iDDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // asignadoDataGridViewCheckBoxColumn
+            // 
+            asignadoDataGridViewCheckBoxColumn.DataPropertyName = "Asignado";
+            asignadoDataGridViewCheckBoxColumn.HeaderText = "Asignado";
+            asignadoDataGridViewCheckBoxColumn.Name = "asignadoDataGridViewCheckBoxColumn";
+            asignadoDataGridViewCheckBoxColumn.Visible = false;
+            // 
+            // nombreDataGridViewTextBoxColumn1
+            // 
+            nombreDataGridViewTextBoxColumn1.DataPropertyName = "Nombre";
+            nombreDataGridViewTextBoxColumn1.HeaderText = "Nombre";
+            nombreDataGridViewTextBoxColumn1.MaxInputLength = 100;
+            nombreDataGridViewTextBoxColumn1.Name = "nombreDataGridViewTextBoxColumn1";
+            nombreDataGridViewTextBoxColumn1.Width = 180;
+            // 
+            // sexoDataGridViewTextBoxColumn
+            // 
+            sexoDataGridViewTextBoxColumn.DataPropertyName = "Sexo";
+            sexoDataGridViewTextBoxColumn.HeaderText = "Sexo";
+            sexoDataGridViewTextBoxColumn.Items.AddRange(new object[] { "M", "F" });
+            sexoDataGridViewTextBoxColumn.Name = "sexoDataGridViewTextBoxColumn";
+            sexoDataGridViewTextBoxColumn.Resizable = DataGridViewTriState.True;
+            sexoDataGridViewTextBoxColumn.SortMode = DataGridViewColumnSortMode.Automatic;
+            // 
+            // fechaNacimientoDataGridViewTextBoxColumn1
+            // 
+            fechaNacimientoDataGridViewTextBoxColumn1.DataPropertyName = "FechaNacimiento";
+            dataGridViewCellStyle1.Format = "dd/MM/yyyy";
+            fechaNacimientoDataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle1;
+            fechaNacimientoDataGridViewTextBoxColumn1.HeaderText = "Fecha Nacim.";
+            fechaNacimientoDataGridViewTextBoxColumn1.Name = "fechaNacimientoDataGridViewTextBoxColumn1";
+            // 
+            // edadDataGridViewTextBoxColumn1
+            // 
+            edadDataGridViewTextBoxColumn1.DataPropertyName = "Edad";
+            edadDataGridViewTextBoxColumn1.HeaderText = "Edad";
+            edadDataGridViewTextBoxColumn1.Name = "edadDataGridViewTextBoxColumn1";
+            // 
+            // pesoDataGridViewTextBoxColumn1
+            // 
+            pesoDataGridViewTextBoxColumn1.DataPropertyName = "Peso";
+            pesoDataGridViewTextBoxColumn1.HeaderText = "Peso";
+            pesoDataGridViewTextBoxColumn1.Name = "pesoDataGridViewTextBoxColumn1";
+            // 
+            // categoriaDataGridViewTextBoxColumn1
+            // 
+            categoriaDataGridViewTextBoxColumn1.DataPropertyName = "Categoria";
+            categoriaDataGridViewTextBoxColumn1.HeaderText = "Categoria";
+            categoriaDataGridViewTextBoxColumn1.Name = "categoriaDataGridViewTextBoxColumn1";
+            categoriaDataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // cantidadPeleasDataGridViewTextBoxColumn1
+            // 
+            cantidadPeleasDataGridViewTextBoxColumn1.DataPropertyName = "CantidadPeleas";
+            cantidadPeleasDataGridViewTextBoxColumn1.HeaderText = "Cant. Peleas";
+            cantidadPeleasDataGridViewTextBoxColumn1.Name = "cantidadPeleasDataGridViewTextBoxColumn1";
+            // 
+            // profesorDataGridViewTextBoxColumn1
+            // 
+            profesorDataGridViewTextBoxColumn1.DataPropertyName = "Profesor";
+            profesorDataGridViewTextBoxColumn1.HeaderText = "Profesor/Escuela";
+            profesorDataGridViewTextBoxColumn1.Name = "profesorDataGridViewTextBoxColumn1";
+            // 
+            // uRLDataGridViewTextBoxColumn1
+            // 
+            uRLDataGridViewTextBoxColumn1.DataPropertyName = "URL";
+            uRLDataGridViewTextBoxColumn1.HeaderText = "URL";
+            uRLDataGridViewTextBoxColumn1.Name = "uRLDataGridViewTextBoxColumn1";
+            uRLDataGridViewTextBoxColumn1.Width = 250;
+            // 
+            // eventoDataGridViewTextBoxColumn1
+            // 
+            eventoDataGridViewTextBoxColumn1.DataPropertyName = "Evento";
+            eventoDataGridViewTextBoxColumn1.HeaderText = "Evento";
+            eventoDataGridViewTextBoxColumn1.Name = "eventoDataGridViewTextBoxColumn1";
+            eventoDataGridViewTextBoxColumn1.ReadOnly = true;
+            eventoDataGridViewTextBoxColumn1.Width = 250;
             // 
             // FormAgendaBoxeadores
             // 
