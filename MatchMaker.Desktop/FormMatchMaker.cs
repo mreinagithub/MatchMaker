@@ -56,11 +56,15 @@ namespace MatchMaker
 
         IList<ReglaEdad> _reglasEdad = new List<ReglaEdad>();
 
+        IList<Boxeador> _boxeadoresParaCategorias = new List<Boxeador>();
+
         System.Windows.Forms.Timer _timer;
 
         FormAyuda _fayuda = null;
 
-       
+        string _backup = "";
+
+
         const int _indiceFechaNacimiento = 3;
         const int _indiceEdad = 4;
         const int _indicePeso = 5;
@@ -136,6 +140,12 @@ namespace MatchMaker
         }
         private void GrillaIngreso_UserDeletingRow(object sender, DataGridViewRowCancelEventArgs e)
         {
+            if (_SoloLectura)
+            {
+                e.Cancel = true;
+                return;
+            }
+
             Boxeador boxEliminado = _boxeadores[e.Row.Index];
             if (boxEliminado == null)
             {
@@ -236,36 +246,37 @@ namespace MatchMaker
                 grillaIngreso.CurrentCell.Value = texto;
             }
         }
-
-        private void grillaPeleas_ColumnHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        private void grillaIngreso_ColumnHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            //try
-            //{
-            //    string col = grillaPeleas.Columns[e.ColumnIndex].DataPropertyName;
-            //    string order = "ASC";
-            //    if (grillaPeleas.Tag != null)
-            //        order = grillaPeleas.Tag.ToString().Contains("ASC") ? "DESC" : "ASC";
-            //    grillaPeleas.Tag = col + "|" + order;
+            try
+            {
+                string col = grillaIngreso.Columns[e.ColumnIndex].DataPropertyName;
+                string order = "ASC";
+                if (grillaIngreso.Tag != null)
+                    order = grillaIngreso.Tag.ToString().Contains("ASC") ? "DESC" : "ASC";
+                grillaIngreso.Tag = col + "|" + order;
 
-            //    if (grillaPeleas.Tag != null && !string.IsNullOrWhiteSpace(grillaPeleas.Tag.ToString()))
-            //    {
-            //        string[] condiciones = grillaPeleas.Tag.ToString().Split('|');
-            //        if (condiciones[1].Contains("ASC"))
-            //            _peleas = new BindingList<Pelea>(_peleas.OrderBy(x => GetPropValue(x, condiciones[0])).ToList());
-            //        else
-            //            _peleas = new BindingList<Pelea>(_peleas.OrderByDescending(x => GetPropValue(x, condiciones[0])).ToList());
-            //        grillaPeleas.DataSource = _peleas;
-            //    }
-            //}
-            //catch (Exception ex)
-            //{
-            //    //MostrarMensaje.MostrarError(ex);
-            //}
-            //finally
-            //{
-            //    this.Cursor = Cursors.Default;
-            //}
+                if (grillaIngreso.Tag != null && !string.IsNullOrWhiteSpace(grillaIngreso.Tag.ToString()))
+                {
+                    string[] condiciones = grillaIngreso.Tag.ToString().Split('|');
+                    if (condiciones[1].Contains("ASC"))
+                        _boxeadores = new BindingList<Boxeador>(_boxeadores.OrderBy(x => Utilidades.GetPropValue(x, condiciones[0])).ToList());
+                    else
+                        _boxeadores = new BindingList<Boxeador>(_boxeadores.OrderByDescending(x => Utilidades.GetPropValue(x, condiciones[0])).ToList());
+                    grillaIngreso.DataSource = _boxeadores;
+                    ConfigurarGrillaIngreso();
+                }
+            }
+            catch (Exception ex)
+            {
+                //MostrarMensaje.MostrarError(ex);
+            }
+            finally
+            {
+                this.Cursor = Cursors.Default;
+            }
         }
+
         private void contextArmarPelea_Opening(object sender, CancelEventArgs e)
         {
 
@@ -310,9 +321,11 @@ namespace MatchMaker
         {
             e.Cancel = true;
 
+            if (_SoloLectura)
+                return;
+
             DesarmarPelea(sender);
         }
-
         private void btnSubir_Click(object sender, EventArgs e)
         {
             try
@@ -424,7 +437,7 @@ namespace MatchMaker
             try
             {
                 FormAgendaBoxeadores f = new FormAgendaBoxeadores();
-               f.Show();               
+                f.Show();
 
             }
             catch (Exception ex)
@@ -449,6 +462,35 @@ namespace MatchMaker
                     dt.exportToExcel(saveFileDialog1.FileName);
                     MessageBox.Show("Exportación realizada.");
                 }
+            }
+            catch (Exception ex) { MessageBox.Show(ex.Message); }
+        }
+        private void buscarEnGrillaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                //
+                DataGridView dgv = null;
+                string solapa = tabPrincipal.SelectedTab?.Text;
+                switch (solapa.ToUpper())
+                {
+                    case "INGRESO":
+                        dgv = grillaIngreso;
+                        break;
+                    case "PELEAS":
+                        dgv = grillaPeleas;
+                        break;
+                    default:
+                        dgv = null;
+                        break;
+                }
+
+                if(dgv != null)
+                {
+                    FormBuscar fBuscar = new FormBuscar(dgv);
+                    fBuscar.ShowDialog();
+                }
+                    
             }
             catch (Exception ex) { MessageBox.Show(ex.Message); }
         }
@@ -479,31 +521,76 @@ namespace MatchMaker
             }
         }
 
+        //private void TxtFiltroProfEsc_TextChanged(object sender, EventArgs e)
+        //{
+        //    try
+        //    {
+        //        BindearGrillaIngreso();
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        MessageBox.Show(this, ex.Message, "Error al leer la boxeadores", MessageBoxButtons.OK);
+        //    }
+        //}
+        //private void TxtFiltroNombre_TextChanged(object sender, EventArgs e)
+        //{
+        //    try
+        //    {
+        //        BindearGrillaIngreso();
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        MessageBox.Show(this, ex.Message, "Error al leer los boxeadores", MessageBoxButtons.OK);
+        //    }
+        //}
+        //private void BtnBorrarFiltros_Click(object sender, EventArgs e)
+        //{
+        //    try
+        //    {
+        //        txtFiltroNombre.Text = "";
+        //        txtFiltroProfEsc.Text = "";
+        //        BindearGrillaIngreso();
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        MessageBox.Show(this, ex.Message, "Error al leer los boxeadores", MessageBoxButtons.OK);
+        //    }
+        //}
+
+
         private void Iniciar(string backup = "")
         {
             try
             {
                 Task.Delay(2000);
 
+                _backup = backup;
+
                 System.Reflection.Assembly assembly = System.Reflection.Assembly.GetExecutingAssembly();
                 System.Diagnostics.FileVersionInfo fvi = System.Diagnostics.FileVersionInfo.GetVersionInfo(assembly.Location);
                 string version = fvi.FileVersion;
 
-                this.Text = $"Match Maker (v{version}) - {(string.IsNullOrWhiteSpace(backup) ? "Evento Actual" : backup.Substring(0, 15) + " (evento guardado)")}";
+                this.Text = $"Match Maker (v{version}) - {(string.IsNullOrWhiteSpace(_backup) ? "Evento Actual" : _backup.Substring(0, 20) + " (evento guardado)")}";
 
 
-                _SoloLectura = !string.IsNullOrWhiteSpace(backup);
+                _SoloLectura = !string.IsNullOrWhiteSpace(_backup);
+
+                //BorrarFiltros();
 
                 //Iniciamos la base de datos
                 _dataBase = new DatabaseHandler();
-                var lstBx = GetBoxeadores(backup);
-                _boxeadores = new BindingList<Boxeador>(lstBx);
-                var lstPeleas = GetPeleas(backup);
+
+                BindearGrillaIngreso();
+
+
+                //var lstBx = GetBoxeadores(_backup);
+                //_boxeadores = new BindingList<Boxeador>(lstBx);
+                var lstPeleas = GetPeleas(_backup);
                 _peleas = new BindingList<Pelea>(lstPeleas);
 
                 //Binding
-                grillaIngreso.Rows.Clear();
-                grillaIngreso.DataSource = _boxeadores;
+                //grillaIngreso.Rows.Clear();
+                //grillaIngreso.DataSource = _boxeadores;
                 grillaPeleas.Rows.Clear();
                 grillaPeleas.DataSource = _peleas;
 
@@ -516,6 +603,10 @@ namespace MatchMaker
                 grillaIngreso.CellValidating -= GrillaIngreso_CellValidating;
                 grillaIngreso.CellValidated -= grillaIngreso_CellValidated;
                 grillaIngreso.EditingControlShowing -= grillaIngreso_EditingControlShowing;
+                grillaIngreso.ColumnHeaderMouseClick -= grillaIngreso_ColumnHeaderMouseClick;
+                //btnBorrarFiltros.Click -= BtnBorrarFiltros_Click;
+                //txtFiltroNombre.TextChanged -= TxtFiltroNombre_TextChanged;
+                //txtFiltroProfEsc.TextChanged -= TxtFiltroProfEsc_TextChanged;
 
                 _timer = null;
 
@@ -537,7 +628,6 @@ namespace MatchMaker
 
                     grillaIngreso.RowLeave += GrillaIngreso_RowLeave;
                     grillaIngreso.CellLeave += GrillaIngreso_CellLeave;
-                    grillaIngreso.UserDeletingRow += GrillaIngreso_UserDeletingRow;
                     grillaIngreso.CellValidating += GrillaIngreso_CellValidating;
                     grillaIngreso.CellValidated += grillaIngreso_CellValidated;
                     grillaIngreso.EditingControlShowing += grillaIngreso_EditingControlShowing;
@@ -546,7 +636,13 @@ namespace MatchMaker
                     _reglasEdad = ReglaEdad.ObtenerReglas();
                 }
 
-                ConfigurarGrillaIngreso();
+                grillaIngreso.ColumnHeaderMouseClick += grillaIngreso_ColumnHeaderMouseClick;
+                grillaIngreso.UserDeletingRow += GrillaIngreso_UserDeletingRow;
+                //btnBorrarFiltros.Click += BtnBorrarFiltros_Click;
+                //txtFiltroNombre.TextChanged += TxtFiltroNombre_TextChanged;
+                //txtFiltroProfEsc.TextChanged += TxtFiltroProfEsc_TextChanged;
+
+                //ConfigurarGrillaIngreso();
 
                 if (!_SoloLectura && _timer != null) _timer.Start();
 
@@ -709,7 +805,15 @@ namespace MatchMaker
             //BloquearAsignadosYColorearGrillas();
 
         }
-       
+        private void BindearGrillaIngreso()
+        {
+            var lstBx = GetBoxeadores(_backup);
+            _boxeadores = new BindingList<Boxeador>(lstBx);
+            grillaIngreso.Rows.Clear();
+            grillaIngreso.DataSource = _boxeadores;
+            ConfigurarGrillaIngreso();
+        }
+
         private void ConfigurarGrillaIngreso()
         {
             foreach (DataGridViewRow row in grillaIngreso.Rows)
@@ -726,7 +830,7 @@ namespace MatchMaker
                     row.DefaultCellStyle.BackColor = Color.White;
                 }
 
-                if(bx != null && bx.FechaNacimiento is not null)
+                if (bx != null && bx.FechaNacimiento is not null)
                 {
                     row.Cells[4].ReadOnly = true;
                 }
@@ -1017,7 +1121,13 @@ namespace MatchMaker
                 dgv.CurrentCell = dgv[0, nIndice.Value];
             }
         }
-        public static DataTable DataGridView_To_Datatable(DataGridView dg)
+        //private void BorrarFiltros()
+        //{
+        //    txtFiltroNombre.Text = "";            
+        //    txtFiltroProfEsc.Text = "";
+        //}
+
+        private static DataTable DataGridView_To_Datatable(DataGridView dg)
         {
             DataTable ExportDataTable = new DataTable();
             foreach (DataGridViewColumn col in dg.Columns)
@@ -1052,10 +1162,10 @@ namespace MatchMaker
                 var results = conn.Table<Boxeador>().ToList();
 
                 //Actualizar edad boxeadores
-                if(string.IsNullOrWhiteSpace(backup))
+                if (string.IsNullOrWhiteSpace(backup))
                 {
                     bool hayActualizaciones = false;
-                    foreach(Boxeador bx in results.Where(b => b.FechaNacimiento is not null))
+                    foreach (Boxeador bx in results.Where(b => b.FechaNacimiento is not null))
                     {
                         //Calcular edad
                         int edad = Utilidades.CalcularEdad(bx.FechaNacimiento.Value);
@@ -1072,7 +1182,13 @@ namespace MatchMaker
 
                 _dataBase.CloseConnection();
 
-               
+                //string fNombre = txtFiltroNombre.Text;                
+                //string fProfesor = txtFiltroProfEsc.Text;
+
+                //_boxeadoresParaCategorias = results;
+
+                //var resuPGrilla = results.Where(b => b.Nombre.ToUpper().Contains(fNombre.ToUpper())                                          
+                //                          && b.Profesor.ToUpper().Contains(fProfesor.ToUpper())).ToList();
 
                 return results;
             }
@@ -1123,7 +1239,7 @@ namespace MatchMaker
                 if (ValidarBoxeador(boxeador))
                 {
                     var conn = _dataBase.GetConnection();
-                    conn.Update(boxeador);                    
+                    conn.Update(boxeador);
                     _dataBase.CloseConnection();
                 }
                 else
@@ -1185,7 +1301,9 @@ namespace MatchMaker
                 var conn = _dataBase.GetConnection();
 
                 conn.Insert(pelea);
+                Task.Delay(500);
                 conn.Update(pelea.Boxeador1);
+                Task.Delay(500);
                 conn.Update(pelea.Boxeador2);
 
                 _dataBase.CloseConnection();
@@ -1206,7 +1324,9 @@ namespace MatchMaker
                 var conn = _dataBase.GetConnection();
 
                 conn.Delete(pelea);
+                Task.Delay(500);
                 conn.Update(pelea.Boxeador1);
+                Task.Delay(500);
                 conn.Update(pelea.Boxeador2);
 
                 _dataBase.CloseConnection();

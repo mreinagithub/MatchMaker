@@ -321,6 +321,7 @@
             salirToolStripMenuItem = new ToolStripMenuItem();
             herramientasToolStripMenuItem = new ToolStripMenuItem();
             exportarPeleasAExcelToolStripMenuItem = new ToolStripMenuItem();
+            buscarEnGrillaToolStripMenuItem = new ToolStripMenuItem();
             ayudaToolStripMenuItem = new ToolStripMenuItem();
             guiaDeUsoToolStripMenuItem = new ToolStripMenuItem();
             nombre = new DataGridViewTextBoxColumn();
@@ -465,7 +466,7 @@
             grillaIngreso.Location = new Point(3, 3);
             grillaIngreso.Name = "grillaIngreso";
             grillaIngreso.Size = new Size(920, 505);
-            grillaIngreso.TabIndex = 0;
+            grillaIngreso.TabIndex = 4;
             // 
             // iDDataGridViewTextBoxColumn
             // 
@@ -556,7 +557,7 @@
             tabCat49.Location = new Point(4, 24);
             tabCat49.Name = "tabCat49";
             tabCat49.Padding = new Padding(3);
-            tabCat49.Size = new Size(839, 398);
+            tabCat49.Size = new Size(926, 511);
             tabCat49.TabIndex = 1;
             tabCat49.Text = "Cat 49";
             tabCat49.UseVisualStyleBackColor = true;
@@ -575,8 +576,8 @@
             // splitContainer1.Panel2
             // 
             splitContainer1.Panel2.Controls.Add(grillaFemCat49);
-            splitContainer1.Size = new Size(833, 392);
-            splitContainer1.SplitterDistance = 186;
+            splitContainer1.Size = new Size(920, 505);
+            splitContainer1.SplitterDistance = 238;
             splitContainer1.TabIndex = 0;
             // 
             // grillaMascCat49
@@ -592,7 +593,7 @@
             grillaMascCat49.Location = new Point(0, 0);
             grillaMascCat49.Name = "grillaMascCat49";
             grillaMascCat49.ReadOnly = true;
-            grillaMascCat49.Size = new Size(833, 186);
+            grillaMascCat49.Size = new Size(920, 238);
             grillaMascCat49.TabIndex = 1;
             // 
             // iDDataGridViewTextBoxColumn2
@@ -677,7 +678,7 @@
             grillaFemCat49.Location = new Point(0, 0);
             grillaFemCat49.Name = "grillaFemCat49";
             grillaFemCat49.ReadOnly = true;
-            grillaFemCat49.Size = new Size(833, 202);
+            grillaFemCat49.Size = new Size(920, 263);
             grillaFemCat49.TabIndex = 2;
             // 
             // iDDataGridViewTextBoxColumn1
@@ -754,7 +755,7 @@
             tabCat52.Controls.Add(splitContainer2);
             tabCat52.Location = new Point(4, 24);
             tabCat52.Name = "tabCat52";
-            tabCat52.Size = new Size(839, 398);
+            tabCat52.Size = new Size(926, 511);
             tabCat52.TabIndex = 3;
             tabCat52.Text = "Cat 52";
             tabCat52.UseVisualStyleBackColor = true;
@@ -773,8 +774,8 @@
             // splitContainer2.Panel2
             // 
             splitContainer2.Panel2.Controls.Add(grillaFemCat52);
-            splitContainer2.Size = new Size(839, 398);
-            splitContainer2.SplitterDistance = 188;
+            splitContainer2.Size = new Size(926, 511);
+            splitContainer2.SplitterDistance = 241;
             splitContainer2.TabIndex = 1;
             // 
             // grillaMascCat52
@@ -790,7 +791,7 @@
             grillaMascCat52.Location = new Point(0, 0);
             grillaMascCat52.Name = "grillaMascCat52";
             grillaMascCat52.ReadOnly = true;
-            grillaMascCat52.Size = new Size(839, 188);
+            grillaMascCat52.Size = new Size(926, 241);
             grillaMascCat52.TabIndex = 1;
             // 
             // iDDataGridViewTextBoxColumn3
@@ -875,7 +876,7 @@
             grillaFemCat52.Location = new Point(0, 0);
             grillaFemCat52.Name = "grillaFemCat52";
             grillaFemCat52.ReadOnly = true;
-            grillaFemCat52.Size = new Size(839, 206);
+            grillaFemCat52.Size = new Size(926, 266);
             grillaFemCat52.TabIndex = 2;
             // 
             // iDDataGridViewTextBoxColumn4
@@ -952,7 +953,7 @@
             tabCat56.Controls.Add(splitContainer3);
             tabCat56.Location = new Point(4, 24);
             tabCat56.Name = "tabCat56";
-            tabCat56.Size = new Size(839, 398);
+            tabCat56.Size = new Size(926, 511);
             tabCat56.TabIndex = 2;
             tabCat56.Text = "Cat 56";
             tabCat56.UseVisualStyleBackColor = true;
@@ -971,8 +972,8 @@
             // splitContainer3.Panel2
             // 
             splitContainer3.Panel2.Controls.Add(grillaFemCat56);
-            splitContainer3.Size = new Size(839, 398);
-            splitContainer3.SplitterDistance = 188;
+            splitContainer3.Size = new Size(926, 511);
+            splitContainer3.SplitterDistance = 241;
             splitContainer3.TabIndex = 1;
             // 
             // grillaMascCat56
@@ -988,7 +989,7 @@
             grillaMascCat56.Location = new Point(0, 0);
             grillaMascCat56.Name = "grillaMascCat56";
             grillaMascCat56.ReadOnly = true;
-            grillaMascCat56.Size = new Size(839, 188);
+            grillaMascCat56.Size = new Size(926, 241);
             grillaMascCat56.TabIndex = 1;
             // 
             // iDDataGridViewTextBoxColumn5
@@ -1073,7 +1074,7 @@
             grillaFemCat56.Location = new Point(0, 0);
             grillaFemCat56.Name = "grillaFemCat56";
             grillaFemCat56.ReadOnly = true;
-            grillaFemCat56.Size = new Size(839, 206);
+            grillaFemCat56.Size = new Size(926, 266);
             grillaFemCat56.TabIndex = 2;
             // 
             // iDDataGridViewTextBoxColumn6
@@ -1150,7 +1151,7 @@
             tabCat60.Controls.Add(splitContainer4);
             tabCat60.Location = new Point(4, 24);
             tabCat60.Name = "tabCat60";
-            tabCat60.Size = new Size(839, 398);
+            tabCat60.Size = new Size(926, 511);
             tabCat60.TabIndex = 4;
             tabCat60.Text = "Cat 60";
             tabCat60.UseVisualStyleBackColor = true;
@@ -1169,8 +1170,8 @@
             // splitContainer4.Panel2
             // 
             splitContainer4.Panel2.Controls.Add(grillaFemCat60);
-            splitContainer4.Size = new Size(839, 398);
-            splitContainer4.SplitterDistance = 188;
+            splitContainer4.Size = new Size(926, 511);
+            splitContainer4.SplitterDistance = 241;
             splitContainer4.TabIndex = 1;
             // 
             // grillaMascCat60
@@ -1186,7 +1187,7 @@
             grillaMascCat60.Location = new Point(0, 0);
             grillaMascCat60.Name = "grillaMascCat60";
             grillaMascCat60.ReadOnly = true;
-            grillaMascCat60.Size = new Size(839, 188);
+            grillaMascCat60.Size = new Size(926, 241);
             grillaMascCat60.TabIndex = 1;
             // 
             // iDDataGridViewTextBoxColumn7
@@ -1271,7 +1272,7 @@
             grillaFemCat60.Location = new Point(0, 0);
             grillaFemCat60.Name = "grillaFemCat60";
             grillaFemCat60.ReadOnly = true;
-            grillaFemCat60.Size = new Size(839, 206);
+            grillaFemCat60.Size = new Size(926, 266);
             grillaFemCat60.TabIndex = 2;
             // 
             // iDDataGridViewTextBoxColumn8
@@ -1348,7 +1349,7 @@
             tabCat64.Controls.Add(splitContainer5);
             tabCat64.Location = new Point(4, 24);
             tabCat64.Name = "tabCat64";
-            tabCat64.Size = new Size(839, 398);
+            tabCat64.Size = new Size(926, 511);
             tabCat64.TabIndex = 5;
             tabCat64.Text = "Cat 64";
             tabCat64.UseVisualStyleBackColor = true;
@@ -1367,8 +1368,8 @@
             // splitContainer5.Panel2
             // 
             splitContainer5.Panel2.Controls.Add(grillaFemCat64);
-            splitContainer5.Size = new Size(839, 398);
-            splitContainer5.SplitterDistance = 188;
+            splitContainer5.Size = new Size(926, 511);
+            splitContainer5.SplitterDistance = 241;
             splitContainer5.TabIndex = 1;
             // 
             // grillaMascCat64
@@ -1384,7 +1385,7 @@
             grillaMascCat64.Location = new Point(0, 0);
             grillaMascCat64.Name = "grillaMascCat64";
             grillaMascCat64.ReadOnly = true;
-            grillaMascCat64.Size = new Size(839, 188);
+            grillaMascCat64.Size = new Size(926, 241);
             grillaMascCat64.TabIndex = 1;
             // 
             // iDDataGridViewTextBoxColumn9
@@ -1469,7 +1470,7 @@
             grillaFemCat64.Location = new Point(0, 0);
             grillaFemCat64.Name = "grillaFemCat64";
             grillaFemCat64.ReadOnly = true;
-            grillaFemCat64.Size = new Size(839, 206);
+            grillaFemCat64.Size = new Size(926, 266);
             grillaFemCat64.TabIndex = 2;
             // 
             // iDDataGridViewTextBoxColumn10
@@ -1546,7 +1547,7 @@
             tabCat69.Controls.Add(splitContainer6);
             tabCat69.Location = new Point(4, 24);
             tabCat69.Name = "tabCat69";
-            tabCat69.Size = new Size(839, 398);
+            tabCat69.Size = new Size(926, 511);
             tabCat69.TabIndex = 6;
             tabCat69.Text = "Cat 69";
             tabCat69.UseVisualStyleBackColor = true;
@@ -1565,8 +1566,8 @@
             // splitContainer6.Panel2
             // 
             splitContainer6.Panel2.Controls.Add(grillaFemCat69);
-            splitContainer6.Size = new Size(839, 398);
-            splitContainer6.SplitterDistance = 188;
+            splitContainer6.Size = new Size(926, 511);
+            splitContainer6.SplitterDistance = 241;
             splitContainer6.TabIndex = 1;
             // 
             // grillaMascCat69
@@ -1582,7 +1583,7 @@
             grillaMascCat69.Location = new Point(0, 0);
             grillaMascCat69.Name = "grillaMascCat69";
             grillaMascCat69.ReadOnly = true;
-            grillaMascCat69.Size = new Size(839, 188);
+            grillaMascCat69.Size = new Size(926, 241);
             grillaMascCat69.TabIndex = 1;
             // 
             // iDDataGridViewTextBoxColumn11
@@ -1667,7 +1668,7 @@
             grillaFemCat69.Location = new Point(0, 0);
             grillaFemCat69.Name = "grillaFemCat69";
             grillaFemCat69.ReadOnly = true;
-            grillaFemCat69.Size = new Size(839, 206);
+            grillaFemCat69.Size = new Size(926, 266);
             grillaFemCat69.TabIndex = 2;
             // 
             // iDDataGridViewTextBoxColumn12
@@ -1744,7 +1745,7 @@
             tabCat75.Controls.Add(splitContainer7);
             tabCat75.Location = new Point(4, 24);
             tabCat75.Name = "tabCat75";
-            tabCat75.Size = new Size(839, 398);
+            tabCat75.Size = new Size(926, 511);
             tabCat75.TabIndex = 7;
             tabCat75.Text = "Cat 75";
             tabCat75.UseVisualStyleBackColor = true;
@@ -1763,8 +1764,8 @@
             // splitContainer7.Panel2
             // 
             splitContainer7.Panel2.Controls.Add(grillaFemCat75);
-            splitContainer7.Size = new Size(839, 398);
-            splitContainer7.SplitterDistance = 188;
+            splitContainer7.Size = new Size(926, 511);
+            splitContainer7.SplitterDistance = 241;
             splitContainer7.TabIndex = 1;
             // 
             // grillaMascCat75
@@ -1780,7 +1781,7 @@
             grillaMascCat75.Location = new Point(0, 0);
             grillaMascCat75.Name = "grillaMascCat75";
             grillaMascCat75.ReadOnly = true;
-            grillaMascCat75.Size = new Size(839, 188);
+            grillaMascCat75.Size = new Size(926, 241);
             grillaMascCat75.TabIndex = 1;
             // 
             // iDDataGridViewTextBoxColumn13
@@ -1865,7 +1866,7 @@
             grillaFemCat75.Location = new Point(0, 0);
             grillaFemCat75.Name = "grillaFemCat75";
             grillaFemCat75.ReadOnly = true;
-            grillaFemCat75.Size = new Size(839, 206);
+            grillaFemCat75.Size = new Size(926, 266);
             grillaFemCat75.TabIndex = 2;
             // 
             // iDDataGridViewTextBoxColumn14
@@ -1942,7 +1943,7 @@
             tabCat81.Controls.Add(splitContainer8);
             tabCat81.Location = new Point(4, 24);
             tabCat81.Name = "tabCat81";
-            tabCat81.Size = new Size(839, 398);
+            tabCat81.Size = new Size(926, 511);
             tabCat81.TabIndex = 8;
             tabCat81.Text = "Cat 81";
             tabCat81.UseVisualStyleBackColor = true;
@@ -1961,8 +1962,8 @@
             // splitContainer8.Panel2
             // 
             splitContainer8.Panel2.Controls.Add(grillaFemCat81);
-            splitContainer8.Size = new Size(839, 398);
-            splitContainer8.SplitterDistance = 188;
+            splitContainer8.Size = new Size(926, 511);
+            splitContainer8.SplitterDistance = 241;
             splitContainer8.TabIndex = 1;
             // 
             // grillaMascCat81
@@ -1978,7 +1979,7 @@
             grillaMascCat81.Location = new Point(0, 0);
             grillaMascCat81.Name = "grillaMascCat81";
             grillaMascCat81.ReadOnly = true;
-            grillaMascCat81.Size = new Size(839, 188);
+            grillaMascCat81.Size = new Size(926, 241);
             grillaMascCat81.TabIndex = 1;
             // 
             // iDDataGridViewTextBoxColumn15
@@ -2063,7 +2064,7 @@
             grillaFemCat81.Location = new Point(0, 0);
             grillaFemCat81.Name = "grillaFemCat81";
             grillaFemCat81.ReadOnly = true;
-            grillaFemCat81.Size = new Size(839, 206);
+            grillaFemCat81.Size = new Size(926, 266);
             grillaFemCat81.TabIndex = 2;
             // 
             // iDDataGridViewTextBoxColumn16
@@ -2140,7 +2141,7 @@
             tabCat91.Controls.Add(splitContainer9);
             tabCat91.Location = new Point(4, 24);
             tabCat91.Name = "tabCat91";
-            tabCat91.Size = new Size(839, 398);
+            tabCat91.Size = new Size(926, 511);
             tabCat91.TabIndex = 9;
             tabCat91.Text = "Cat 91";
             tabCat91.UseVisualStyleBackColor = true;
@@ -2159,8 +2160,8 @@
             // splitContainer9.Panel2
             // 
             splitContainer9.Panel2.Controls.Add(grillaFemCat91);
-            splitContainer9.Size = new Size(839, 398);
-            splitContainer9.SplitterDistance = 188;
+            splitContainer9.Size = new Size(926, 511);
+            splitContainer9.SplitterDistance = 241;
             splitContainer9.TabIndex = 1;
             // 
             // grillaMascCat91
@@ -2176,7 +2177,7 @@
             grillaMascCat91.Location = new Point(0, 0);
             grillaMascCat91.Name = "grillaMascCat91";
             grillaMascCat91.ReadOnly = true;
-            grillaMascCat91.Size = new Size(839, 188);
+            grillaMascCat91.Size = new Size(926, 241);
             grillaMascCat91.TabIndex = 1;
             // 
             // iDDataGridViewTextBoxColumn17
@@ -2261,7 +2262,7 @@
             grillaFemCat91.Location = new Point(0, 0);
             grillaFemCat91.Name = "grillaFemCat91";
             grillaFemCat91.ReadOnly = true;
-            grillaFemCat91.Size = new Size(839, 206);
+            grillaFemCat91.Size = new Size(926, 266);
             grillaFemCat91.TabIndex = 2;
             // 
             // iDDataGridViewTextBoxColumn18
@@ -2339,7 +2340,7 @@
             tabMas91.Location = new Point(4, 24);
             tabMas91.Name = "tabMas91";
             tabMas91.Padding = new Padding(3);
-            tabMas91.Size = new Size(839, 398);
+            tabMas91.Size = new Size(926, 511);
             tabMas91.TabIndex = 11;
             tabMas91.Text = "Cat +91";
             tabMas91.UseVisualStyleBackColor = true;
@@ -2358,8 +2359,8 @@
             // splitContainer10.Panel2
             // 
             splitContainer10.Panel2.Controls.Add(grillaFemCatMas91);
-            splitContainer10.Size = new Size(833, 392);
-            splitContainer10.SplitterDistance = 185;
+            splitContainer10.Size = new Size(920, 505);
+            splitContainer10.SplitterDistance = 238;
             splitContainer10.TabIndex = 2;
             // 
             // grillaMascCatMas91
@@ -2375,7 +2376,7 @@
             grillaMascCatMas91.Location = new Point(0, 0);
             grillaMascCatMas91.Name = "grillaMascCatMas91";
             grillaMascCatMas91.ReadOnly = true;
-            grillaMascCatMas91.Size = new Size(833, 185);
+            grillaMascCatMas91.Size = new Size(920, 238);
             grillaMascCatMas91.TabIndex = 1;
             // 
             // dataGridViewTextBoxColumn3
@@ -2460,7 +2461,7 @@
             grillaFemCatMas91.Location = new Point(0, 0);
             grillaFemCatMas91.Name = "grillaFemCatMas91";
             grillaFemCatMas91.ReadOnly = true;
-            grillaFemCatMas91.Size = new Size(833, 203);
+            grillaFemCatMas91.Size = new Size(920, 263);
             grillaFemCatMas91.TabIndex = 2;
             // 
             // dataGridViewTextBoxColumn10
@@ -2540,7 +2541,7 @@
             tabPeleas.Location = new Point(4, 24);
             tabPeleas.Name = "tabPeleas";
             tabPeleas.Padding = new Padding(3);
-            tabPeleas.Size = new Size(839, 398);
+            tabPeleas.Size = new Size(926, 511);
             tabPeleas.TabIndex = 10;
             tabPeleas.Text = "Peleas";
             tabPeleas.UseVisualStyleBackColor = true;
@@ -2578,9 +2579,8 @@
             grillaPeleas.Location = new Point(41, 3);
             grillaPeleas.Name = "grillaPeleas";
             grillaPeleas.ReadOnly = true;
-            grillaPeleas.Size = new Size(795, 392);
+            grillaPeleas.Size = new Size(882, 505);
             grillaPeleas.TabIndex = 1;
-            grillaPeleas.ColumnHeaderMouseClick += grillaPeleas_ColumnHeaderMouseClick;
             grillaPeleas.UserDeletingRow += grillaPeleas_UserDeletingRow;
             // 
             // ordenDataGridViewTextBoxColumn
@@ -2763,7 +2763,7 @@
             // 
             // herramientasToolStripMenuItem
             // 
-            herramientasToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { exportarPeleasAExcelToolStripMenuItem });
+            herramientasToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { exportarPeleasAExcelToolStripMenuItem, buscarEnGrillaToolStripMenuItem });
             herramientasToolStripMenuItem.Name = "herramientasToolStripMenuItem";
             herramientasToolStripMenuItem.Size = new Size(90, 20);
             herramientasToolStripMenuItem.Text = "Herramientas";
@@ -2771,9 +2771,17 @@
             // exportarPeleasAExcelToolStripMenuItem
             // 
             exportarPeleasAExcelToolStripMenuItem.Name = "exportarPeleasAExcelToolStripMenuItem";
-            exportarPeleasAExcelToolStripMenuItem.Size = new Size(202, 22);
+            exportarPeleasAExcelToolStripMenuItem.Size = new Size(203, 22);
             exportarPeleasAExcelToolStripMenuItem.Text = "Exportar peleas a Excel...";
             exportarPeleasAExcelToolStripMenuItem.Click += exportarPeleasAExcelToolStripMenuItem_Click;
+            // 
+            // buscarEnGrillaToolStripMenuItem
+            // 
+            buscarEnGrillaToolStripMenuItem.Name = "buscarEnGrillaToolStripMenuItem";
+            buscarEnGrillaToolStripMenuItem.ShortcutKeys = Keys.Control | Keys.F;
+            buscarEnGrillaToolStripMenuItem.Size = new Size(203, 22);
+            buscarEnGrillaToolStripMenuItem.Text = "Buscar en grilla...";
+            buscarEnGrillaToolStripMenuItem.Click += buscarEnGrillaToolStripMenuItem_Click;
             // 
             // ayudaToolStripMenuItem
             // 
@@ -3312,5 +3320,6 @@
         private DataGridViewCheckBoxColumn dataGridViewCheckBoxColumn2;
         private ToolStripSeparator toolStripSeparator3;
         private ToolStripMenuItem agendaBoxeadoresToolStripMenuItem;
+        private ToolStripMenuItem buscarEnGrillaToolStripMenuItem;
     }
 }
