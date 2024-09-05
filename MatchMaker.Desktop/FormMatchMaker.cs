@@ -61,6 +61,9 @@ namespace MatchMaker
         System.Windows.Forms.Timer _timer;
 
         FormAyuda _fayuda = null;
+        FormInformacionImportante _fInfoImportante = null;
+        FormAgendaBoxeadores _fAgendaBoxAmateur = null;
+        FormAgendaProfesionales _fAgendaBoxProfesional = null;
 
         string _backup = "";
 
@@ -435,9 +438,20 @@ namespace MatchMaker
         private void agendaBoxeadoresToolStripMenuItem_Click(object sender, EventArgs e)
         {
             try
-            {
-                FormAgendaBoxeadores f = new FormAgendaBoxeadores();
-                f.Show();
+            {                
+                if (_fAgendaBoxAmateur != null)
+                {
+                    _fAgendaBoxAmateur.BringToFront();
+                }
+                else
+                {
+                    _fAgendaBoxAmateur = new FormAgendaBoxeadores();
+                    _fAgendaBoxAmateur.OnCierreFormulario += delegate
+                    {
+                        _fAgendaBoxAmateur = null;
+                    };
+                    _fAgendaBoxAmateur.Show();
+                }
 
             }
             catch (Exception ex)
@@ -446,6 +460,31 @@ namespace MatchMaker
                 MessageBox.Show(this, ex.Message, "Error al iniciar la pantalla", MessageBoxButtons.OK);
             }
         }
+        private void agendaProfesionalesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (_fAgendaBoxProfesional != null)
+                {
+                    _fAgendaBoxProfesional.BringToFront();
+                }
+                else
+                {
+                    _fAgendaBoxProfesional = new FormAgendaProfesionales();
+                    _fAgendaBoxProfesional.OnCierreFormulario += delegate
+                    {
+                        _fAgendaBoxProfesional = null;
+                    };
+                    _fAgendaBoxProfesional.Show();
+                }
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(this, ex.Message, "Error al iniciar la pantalla", MessageBoxButtons.OK);
+            }
+        }    
         private void exportarPeleasAExcelToolStripMenuItem_Click(object sender, EventArgs e)
         {
             try
@@ -485,19 +524,46 @@ namespace MatchMaker
                         break;
                 }
 
-                if(dgv != null)
+                if (dgv != null)
                 {
                     FormBuscar fBuscar = new FormBuscar(dgv);
                     fBuscar.ShowDialog();
                 }
-                    
+
             }
             catch (Exception ex) { MessageBox.Show(ex.Message); }
         }
+        private void informaciónImportanteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if(_fInfoImportante != null)
+            {
+                _fInfoImportante.BringToFront();
+            }
+            else
+            {
+                _fInfoImportante = new FormInformacionImportante();
+                _fInfoImportante.OnCierreFormulario += delegate
+                {
+                    _fInfoImportante = null;
+                };
+                _fInfoImportante.Show();
+            }
+        }
         private void guiaDeUsoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            _fayuda = new FormAyuda();
-            _fayuda.ShowDialog();
+            if (_fayuda != null)
+            {
+                _fayuda.BringToFront();
+            }
+            else
+            {
+                _fayuda = new FormAyuda();
+                _fayuda.OnCierreFormulario += delegate
+                {
+                    _fayuda = null;
+                };
+                _fayuda.Show();
+            }            
 
         }
         private void _timer_Tick(object sender, EventArgs e)
@@ -1380,6 +1446,6 @@ namespace MatchMaker
             }
         }
 
-       
+     
     }
 }

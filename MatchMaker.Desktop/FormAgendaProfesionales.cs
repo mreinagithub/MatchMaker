@@ -1,33 +1,32 @@
-﻿using MatchMaker.Comun;
-using MatchMaker.Comun.Data;
-using MatchMaker.Comun.Modelos;
+﻿using MatchMaker.Comun.Data;
+using MatchMaker.Comun;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
-using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Diagnostics;
 
 namespace MatchMaker.Desktop
 {
-    public partial class FormAgendaBoxeadores : Form
+    public partial class FormAgendaProfesionales : Form
     {
-        public FormAgendaBoxeadores()
+        public FormAgendaProfesionales()
         {
             InitializeComponent();
 
-            this.FormClosed += FormAgendaBoxeadores_FormClosed;
+            this.FormClosed += FormAgendaProfesionales_FormClosed;
         }
 
-      
+     
 
         bool _grillaAllowDecimalSeparator = false;
         DatabaseHandler _dataBase;
-        BindingList<BoxeadorAgenda> _boxeadores = new BindingList<BoxeadorAgenda>();
+        BindingList<BoxeadorProfesional> _boxeadores = new BindingList<BoxeadorProfesional>();
         public EventHandler OnCierreFormulario;
 
         bool _esLoad = false;
@@ -35,19 +34,20 @@ namespace MatchMaker.Desktop
         const int _indiceFechaNacimiento = 4;
         const int _indiceEdad = 5;
         const int _indicePeso = 6;
-        const int _indiceCantidadPeleas = 8;
-        const int _indiceProfesor = 9;
-        const int _indiceURL = 10;
+        const int _indiceLibras = 7;
+        const int _indiceCantidadPeleas = 9;
+        const int _indiceProfesor = 10;
+        const int _indiceURL = 12;
 
         private void btnCerrar_Click(object sender, EventArgs e)
         {
             this.Close();
         }
-        private void FormAgendaBoxeadores_FormClosed(object sender, FormClosedEventArgs e)
+        private void FormAgendaProfesionales_FormClosed(object sender, FormClosedEventArgs e)
         {
             OnCierreFormulario?.Invoke(this, e);
         }
-        private void FormAgendaBoxeadores_Load(object sender, EventArgs e)
+        private void FormAgendaProfesionales_Load(object sender, EventArgs e)
         {
             try
             {
@@ -69,6 +69,9 @@ namespace MatchMaker.Desktop
                 txtFiltroNombre.TextChanged += TxtFiltroNombre_TextChanged;
                 txtFiltroCategoria.TextChanged += TxtFiltroCategoria_TextChanged;
                 txtFiltroProfEsc.TextChanged += TxtFiltroProfEsc_TextChanged;
+                grillaAgendaBoxeadores.ColumnHeaderMouseClick += grillaAgendaBoxeadores_ColumnHeaderMouseClick;
+                txtBorrarFiltros.Click += txtBorrarFiltros_Click;
+                grillaAgendaBoxeadores.CellContentClick += grillaAgendaBoxeadores_CellContentClick;
             }
             catch (Exception ex)
             {
@@ -80,12 +83,14 @@ namespace MatchMaker.Desktop
                 _esLoad = false;
             }
         }
+
         private void GrillaAgendaBoxeadores_EditingControlShowing(object sender, DataGridViewEditingControlShowingEventArgs e)
         {
             e.Control.KeyPress -= new KeyPressEventHandler(ColumnNumber_KeyPress);
             _grillaAllowDecimalSeparator = grillaAgendaBoxeadores.CurrentCell.ColumnIndex == _indicePeso;
             if (grillaAgendaBoxeadores.CurrentCell.ColumnIndex == _indiceEdad
                 || grillaAgendaBoxeadores.CurrentCell.ColumnIndex == _indicePeso
+                || grillaAgendaBoxeadores.CurrentCell.ColumnIndex == _indiceLibras
                 || grillaAgendaBoxeadores.CurrentCell.ColumnIndex == _indiceCantidadPeleas)
             {
                 _grillaAllowDecimalSeparator = true;
@@ -153,6 +158,24 @@ namespace MatchMaker.Desktop
                 string texto = grillaAgendaBoxeadores.CurrentCell.EditedFormattedValue.ToString();
                 texto = texto.Replace(".", ",");
                 grillaAgendaBoxeadores.CurrentCell.Value = texto;
+
+                decimal kilos = Convert.ToDecimal(texto);
+
+                string libras = Convert.ToString(Decimal.Round(kilos * (2.2M),2));
+
+                grillaAgendaBoxeadores.CurrentRow.Cells[_indiceLibras].Value = libras;
+            }
+            else if (e.ColumnIndex == _indiceLibras)
+            {
+                string texto = grillaAgendaBoxeadores.CurrentCell.EditedFormattedValue.ToString();
+                texto = texto.Replace(".", ",");
+                grillaAgendaBoxeadores.CurrentCell.Value = texto;
+
+                decimal libras = Convert.ToDecimal(texto);
+
+                string kilos = Convert.ToString(Decimal.Round(libras / (2.2M),2));
+
+                grillaAgendaBoxeadores.CurrentRow.Cells[_indicePeso].Value = kilos;
             }
         }
         private void GrillaAgendaBoxeadores_CellValidating(object sender, DataGridViewCellValidatingEventArgs e)
@@ -168,7 +191,7 @@ namespace MatchMaker.Desktop
         }
         private void GrillaAgendaBoxeadores_UserDeletingRow(object sender, DataGridViewRowCancelEventArgs e)
         {
-            BoxeadorAgenda boxEliminado = _boxeadores[e.Row.Index];
+            BoxeadorProfesional boxEliminado = _boxeadores[e.Row.Index];
             if (boxEliminado == null)
             {
                 e.Cancel = true;
@@ -193,7 +216,7 @@ namespace MatchMaker.Desktop
             if (_boxeadores.Count > 0)
             {
 
-                BoxeadorAgenda boxActualizado = _boxeadores[e.RowIndex];
+                BoxeadorProfesional boxActualizado = _boxeadores[e.RowIndex];
                 if (boxActualizado == null) { return; }
                 if (boxActualizado.ID == null) //Alta
                 {
@@ -254,9 +277,9 @@ namespace MatchMaker.Desktop
                 {
                     string[] condiciones = grillaAgendaBoxeadores.Tag.ToString().Split('|');
                     if (condiciones[1].Contains("ASC"))
-                        _boxeadores = new BindingList<BoxeadorAgenda>(_boxeadores.OrderBy(x => Utilidades.GetPropValue(x, condiciones[0])).ToList());
+                        _boxeadores = new BindingList<BoxeadorProfesional>(_boxeadores.OrderBy(x => Utilidades.GetPropValue(x, condiciones[0])).ToList());
                     else
-                        _boxeadores = new BindingList<BoxeadorAgenda>(_boxeadores.OrderByDescending(x => Utilidades.GetPropValue(x, condiciones[0])).ToList());
+                        _boxeadores = new BindingList<BoxeadorProfesional>(_boxeadores.OrderByDescending(x => Utilidades.GetPropValue(x, condiciones[0])).ToList());
                     grillaAgendaBoxeadores.DataSource = _boxeadores;
                 }
             }
@@ -306,7 +329,7 @@ namespace MatchMaker.Desktop
         {
             foreach (DataGridViewRow row in grillaAgendaBoxeadores.Rows)
             {
-                var bx = row.DataBoundItem as BoxeadorAgenda;
+                var bx = row.DataBoundItem as BoxeadorProfesional;
 
                 if (bx != null && bx.FechaNacimiento is not null)
                 {
@@ -317,14 +340,14 @@ namespace MatchMaker.Desktop
         }
         private void BindearGrilla()
         {
-            var lstBx = GetBoxeadoresAgenda();
-            _boxeadores = new BindingList<BoxeadorAgenda>(lstBx);
+            var lstBx = GetBoxeadoresAgendaProfesional();
+            _boxeadores = new BindingList<BoxeadorProfesional>(lstBx);
             grillaAgendaBoxeadores.Rows.Clear();
             grillaAgendaBoxeadores.DataSource = _boxeadores;
 
             ConfigurarGrillaBoxeadores();
         }
-        private bool ValidarBoxeadorAgenda(BoxeadorAgenda boxeador)
+        private bool ValidarBoxeadorAgenda(BoxeadorProfesional boxeador)
         {
             if (boxeador == null)
                 return false;
@@ -352,18 +375,18 @@ namespace MatchMaker.Desktop
 
         }
 
-        private List<BoxeadorAgenda> GetBoxeadoresAgenda()
+        private List<BoxeadorProfesional> GetBoxeadoresAgendaProfesional()
         {
             try
             {
-                var conn = _dataBase.GetAgendaConnection();
-                var results = conn.Table<BoxeadorAgenda>().ToList();
+                var conn = _dataBase.GetAgendaProfesionalesConnection();
+                var results = conn.Table<BoxeadorProfesional>().ToList();
 
                 //Actualizar edad boxeadores
                 if (_esLoad)
                 {
                     bool hayActualizaciones = false;
-                    foreach (BoxeadorAgenda bx in results.Where(b => b.FechaNacimiento is not null))
+                    foreach (BoxeadorProfesional bx in results.Where(b => b.FechaNacimiento is not null))
                     {
                         //Calcular edad
                         int edad = Utilidades.CalcularEdad(bx.FechaNacimiento.Value);
@@ -393,7 +416,7 @@ namespace MatchMaker.Desktop
                 throw;
             }
         }
-        public void InsertBoxeadorAgenda(BoxeadorAgenda boxeador)
+        public void InsertBoxeadorAgenda(BoxeadorProfesional boxeador)
         {
             try
             {
@@ -405,7 +428,7 @@ namespace MatchMaker.Desktop
 
                 if (ValidarBoxeadorAgenda(boxeador))
                 {
-                    var conn = _dataBase.GetAgendaConnection();
+                    var conn = _dataBase.GetAgendaProfesionalesConnection();
                     conn.Insert(boxeador);
                     _dataBase.CloseConnection();
                 }
@@ -418,7 +441,7 @@ namespace MatchMaker.Desktop
                 MessageBox.Show(this, ex.Message, "Error en base de datos", MessageBoxButtons.OK);
             }
         }
-        public void UpdateBoxeadorAgenda(BoxeadorAgenda boxeador)
+        public void UpdateBoxeadorAgenda(BoxeadorProfesional boxeador)
         {
             try
             {
@@ -430,7 +453,7 @@ namespace MatchMaker.Desktop
 
                 if (ValidarBoxeadorAgenda(boxeador))
                 {
-                    var conn = _dataBase.GetAgendaConnection();
+                    var conn = _dataBase.GetAgendaProfesionalesConnection();
                     conn.Update(boxeador);
                     _dataBase.CloseConnection();
                 }
@@ -443,13 +466,13 @@ namespace MatchMaker.Desktop
             }
 
         }
-        public void DeleteBoxeadorAgenda(BoxeadorAgenda boxeador)
+        public void DeleteBoxeadorAgenda(BoxeadorProfesional boxeador)
         {
             try
             {
                 if (boxeador.ID != null)
                 {
-                    var conn = _dataBase.GetAgendaConnection();
+                    var conn = _dataBase.GetAgendaProfesionalesConnection();
                     conn.Delete(boxeador);
                     _dataBase.CloseConnection();
                 }
@@ -461,7 +484,5 @@ namespace MatchMaker.Desktop
             }
 
         }
-
-        
     }
 }

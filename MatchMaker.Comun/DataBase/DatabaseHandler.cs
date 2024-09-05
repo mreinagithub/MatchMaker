@@ -18,9 +18,11 @@ namespace MatchMaker.Comun.Data
         string DataSource = "MatchMaker.sqlite3";
         string DataSourceBackUp = "Backups.sqlite3";
         string DataSourceAgenda = "AgendaBoxeadores.sqlite3";
+        string DataSourceAgendaProfesionales = "AgendaProfesionales.sqlite3";
 
         string DataSourceRespaldo = "MatchMaker_Respaldo.sqlite3";   
-        string DataSourdeAgendaRespaldo = "AgendaBoxeadores_Respaldo.sqlite3";
+        string DataSourceAgendaRespaldo = "AgendaBoxeadores_Respaldo.sqlite3";
+        string DataSourceAgendaProfesionalesRespaldo = "AgendaProfesionales_Respaldo.sqlite3";
 
         string baseFolder;
         string agendaFolder;
@@ -54,6 +56,9 @@ namespace MatchMaker.Comun.Data
 
             _db = new SQLiteConnection(Path.Combine(agendaFolder, DataSourceAgenda));
             _db.CreateTable<BoxeadorAgenda>();
+
+            _db = new SQLiteConnection(Path.Combine(agendaFolder, DataSourceAgendaProfesionales));
+            _db.CreateTable<BoxeadorProfesional>();
 
             respaldoFolder = Path.Combine(baseFolder, "Respaldos");
 
@@ -110,7 +115,7 @@ namespace MatchMaker.Comun.Data
         public void TomarBackupAgendaBoxeadores()
         {
             string fullPathWithFile = Path.Combine(agendaFolder, DataSourceAgenda);
-            string fullPathWithFileInst = Path.Combine(respaldoFolder, DataSourdeAgendaRespaldo);
+            string fullPathWithFileInst = Path.Combine(respaldoFolder, DataSourceAgendaRespaldo);
 
             File.Copy(fullPathWithFile, fullPathWithFileInst, overwrite: true);
         }
@@ -135,6 +140,11 @@ namespace MatchMaker.Comun.Data
         public SQLiteConnection GetAgendaConnection()
         {
             _db = new SQLiteConnection(Path.Combine(agendaFolder, DataSourceAgenda));
+            return _db;
+        }
+        public SQLiteConnection GetAgendaProfesionalesConnection()
+        {
+            _db = new SQLiteConnection(Path.Combine(agendaFolder, DataSourceAgendaProfesionales));
             return _db;
         }
         public void CloseConnection()

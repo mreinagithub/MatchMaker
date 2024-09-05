@@ -317,6 +317,7 @@
             volverAlEventoActualToolStripMenuItem = new ToolStripMenuItem();
             toolStripSeparator3 = new ToolStripSeparator();
             agendaBoxeadoresToolStripMenuItem = new ToolStripMenuItem();
+            agendaProfesionalesToolStripMenuItem = new ToolStripMenuItem();
             toolStripSeparator1 = new ToolStripSeparator();
             salirToolStripMenuItem = new ToolStripMenuItem();
             herramientasToolStripMenuItem = new ToolStripMenuItem();
@@ -340,6 +341,7 @@
             sexoDataGridViewTextBoxColumn2 = new DataGridViewTextBoxColumn();
             profesorDataGridViewTextBoxColumn2 = new DataGridViewTextBoxColumn();
             saveFileDialog1 = new SaveFileDialog();
+            informaciónImportanteToolStripMenuItem = new ToolStripMenuItem();
             tabPrincipal.SuspendLayout();
             tabIngreso.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)grillaIngreso).BeginInit();
@@ -2711,7 +2713,7 @@
             // 
             // archivoToolStripMenuItem
             // 
-            archivoToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { nuevoEventoToolStripMenuItem, verOtrosEventosToolStripMenuItem, volverAlEventoActualToolStripMenuItem, toolStripSeparator3, agendaBoxeadoresToolStripMenuItem, toolStripSeparator1, salirToolStripMenuItem });
+            archivoToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { nuevoEventoToolStripMenuItem, verOtrosEventosToolStripMenuItem, volverAlEventoActualToolStripMenuItem, toolStripSeparator3, agendaBoxeadoresToolStripMenuItem, agendaProfesionalesToolStripMenuItem, toolStripSeparator1, salirToolStripMenuItem });
             archivoToolStripMenuItem.Name = "archivoToolStripMenuItem";
             archivoToolStripMenuItem.Size = new Size(60, 20);
             archivoToolStripMenuItem.Text = "Archivo";
@@ -2746,8 +2748,15 @@
             // 
             agendaBoxeadoresToolStripMenuItem.Name = "agendaBoxeadoresToolStripMenuItem";
             agendaBoxeadoresToolStripMenuItem.Size = new Size(201, 22);
-            agendaBoxeadoresToolStripMenuItem.Text = "Agenda boxeadores...";
+            agendaBoxeadoresToolStripMenuItem.Text = "Agenda amateurs...";
             agendaBoxeadoresToolStripMenuItem.Click += agendaBoxeadoresToolStripMenuItem_Click;
+            // 
+            // agendaProfesionalesToolStripMenuItem
+            // 
+            agendaProfesionalesToolStripMenuItem.Name = "agendaProfesionalesToolStripMenuItem";
+            agendaProfesionalesToolStripMenuItem.Size = new Size(201, 22);
+            agendaProfesionalesToolStripMenuItem.Text = "Agenda profesionales...";
+            agendaProfesionalesToolStripMenuItem.Click += agendaProfesionalesToolStripMenuItem_Click;
             // 
             // toolStripSeparator1
             // 
@@ -2785,7 +2794,7 @@
             // 
             // ayudaToolStripMenuItem
             // 
-            ayudaToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { guiaDeUsoToolStripMenuItem });
+            ayudaToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { informaciónImportanteToolStripMenuItem, guiaDeUsoToolStripMenuItem });
             ayudaToolStripMenuItem.Name = "ayudaToolStripMenuItem";
             ayudaToolStripMenuItem.Size = new Size(53, 20);
             ayudaToolStripMenuItem.Text = "Ayuda";
@@ -2793,7 +2802,7 @@
             // guiaDeUsoToolStripMenuItem
             // 
             guiaDeUsoToolStripMenuItem.Name = "guiaDeUsoToolStripMenuItem";
-            guiaDeUsoToolStripMenuItem.Size = new Size(145, 22);
+            guiaDeUsoToolStripMenuItem.Size = new Size(210, 22);
             guiaDeUsoToolStripMenuItem.Text = "Guia de uso...";
             guiaDeUsoToolStripMenuItem.Click += guiaDeUsoToolStripMenuItem_Click;
             // 
@@ -2934,6 +2943,13 @@
             profesorDataGridViewTextBoxColumn2.DataPropertyName = "Profesor";
             profesorDataGridViewTextBoxColumn2.HeaderText = "Profesor";
             profesorDataGridViewTextBoxColumn2.Name = "profesorDataGridViewTextBoxColumn2";
+            // 
+            // informaciónImportanteToolStripMenuItem
+            // 
+            informaciónImportanteToolStripMenuItem.Name = "informaciónImportanteToolStripMenuItem";
+            informaciónImportanteToolStripMenuItem.Size = new Size(210, 22);
+            informaciónImportanteToolStripMenuItem.Text = "Información importante...";
+            informaciónImportanteToolStripMenuItem.Click += informaciónImportanteToolStripMenuItem_Click;
             // 
             // FormMatchMaker
             // 
@@ -3321,5 +3337,7 @@
         private ToolStripSeparator toolStripSeparator3;
         private ToolStripMenuItem agendaBoxeadoresToolStripMenuItem;
         private ToolStripMenuItem buscarEnGrillaToolStripMenuItem;
+        private ToolStripMenuItem agendaProfesionalesToolStripMenuItem;
+        private ToolStripMenuItem informaciónImportanteToolStripMenuItem;
     }
 }
