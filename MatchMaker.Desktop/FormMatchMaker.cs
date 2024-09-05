@@ -576,6 +576,7 @@ namespace MatchMaker
                 //Tomar backup del archivo
                 _dataBase.TomarBackupEvento();
                 _dataBase.TomarBackupAgendaBoxeadores();
+                _dataBase.TomarBackupAgendaProfesionales();
             }
             catch
             {

@@ -161,7 +161,7 @@ namespace MatchMaker.Desktop
 
                 decimal kilos = Convert.ToDecimal(texto);
 
-                string libras = Convert.ToString(Decimal.Round(kilos * (2.2M),2));
+                string libras = Convert.ToString(Decimal.Round(kilos * (2.2M),0));
 
                 grillaAgendaBoxeadores.CurrentRow.Cells[_indiceLibras].Value = libras;
             }
@@ -173,7 +173,7 @@ namespace MatchMaker.Desktop
 
                 decimal libras = Convert.ToDecimal(texto);
 
-                string kilos = Convert.ToString(Decimal.Round(libras / (2.2M),2));
+                string kilos = Convert.ToString(Decimal.Round(libras / (2.2M),1));
 
                 grillaAgendaBoxeadores.CurrentRow.Cells[_indicePeso].Value = kilos;
             }

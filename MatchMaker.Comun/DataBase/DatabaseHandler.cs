@@ -119,6 +119,13 @@ namespace MatchMaker.Comun.Data
 
             File.Copy(fullPathWithFile, fullPathWithFileInst, overwrite: true);
         }
+        public void TomarBackupAgendaProfesionales()
+        {
+            string fullPathWithFile = Path.Combine(agendaFolder, DataSourceAgendaProfesionales);
+            string fullPathWithFileInst = Path.Combine(respaldoFolder, DataSourceAgendaProfesionalesRespaldo);
+
+            File.Copy(fullPathWithFile, fullPathWithFileInst, overwrite: true);
+        }
 
         public SQLiteConnection GetConnection(string backup = "")
         {
