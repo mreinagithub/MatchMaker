@@ -8,7 +8,7 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <ApplicationIcon>boxing-gloves.ico</ApplicationIcon>
     <AssemblyName>MatchMaker</AssemblyName>
-    <AssemblyVersion>1.0.0.3000</AssemblyVersion>
+    <AssemblyVersion>1.0.0.4000</AssemblyVersion>
     <PlatformTarget>AnyCPU</PlatformTarget>
   </PropertyGroup>
 
