@@ -5,7 +5,10 @@ using System.Data;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Reflection;
+using System.Security.AccessControl;
 using System.Security.Policy;
+using System.Security.Principal;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -21,20 +24,21 @@ namespace MatchMaker.Desktop
 
         public EventHandler OnCierreFormulario;
 
-        string _textoInfo = "";
+        string _textoInfo = "";      
+        string _fullPathFile = "";
 
         private void FormInformacionImportante_Load(object sender, EventArgs e)
         {
             try
             {
-                if (File.Exists("InformacionImportante.txt"))
-                {
-                    //_textoInfo = File.ReadAllText("InformacionImportante.txt", Encoding.UTF8);
-                    txtInfoImportante.LoadFile("InformacionImportante.txt", RichTextBoxStreamType.RichText);
-                }
-                //txtInfoImportante.Text = _textoInfo;
-                _textoInfo = txtInfoImportante.Text;
+                string baseFolder = Path.Combine(Environment.GetEnvironmentVariable("programdata"), "MatchMaker", "DataBase");
+                _fullPathFile = Path.Combine(baseFolder, "InformacionImportante.txt");
 
+                if (File.Exists(_fullPathFile))
+                {                    
+                    txtInfoImportante.LoadFile(_fullPathFile, RichTextBoxStreamType.RichText);
+                }                
+                _textoInfo = txtInfoImportante.Text;
 
             }
             catch (Exception ex)
@@ -50,23 +54,9 @@ namespace MatchMaker.Desktop
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             try
-            {
-
-                //FileStream fs;
-                //if (!File.Exists("InformacionImportante.txt"))
-                //{
-                //    fs = File.Create("InformacionImportante.txt");
-                //    fs.Close();                    
-                //}
-
-                //using (StreamWriter sw = new StreamWriter("InformacionImportante.txt", append: false))
-                //{
-                //    //sw.Write(txtInfoImportante.Text);                   
-                //}
-                txtInfoImportante.SaveFile("InformacionImportante.txt", RichTextBoxStreamType.RichText);
-
+            {                
+                txtInfoImportante.SaveFile(_fullPathFile, RichTextBoxStreamType.RichText);
                 _textoInfo = txtInfoImportante.Text;
-
                 this.Close();
             }
             catch (Exception ex)
@@ -90,5 +80,7 @@ namespace MatchMaker.Desktop
                 }
             }
         }
+
+
     }
 }

@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.AccessControl;
+using System.Security.Principal;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -45,5 +47,7 @@ namespace MatchMaker.Comun
             //Obtiene el valor de la propiedad desde el source por reflexión.            
             return src.GetType().GetProperty(propName).GetValue(src, null);
         }
+
+      
     }
 }
