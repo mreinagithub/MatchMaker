@@ -406,9 +406,9 @@ namespace MatchMaker.Desktop
                 string fCat = txtFiltroCategoria.Text;
                 string fProfesor = txtFiltroProfEsc.Text;
 
-                results = results.Where(b => b.Nombre.ToUpper().Contains(fNombre.ToUpper())
-                                          && b.Categoria.ToUpper().Contains(fCat.ToUpper())
-                                          && b.Profesor.ToUpper().Contains(fProfesor.ToUpper())).ToList();
+                results = results.Where(b => (b.Nombre ?? "").ToUpper().Contains(fNombre.ToUpper())
+                                          && (b.Categoria ?? "").ToUpper().Contains(fCat.ToUpper())
+                                          && (b.Profesor ?? "").ToUpper().Contains(fProfesor.ToUpper())).ToList();
                 return results;
             }
             catch
